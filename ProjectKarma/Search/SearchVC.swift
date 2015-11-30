@@ -10,6 +10,9 @@ import UIKit
 import Foundation
 
 class SearchVC: UITableViewController {
+    @IBOutlet var searchBar_: UISearchBar!
+    @IBOutlet var tableView_: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

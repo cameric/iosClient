@@ -60,6 +60,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Search" id="UKb-h3-Z7M"/>
+                    <connections>
+                        <outlet property="searchBar_" destination="hZG-Se-y2v" id="cgG-h8-rdT"/>
+                        <outlet property="tableView_" destination="avJ-qV-Niv" id="sT8-mg-7ac"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVZ-MZ-uEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
