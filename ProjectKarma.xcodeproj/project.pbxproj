@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740DFC571C0C442800CE36EA /* Search in Resources */ = {isa = PBXBuildFile; fileRef = 740DFC561C0C442800CE36EA /* Search */; };
+		740DFC641C0C44FF00CE36EA /* Favorite in Resources */ = {isa = PBXBuildFile; fileRef = 740DFC601C0C44FF00CE36EA /* Favorite */; };
+		740DFC651C0C44FF00CE36EA /* Personal in Resources */ = {isa = PBXBuildFile; fileRef = 740DFC611C0C44FF00CE36EA /* Personal */; };
+		740DFC661C0C44FF00CE36EA /* Schedule in Resources */ = {isa = PBXBuildFile; fileRef = 740DFC621C0C44FF00CE36EA /* Schedule */; };
+		740DFC671C0C44FF00CE36EA /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 740DFC631C0C44FF00CE36EA /* Shared */; };
 		7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */; };
 		7436D0DC1BFFF47E00E7D545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7436D0DA1BFFF47E00E7D545 /* Main.storyboard */; };
 		7436D0DE1BFFF47E00E7D545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7436D0DD1BFFF47E00E7D545 /* Assets.xcassets */; };
 		7436D0E11BFFF47E00E7D545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */; };
 		7436D0EC1BFFF47E00E7D545 /* ProjectKarmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0EB1BFFF47E00E7D545 /* ProjectKarmaTests.swift */; };
 		7436D0F71BFFF47E00E7D545 /* ProjectKarmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0F61BFFF47E00E7D545 /* ProjectKarmaUITests.swift */; };
-		7436D1051BFFF8C000E7D545 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D1041BFFF8C000E7D545 /* SearchVC.swift */; };
-		7436D1071BFFF8D700E7D545 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D1061BFFF8D700E7D545 /* FavoriteVC.swift */; };
-		7436D1091BFFF91800E7D545 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D1081BFFF91800E7D545 /* ScheduleVC.swift */; };
-		7436D10B1BFFF92900E7D545 /* PersonalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D10A1BFFF92900E7D545 /* PersonalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		740DFC561C0C442800CE36EA /* Search */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Search; sourceTree = "<group>"; };
+		740DFC601C0C44FF00CE36EA /* Favorite */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Favorite; sourceTree = "<group>"; };
+		740DFC611C0C44FF00CE36EA /* Personal */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Personal; sourceTree = "<group>"; };
+		740DFC621C0C44FF00CE36EA /* Schedule */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Schedule; sourceTree = "<group>"; };
+		740DFC631C0C44FF00CE36EA /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared; sourceTree = "<group>"; };
 		7436D0D11BFFF47E00E7D545 /* ProjectKarma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectKarma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7436D0DB1BFFF47E00E7D545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,10 +55,6 @@
 		7436D0F21BFFF47E00E7D545 /* ProjectKarmaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectKarmaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7436D0F61BFFF47E00E7D545 /* ProjectKarmaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectKarmaUITests.swift; sourceTree = "<group>"; };
 		7436D0F81BFFF47E00E7D545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7436D1041BFFF8C000E7D545 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
-		7436D1061BFFF8D700E7D545 /* FavoriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
-		7436D1081BFFF91800E7D545 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
-		7436D10A1BFFF92900E7D545 /* PersonalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,11 @@
 			children = (
 				7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */,
 				7436D0DA1BFFF47E00E7D545 /* Main.storyboard */,
-				7436D1041BFFF8C000E7D545 /* SearchVC.swift */,
-				7436D1061BFFF8D700E7D545 /* FavoriteVC.swift */,
-				7436D1081BFFF91800E7D545 /* ScheduleVC.swift */,
-				7436D10A1BFFF92900E7D545 /* PersonalVC.swift */,
+				740DFC601C0C44FF00CE36EA /* Favorite */,
+				740DFC611C0C44FF00CE36EA /* Personal */,
+				740DFC621C0C44FF00CE36EA /* Schedule */,
+				740DFC631C0C44FF00CE36EA /* Shared */,
+				740DFC561C0C442800CE36EA /* Search */,
 				7436D0DD1BFFF47E00E7D545 /* Assets.xcassets */,
 				7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */,
 				7436D0E21BFFF47E00E7D545 /* Info.plist */,
@@ -238,9 +241,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740DFC661C0C44FF00CE36EA /* Schedule in Resources */,
+				740DFC571C0C442800CE36EA /* Search in Resources */,
 				7436D0E11BFFF47E00E7D545 /* LaunchScreen.storyboard in Resources */,
 				7436D0DE1BFFF47E00E7D545 /* Assets.xcassets in Resources */,
 				7436D0DC1BFFF47E00E7D545 /* Main.storyboard in Resources */,
+				740DFC671C0C44FF00CE36EA /* Shared in Resources */,
+				740DFC651C0C44FF00CE36EA /* Personal in Resources */,
+				740DFC641C0C44FF00CE36EA /* Favorite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7436D1051BFFF8C000E7D545 /* SearchVC.swift in Sources */,
-				7436D1091BFFF91800E7D545 /* ScheduleVC.swift in Sources */,
-				7436D10B1BFFF92900E7D545 /* PersonalVC.swift in Sources */,
-				7436D1071BFFF8D700E7D545 /* FavoriteVC.swift in Sources */,
 				7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
