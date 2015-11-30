@@ -17,7 +17,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KWh-J1-awC" kind="relationship" relationship="viewControllers" id="8fa-PC-4Zh"/>
+                        <segue destination="Khn-cM-AEY" kind="relationship" relationship="viewControllers" id="fdw-rN-Tkm"/>
                         <segue destination="oDV-4k-n0E" kind="relationship" relationship="viewControllers" id="DR4-X1-F8N"/>
                         <segue destination="tlf-18-4kr" kind="relationship" relationship="viewControllers" id="dw1-NU-XfE"/>
                         <segue destination="oyE-00-RVl" kind="relationship" relationship="viewControllers" id="NN7-Jd-Zne"/>
@@ -25,27 +25,45 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-54" y="10"/>
         </scene>
         <!--Search-->
-        <scene sceneID="Zp0-Nr-uBC">
+        <scene sceneID="ZEd-gA-pqK">
             <objects>
-                <viewController id="KWh-J1-awC" customClass="SearchVC" customModule="ProjectKarma" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yqF-nK-l4v"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ltk-v3-zDT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4In-As-J1a">
+                <tableViewController id="Khn-cM-AEY" customClass="SearchVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="avJ-qV-Niv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="pde-nk-mrO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TgO-E4-NQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="hZG-Se-y2v">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aqE-ML-fUs">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aqE-ML-fUs" id="Ttf-oi-e4Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Khn-cM-AEY" id="wFh-k5-Cec"/>
+                            <outlet property="delegate" destination="Khn-cM-AEY" id="frC-pk-JnC"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Search" id="UKb-h3-Z7M"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVZ-MZ-uEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="-163"/>
+            <point key="canvasLocation" x="708" y="-73"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="sEr-4C-d9L">
