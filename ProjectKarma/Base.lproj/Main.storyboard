@@ -17,7 +17,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Khn-cM-AEY" kind="relationship" relationship="viewControllers" id="fdw-rN-Tkm"/>
+                        <segue destination="NKQ-MK-5yn" kind="relationship" relationship="viewControllers" id="iiU-h8-bW2"/>
                         <segue destination="oDV-4k-n0E" kind="relationship" relationship="viewControllers" id="DR4-X1-F8N"/>
                         <segue destination="tlf-18-4kr" kind="relationship" relationship="viewControllers" id="dw1-NU-XfE"/>
                         <segue destination="oyE-00-RVl" kind="relationship" relationship="viewControllers" id="NN7-Jd-Zne"/>
@@ -28,25 +28,25 @@
             <point key="canvasLocation" x="-54" y="10"/>
         </scene>
         <!--Search-->
-        <scene sceneID="ZEd-gA-pqK">
+        <scene sceneID="JiS-as-WXu">
             <objects>
-                <tableViewController id="Khn-cM-AEY" customClass="SearchVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="avJ-qV-Niv">
+                <tableViewController id="NKQ-MK-5yn" customClass="SearchVC" customModule="ProjectKarma" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VXK-lc-ub9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="hZG-Se-y2v">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Uo7-qW-ekb">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <animations/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aqE-ML-fUs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vnq-y7-ggT">
                                 <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aqE-ML-fUs" id="Ttf-oi-e4Y">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vnq-y7-ggT" id="pX6-Fd-KOY">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
@@ -55,19 +55,19 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Khn-cM-AEY" id="wFh-k5-Cec"/>
-                            <outlet property="delegate" destination="Khn-cM-AEY" id="frC-pk-JnC"/>
+                            <outlet property="dataSource" destination="NKQ-MK-5yn" id="qz8-Uz-3xW"/>
+                            <outlet property="delegate" destination="NKQ-MK-5yn" id="shk-7y-Zhn"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Search" id="UKb-h3-Z7M"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="mPS-Dk-nHf"/>
                     <connections>
-                        <outlet property="searchBar_" destination="hZG-Se-y2v" id="Tlz-Ny-znR"/>
-                        <outlet property="tableView_" destination="avJ-qV-Niv" id="dsl-yT-XPY"/>
+                        <outlet property="searchBar_" destination="Uo7-qW-ekb" id="XLx-vQ-2jH"/>
+                        <outlet property="tableView_" destination="VXK-lc-ub9" id="Jdr-an-Rvq"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UVZ-MZ-uEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PuI-zG-uoi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="-73"/>
+            <point key="canvasLocation" x="708" y="-173"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="sEr-4C-d9L">
