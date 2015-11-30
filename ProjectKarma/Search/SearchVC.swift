@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 class SearchVC: UITableViewController {
+
     @IBOutlet var searchBar_: UISearchBar!
     @IBOutlet var tableView_: UITableView!
     
