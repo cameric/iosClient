@@ -23,6 +23,8 @@
 		7436D0E11BFFF47E00E7D545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */; };
 		7436D0EC1BFFF47E00E7D545 /* ProjectKarmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0EB1BFFF47E00E7D545 /* ProjectKarmaTests.swift */; };
 		7436D0F71BFFF47E00E7D545 /* ProjectKarmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0F61BFFF47E00E7D545 /* ProjectKarmaUITests.swift */; };
+		7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458D7B21C2B61FE008ABA85 /* SearchBar.swift */; };
+		7458D7B51C2B6301008ABA85 /* SearchBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		7436D0F21BFFF47E00E7D545 /* ProjectKarmaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectKarmaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7436D0F61BFFF47E00E7D545 /* ProjectKarmaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectKarmaUITests.swift; sourceTree = "<group>"; };
 		7436D0F81BFFF47E00E7D545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7458D7B21C2B61FE008ABA85 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */,
+				7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */,
+				7458D7B21C2B61FE008ABA85 /* SearchBar.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -355,9 +361,11 @@
 			files = (
 				25AF484D1C0C5C8C00C71DB6 /* PersonalVC.swift in Sources */,
 				25AF48491C0C5C7F00C71DB6 /* SearchVC.swift in Sources */,
+				7458D7B51C2B6301008ABA85 /* SearchBarVC.swift in Sources */,
 				7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */,
 				25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */,
 				25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */,
+				7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
