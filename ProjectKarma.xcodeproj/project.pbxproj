@@ -25,6 +25,9 @@
 		7436D0F71BFFF47E00E7D545 /* ProjectKarmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0F61BFFF47E00E7D545 /* ProjectKarmaUITests.swift */; };
 		7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458D7B21C2B61FE008ABA85 /* SearchBar.swift */; };
 		7458D7B51C2B6301008ABA85 /* SearchBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */; };
+		7458D7B71C2BB439008ABA85 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458D7B61C2BB439008ABA85 /* ColorScheme.swift */; };
+		7458D7B91C2BB8F3008ABA85 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458D7B81C2BB8F3008ABA85 /* Font.swift */; };
+		7458D7F91C2BF2BE008ABA85 /* SearchUserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		7436D0F81BFFF47E00E7D545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7458D7B21C2B61FE008ABA85 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarVC.swift; sourceTree = "<group>"; };
+		7458D7B61C2BB439008ABA85 /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorScheme.swift; path = ../ColorScheme.swift; sourceTree = "<group>"; };
+		7458D7B81C2BB8F3008ABA85 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Font.swift; path = ../Font.swift; sourceTree = "<group>"; };
+		7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchUserListCell.swift; path = ../../SearchUserListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,9 @@
 		740DFC721C0C4FEA00CE36EA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */,
+				7458D7B61C2BB439008ABA85 /* ColorScheme.swift */,
+				7458D7B81C2BB8F3008ABA85 /* Font.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -296,6 +305,7 @@
 				TargetAttributes = {
 					7436D0D01BFFF47E00E7D545 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = Z5DDEVPSTD;
 					};
 					7436D0E61BFFF47E00E7D545 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -359,10 +369,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7458D7B71C2BB439008ABA85 /* ColorScheme.swift in Sources */,
 				25AF484D1C0C5C8C00C71DB6 /* PersonalVC.swift in Sources */,
 				25AF48491C0C5C7F00C71DB6 /* SearchVC.swift in Sources */,
 				7458D7B51C2B6301008ABA85 /* SearchBarVC.swift in Sources */,
 				7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */,
+				7458D7B91C2BB8F3008ABA85 /* Font.swift in Sources */,
+				7458D7F91C2BF2BE008ABA85 /* SearchUserListCell.swift in Sources */,
 				25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */,
 				25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */,
 				7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */,
@@ -507,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ProjectKarma/AVOSCloud",
@@ -528,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ProjectKarma/AVOSCloud",

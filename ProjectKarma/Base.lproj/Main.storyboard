@@ -13,7 +13,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="0.4549019608" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="NKQ-MK-5yn" kind="relationship" relationship="viewControllers" id="iiU-h8-bW2"/>
@@ -24,9 +24,9 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="10"/>
+            <point key="canvasLocation" x="-48" y="-2"/>
         </scene>
-        <!--Search-->
+        <!--SearchVC-->
         <scene sceneID="JiS-as-WXu">
             <objects>
                 <tableViewController id="NKQ-MK-5yn" customClass="SearchVC" customModule="ProjectKarma" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" id="vnq-y7-ggT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" id="vnq-y7-ggT" customClass="SearchUserListCell" customModule="ProjectKarma" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vnq-y7-ggT" id="pX6-Fd-KOY">
@@ -49,7 +49,9 @@
                             <outlet property="delegate" destination="NKQ-MK-5yn" id="shk-7y-Zhn"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Search" id="mPS-Dk-nHf"/>
+                    <tabBarItem key="tabBarItem" title="" image="Search" id="mPS-Dk-nHf">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView_" destination="VXK-lc-ub9" id="Jdr-an-Rvq"/>
                     </connections>
@@ -58,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="708" y="-173"/>
         </scene>
-        <!--Favorite-->
+        <!--Table View Controller-->
         <scene sceneID="sEr-4C-d9L">
             <objects>
                 <tableViewController id="oDV-4k-n0E" sceneMemberID="viewController">
@@ -67,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Uo6-BQ-lPM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" id="Uo6-BQ-lPM">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uo6-BQ-lPM" id="B5B-r3-pkP">
@@ -81,13 +83,15 @@
                             <outlet property="delegate" destination="oDV-4k-n0E" id="jun-mA-1s7"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favorite" id="LTH-ZD-vqO"/>
+                    <tabBarItem key="tabBarItem" title="" image="Rating" id="LTH-ZD-vqO">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsO-rS-9YF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="592"/>
         </scene>
-        <!--Schedule-->
+        <!--View Controller-->
         <scene sceneID="9Mv-bD-Fzb">
             <objects>
                 <viewController id="tlf-18-4kr" sceneMemberID="viewController">
@@ -100,13 +104,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" id="xpc-dT-lJb"/>
+                    <tabBarItem key="tabBarItem" title="" image="Clock" id="xpc-dT-lJb">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jo-03-TAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="696" y="1424"/>
         </scene>
-        <!--Personal-->
+        <!--Table View Controller-->
         <scene sceneID="var-K2-SVw">
             <objects>
                 <tableViewController id="oyE-00-RVl" sceneMemberID="viewController">
@@ -129,11 +135,20 @@
                             <outlet property="delegate" destination="oyE-00-RVl" id="rHx-Qu-x5E"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Personal" id="242-Ik-Vdi"/>
+                    <tabBarItem key="tabBarItem" title="" image="Contacts" id="242-Ik-Vdi">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdR-fg-TYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="2180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Clock" width="38" height="38"/>
+        <image name="Contacts" width="38" height="38"/>
+        <image name="Rating" width="38" height="38"/>
+        <image name="Search" width="38" height="38"/>
+    </resources>
+    <color key="tintColor" red="1" green="0.45490196078431372" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

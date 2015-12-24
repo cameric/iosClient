@@ -94,4 +94,21 @@ class SearchBar: UISearchBar {
         
         return index
     }
+    
+    func indexOfCancelInSubviews() -> Int! {
+        // Uncomment the next line to see the search bar subviews.
+        // println(subviews[0].subviews)
+        
+        var index: Int!
+        let searchBarView = subviews[0]
+        
+        for var i=0; i<searchBarView.subviews.count; ++i {
+            if searchBarView.subviews[i].isKindOfClass(UIButton) {
+                index = i
+                break
+            }
+        }
+        
+        return index
+    }
 }

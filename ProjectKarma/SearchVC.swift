@@ -33,10 +33,6 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         
         loadListOfUsers()
         
-        // Uncomment the following line to enable the default search controller.
-        // configureSearchController()
-        
-        // Comment out the next line to disable the customized search controller and search bar and use the default ones. Also, uncomment the above line.
         configureCustomSearchController()
 
     }
@@ -63,13 +59,13 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("searchCell", forIndexPath: indexPath)
+        let cell:SearchUserListCell = tableView.dequeueReusableCellWithIdentifier("searchCell", forIndexPath: indexPath) as! SearchUserListCell
         
         if shouldShowSearchResults {
-            cell.textLabel?.text = filteredArray[indexPath.row]
+            cell.loadItem(filteredArray[indexPath.row], image: "me.jpg")
         }
         else {
-            cell.textLabel?.text = dataArray[indexPath.row]
+            cell.loadItem(dataArray[indexPath.row], image: "me.jpg")
         }
         
         return cell
@@ -77,38 +73,24 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60.0
+        return 200.0
     }
     
     
     // MARK: Custom functions
     
     func loadListOfUsers() {
-        let userstring = "Cam Fernando Tony"
+        let userstring = "Cam Fernando Tony Spencer Eric Caroline Justin"
         dataArray = userstring.componentsSeparatedByString(" ")
         
         // Reload the tableview.
         tableView_.reloadData()
     }
     
-    func configureSearchController() {
-        // Initialize and perform a minimum configuration to the search controller.
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search here"
-        searchController.searchBar.delegate = self
-        searchController.searchBar.sizeToFit()
-        
-        // Place the search bar view to the tableview headerview.
-        tableView_.tableHeaderView = searchController.searchBar
-    }
-    
-    
     func configureCustomSearchController() {
-        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tableView_.frame.size.width, 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
+        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tableView_.frame.size.width, 50.0), searchBarFont: Font.fontWithSize(16.0), searchBarTextColor: ColorScheme.fontColor(), searchBarTintColor: ColorScheme.mainColor())
         
-        customSearchController.customSearchBar.placeholder = "Doctor"
+        customSearchController.customSearchBar.placeholder = "Doctor Zhou"
         tableView_.tableHeaderView = customSearchController.customSearchBar
         
         customSearchController.customDelegate = self
@@ -147,10 +129,10 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         }
         
         // Filter the data array and get only those countries that match the search text.
-        filteredArray = dataArray.filter({ (country) -> Bool in
-            let countryText:NSString = country
+        filteredArray = dataArray.filter({ (user) -> Bool in
+            let userList:NSString = user
             
-            return (countryText.rangeOfString(searchString, options: NSStringCompareOptions.CaseInsensitiveSearch).location) != NSNotFound
+            return (userList.rangeOfString(searchString, options: NSStringCompareOptions.CaseInsensitiveSearch).location) != NSNotFound
         })
         
         // Reload the tableview.
@@ -182,10 +164,10 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     func didChangeSearchText(searchText: String) {
         // Filter the data array and get only those countries that match the search text.
-        filteredArray = dataArray.filter({ (country) -> Bool in
-            let countryText: NSString = country
+        filteredArray = dataArray.filter({ (user) -> Bool in
+            let userList: NSString = user
             
-            return (countryText.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch).location) != NSNotFound
+            return (userList.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch).location) != NSNotFound
         })
         
         // Reload the tableview.
