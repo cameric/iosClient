@@ -63,7 +63,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("idCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("searchCell", forIndexPath: indexPath)
         
         if shouldShowSearchResults {
             cell.textLabel?.text = filteredArray[indexPath.row]
@@ -85,7 +85,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     func loadListOfUsers() {
         let userstring = "Cam Fernando Tony"
-        dataArray = userstring.componentsSeparatedByString("\n")
+        dataArray = userstring.componentsSeparatedByString(" ")
         
         // Reload the tableview.
         tableView_.reloadData()
