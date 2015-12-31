@@ -1,3 +1,4 @@
 platform :ios, '9.2'
+use_frameworks!
 
-pod 'AVOSCloud', '~> 3.1'
+pod 'AVOSCloudDynamic', '~> 3.1'

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092B23881C34C40800614EFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B23871C34C40800614EFD /* User.swift */; };
 		0979C20D1C34BFB1000BF8F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979C20C1C34BFB1000BF8F8 /* User.swift */; };
-		22C7CBA97042C6EB6EC8419F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1765AB8775AFD76645BBD40D /* libPods.a */; };
 		25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */; };
 		25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */; };
 		25AF48411C0C580400C71DB6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */; };
@@ -19,6 +19,7 @@
 		25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */; };
 		25AF484D1C0C5C8C00C71DB6 /* PersonalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484C1C0C5C8C00C71DB6 /* PersonalVC.swift */; };
 		25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */; };
+		71E8776821B97429B4670096 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46400D1E132AC462656E376 /* Pods.framework */; };
 		7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */; };
 		7436D0DC1BFFF47E00E7D545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7436D0DA1BFFF47E00E7D545 /* Main.storyboard */; };
 		7436D0DE1BFFF47E00E7D545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7436D0DD1BFFF47E00E7D545 /* Assets.xcassets */; };
@@ -50,8 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092B23871C34C40800614EFD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ProjectKarma/User.swift; sourceTree = SOURCE_ROOT; };
 		0979C20C1C34BFB1000BF8F8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		1765AB8775AFD76645BBD40D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
 		25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -81,6 +82,7 @@
 		7458D7B81C2BB8F3008ABA85 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserListCell.swift; sourceTree = "<group>"; };
 		86AAACBCF58F19FD17A2E6F8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D46400D1E132AC462656E376 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +96,7 @@
 				25AF48411C0C580400C71DB6 /* SystemConfiguration.framework in Frameworks */,
 				25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */,
 				25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */,
-				22C7CBA97042C6EB6EC8419F /* libPods.a in Frameworks */,
+				71E8776821B97429B4670096 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +128,7 @@
 		0979C20E1C34C2BC000BF8F8 /* ServerAPI */ = {
 			isa = PBXGroup;
 			children = (
+				092B23871C34C40800614EFD /* User.swift */,
 			);
 			path = ServerAPI;
 			sourceTree = "<group>";
@@ -133,7 +136,7 @@
 		1D4EEE85A7E75FB639519AEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1765AB8775AFD76645BBD40D /* libPods.a */,
+				D46400D1E132AC462656E376 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				7458D7B91C2BB8F3008ABA85 /* Font.swift in Sources */,
 				7458D7F91C2BF2BE008ABA85 /* SearchUserListCell.swift in Sources */,
 				25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */,
+				092B23881C34C40800614EFD /* User.swift in Sources */,
 				25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */,
 				7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */,
 				0979C20D1C34BFB1000BF8F8 /* User.swift in Sources */,
