@@ -9,15 +9,24 @@
 import UIKit
 
 class User {
+    // MARK: Properties
+    // MARK: Identity
+    var username: String
     var name: String
     var email: String
     
-    var avatar: UIImage?
+    // MARK: Graphics
+    // Note: The avatar is given as generic NSData; if you want to display it, convert to
+    // a UIImage via UIImage(data: NSData)
+    // TODO: Should this be an AVFile? I'm inclined to say "no" since that exposes AVOSCloud in the model
+    var avatar: NSData?
     
     // MARK: Initialization
-    init?(name: String, email: String, avatar: UIImage?) {
+    init?(username: String, name: String, email: String, avatar: NSData?) {
+        self.username = username
         self.name = name
         self.email = email
+        
         self.avatar = avatar
         
         // Return nil if any values are invalid
@@ -25,6 +34,8 @@ class User {
         if name.isEmpty {
             return nil
         } else if email.isEmpty {
+            return nil
+        } else if username.isEmpty {
             return nil
         }
     }

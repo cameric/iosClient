@@ -14,14 +14,15 @@
 
 /* Begin PBXFileReference section */
 		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		3153E699CD4FAEF8FCD23A767A50E953 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloudIM.framework; path = "iOS/release-v3.1.7.1/Dynamic/AVOSCloudIM.framework"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5195C54AD34E0A27DB66178F484229EF /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = "iOS/release-v3.1.7.1/Dynamic/AVOSCloud.framework"; sourceTree = "<group>"; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
 		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BB5D32B5D8FFDA27126FB97ADA2F84CF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C522285E711CABD202F86CE9231326A9 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = "iOS/release-v3.1.7.1/Dynamic/AVOSCloud.framework"; sourceTree = "<group>"; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
@@ -49,12 +50,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5843AD8A38E7D0AA3C91DA64256E7A0C /* Frameworks */ = {
+		2D1C8745626400451284AB65AD677181 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5195C54AD34E0A27DB66178F484229EF /* AVOSCloud.framework */,
+				C522285E711CABD202F86CE9231326A9 /* AVOSCloud.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61FC49D77EDD9B1F50678217D74EC6B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA40F27E0FA14FA253CAD42F91992762 /* AVOSCloudDynamic */,
+				C564A7AF0570B6928F7E314768C21D79 /* AVOSCloudIMDynamic */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
@@ -80,34 +90,17 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				AB23F2AD5EF9A8C4D5D6FC151948739C /* Pods */,
+				61FC49D77EDD9B1F50678217D74EC6B5 /* Pods */,
 				1F65C4CD40C947C4415F8D28536735CC /* Products */,
 				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8F098E2A9B484AA0135B76FF9DF9B178 /* AVOSCloudDynamic */ = {
-			isa = PBXGroup;
-			children = (
-				5843AD8A38E7D0AA3C91DA64256E7A0C /* Frameworks */,
-				986AE143EF7D03F78220D6BF74F63ED8 /* Resources */,
-			);
-			path = AVOSCloudDynamic;
-			sourceTree = "<group>";
-		};
-		986AE143EF7D03F78220D6BF74F63ED8 /* Resources */ = {
+		8A424AC8815158CDE6C2FCF835C55342 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		AB23F2AD5EF9A8C4D5D6FC151948739C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8F098E2A9B484AA0135B76FF9DF9B178 /* AVOSCloudDynamic */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
@@ -116,6 +109,15 @@
 				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BA40F27E0FA14FA253CAD42F91992762 /* AVOSCloudDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				2D1C8745626400451284AB65AD677181 /* Frameworks */,
+				8A424AC8815158CDE6C2FCF835C55342 /* Resources */,
+			);
+			path = AVOSCloudDynamic;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -132,6 +134,30 @@
 				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		C564A7AF0570B6928F7E314768C21D79 /* AVOSCloudIMDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				CA459D4D68316FB2BD441DC50E29A23E /* Frameworks */,
+				C5CBB9B7675EE65C0C2F7488C288DC33 /* Resources */,
+			);
+			path = AVOSCloudIMDynamic;
+			sourceTree = "<group>";
+		};
+		C5CBB9B7675EE65C0C2F7488C288DC33 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CA459D4D68316FB2BD441DC50E29A23E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3153E699CD4FAEF8FCD23A767A50E953 /* AVOSCloudIM.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
