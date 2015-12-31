@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		092B23881C34C40800614EFD /* UserQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B23871C34C40800614EFD /* UserQuery.swift */; };
+		0930C0D61C35EAAB0065FD9F /* QueryWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930C0D51C35EAAB0065FD9F /* QueryWrapper.swift */; };
 		0979C20D1C34BFB1000BF8F8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979C20C1C34BFB1000BF8F8 /* UserModel.swift */; };
 		25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */; };
 		25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		092B23871C34C40800614EFD /* UserQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserQuery.swift; path = ProjectKarma/UserQuery.swift; sourceTree = SOURCE_ROOT; };
+		0930C0D51C35EAAB0065FD9F /* QueryWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryWrapper.swift; path = ProjectKarma/QueryWrapper.swift; sourceTree = SOURCE_ROOT; };
 		0979C20C1C34BFB1000BF8F8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				092B23871C34C40800614EFD /* UserQuery.swift */,
+				0930C0D51C35EAAB0065FD9F /* QueryWrapper.swift */,
 			);
 			name = Query;
 			path = ServerAPI;
@@ -474,6 +477,7 @@
 				7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */,
 				7458D7B91C2BB8F3008ABA85 /* Font.swift in Sources */,
 				7458D7F91C2BF2BE008ABA85 /* SearchUserListCell.swift in Sources */,
+				0930C0D61C35EAAB0065FD9F /* QueryWrapper.swift in Sources */,
 				25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */,
 				092B23881C34C40800614EFD /* UserQuery.swift in Sources */,
 				25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */,

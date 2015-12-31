@@ -16,27 +16,15 @@ class User {
     var email: String
     
     // MARK: Graphics
-    // Note: The avatar is given as generic NSData; if you want to display it, convert to
-    // a UIImage via UIImage(data: NSData)
-    // TODO: Should this be an AVFile? I'm inclined to say "no" since that exposes AVOSCloud in the model
-    var avatar: NSData?
+    // TODO: I presume an avatar can be "not set" in which case we'll use a default image.
+    // What's the best way to handle that?
+    var avatar: UIImage?
     
     // MARK: Initialization
-    init?(username: String, name: String, email: String, avatar: NSData?) {
+    init(username: String, name: String, email: String, avatar: UIImage?) {
         self.username = username
         self.name = name
         self.email = email
-        
         self.avatar = avatar
-        
-        // Return nil if any values are invalid
-        // This must be done AFTER the above are initialized
-        if name.isEmpty {
-            return nil
-        } else if email.isEmpty {
-            return nil
-        } else if username.isEmpty {
-            return nil
-        }
     }
 }
