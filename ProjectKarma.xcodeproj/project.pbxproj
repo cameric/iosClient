@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0979C20D1C34BFB1000BF8F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979C20C1C34BFB1000BF8F8 /* User.swift */; };
 		22C7CBA97042C6EB6EC8419F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1765AB8775AFD76645BBD40D /* libPods.a */; };
 		25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */; };
 		25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0979C20C1C34BFB1000BF8F8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1765AB8775AFD76645BBD40D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
@@ -113,6 +115,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0979C20B1C34BF8D000BF8F8 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				0979C20C1C34BFB1000BF8F8 /* User.swift */,
+			);
+			name = DataModels;
+			sourceTree = "<group>";
+		};
+		0979C20E1C34C2BC000BF8F8 /* ServerAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ServerAPI;
+			sourceTree = "<group>";
+		};
 		1D4EEE85A7E75FB639519AEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +235,8 @@
 		7436D0D31BFFF47E00E7D545 /* ProjectKarma */ = {
 			isa = PBXGroup;
 			children = (
+				0979C20E1C34C2BC000BF8F8 /* ServerAPI */,
+				0979C20B1C34BF8D000BF8F8 /* DataModels */,
 				25AF483F1C0C57B500C71DB6 /* Frameworks */,
 				25AF48531C0C5CAF00C71DB6 /* Favorite */,
 				25AF48521C0C5CA700C71DB6 /* Personal */,
@@ -454,6 +473,7 @@
 				25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */,
 				25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */,
 				7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */,
+				0979C20D1C34BFB1000BF8F8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
