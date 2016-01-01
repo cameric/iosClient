@@ -1,0 +1,14 @@
+PODS:
+  - AVOSCloudDynamic (3.1.7.1)
+  - AVOSCloudIMDynamic (3.1.7.1):
+    - AVOSCloudDynamic
+
+DEPENDENCIES:
+  - AVOSCloudDynamic (~> 3.1)
+  - AVOSCloudIMDynamic (~> 3.1)
+
+SPEC CHECKSUMS:
+  AVOSCloudDynamic: 532aa15204f82638c93a6f47f3c91bc18b96304c
+  AVOSCloudIMDynamic: 6c2d176471c8d6423ed8bb8bab1e43dcceadd215
+
+COCOAPODS: 0.39.0
