@@ -10,48 +10,57 @@ import UIKit
 import Foundation
 import AVOSCloud
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
     
+    // MARK: Properties
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPwd: UITextField!
+    @IBOutlet weak var invalidLoginInfo: UILabel!
+    
+    var showLoginInfo = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        inputEmail.delegate = self
+        inputPwd.delegate = self
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let nextTag=textField.tag + 1;
+        // Try to find next responder
+        let nextResponder=textField.superview?.viewWithTag(nextTag) as UIResponder!
+        
+        if (nextResponder != nil) {
+            // Found next responder, so set it.
+            nextResponder?.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard
+            textField.resignFirstResponder()
+        }
+        return false // We do not want UITextField to insert line-breaks.
     }
     
+    // MARK: Actions
     @IBAction func login(sender: UIButton) {
+        if showLoginInfo {
+            showLoginInfo = false;
+            self.invalidLoginInfo.text = ""
+        }
+        
         if let username = inputEmail!.text {
             if let pwd = inputPwd!.text {
                 AVUser.logInWithUsernameInBackground(username, password: pwd, block: { (user: AVUser!, error: NSError!) in
-                    print("\(user.objectForKey("name"))")
-                })
-            }
-        }
-    }
-    
-    @IBAction func signup(sender: UIButton) {
-        let newUser = AVUser()
-        if let username = inputEmail!.text {
-            if let pwd = inputPwd!.text {
-                newUser.username = username
-                newUser.email = pwd
-                newUser.signUpInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> () in
-                    if (succeeded) {
-                        print("Successfully logged in")
+                    if error != nil {
+                        self.showLoginInfo = true
+                        self.invalidLoginInfo.text = "用户名或密码错误"
                     } else {
-                        print("\(error)")
+                        print("\(user.objectForKey("name"))")
                     }
                 })
-            } else {
-                print("Incomplete info!")
             }
         }
     }
-    
+
 }

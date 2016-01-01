@@ -1,18 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "389158010C98557A8FACA556760DCCD5C88D7715",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2EC77FADB0B39FB86025877C261BFFB8D4172C3B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2EC77FADB0B39FB86025877C261BFFB8D4172C3B" : 0,
     "CE31FB7ED082D131E9CBB0D02B94CF38C0F9DBC3" : 0,
-    "1E9039B0DEE46C3595AC88E02DA29992FD126EB3" : 0,
-    "389158010C98557A8FACA556760DCCD5C88D7715" : 0
+    "1E9039B0DEE46C3595AC88E02DA29992FD126EB3" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1BD4664F-AA78-4ED9-A0FD-C16A13DB3C5B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2EC77FADB0B39FB86025877C261BFFB8D4172C3B" : "ProjectKarma\/",
     "CE31FB7ED082D131E9CBB0D02B94CF38C0F9DBC3" : "",
-    "1E9039B0DEE46C3595AC88E02DA29992FD126EB3" : "..",
-    "389158010C98557A8FACA556760DCCD5C88D7715" : "ProjectKarma\/"
+    "1E9039B0DEE46C3595AC88E02DA29992FD126EB3" : ".."
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ProjectKarma",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -26,7 +26,7 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cameric\/ProjectKarma.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "389158010C98557A8FACA556760DCCD5C88D7715"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2EC77FADB0B39FB86025877C261BFFB8D4172C3B"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CamZhou\/SimulTubeClient.git",
