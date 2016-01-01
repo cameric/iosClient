@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        
+
         // TODO: Testing code. Remove.
         getUserShortById("567c990b1e949ec0524deb21") {(user: User!, error: ErrorType!) -> (Void) in
             if error != nil {
