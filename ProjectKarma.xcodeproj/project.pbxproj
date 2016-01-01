@@ -52,8 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		092B23871C34C40800614EFD /* UserQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserQuery.swift; path = ProjectKarma/UserQuery.swift; sourceTree = SOURCE_ROOT; };
-		0930C0D51C35EAAB0065FD9F /* QueryWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryWrapper.swift; path = ProjectKarma/QueryWrapper.swift; sourceTree = SOURCE_ROOT; };
+		092B23871C34C40800614EFD /* UserQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserQuery.swift; sourceTree = "<group>"; };
+		0930C0D51C35EAAB0065FD9F /* QueryWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryWrapper.swift; sourceTree = "<group>"; };
 		0979C20C1C34BFB1000BF8F8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
@@ -130,11 +130,10 @@
 		0979C20E1C34C2BC000BF8F8 /* Query */ = {
 			isa = PBXGroup;
 			children = (
-				092B23871C34C40800614EFD /* UserQuery.swift */,
 				0930C0D51C35EAAB0065FD9F /* QueryWrapper.swift */,
+				092B23871C34C40800614EFD /* UserQuery.swift */,
 			);
-			name = Query;
-			path = ServerAPI;
+			path = Query;
 			sourceTree = "<group>";
 		};
 		1D4EEE85A7E75FB639519AEC /* Frameworks */ = {
@@ -247,9 +246,9 @@
 				25AF483F1C0C57B500C71DB6 /* Frameworks */,
 				740DFC731C0C4FEA00CE36EA /* Icons */,
 				25AF48521C0C5CA700C71DB6 /* Personal */,
+				0979C20E1C34C2BC000BF8F8 /* Query */,
 				25AF48511C0C5CA000C71DB6 /* Schedule */,
 				25AF48501C0C5C9500C71DB6 /* Search */,
-				0979C20E1C34C2BC000BF8F8 /* Query */,
 				740DFC721C0C4FEA00CE36EA /* Shared */,
 				7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */,
 				7436D0DD1BFFF47E00E7D545 /* Assets.xcassets */,
