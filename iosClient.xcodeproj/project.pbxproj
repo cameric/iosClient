@@ -214,11 +214,11 @@
 		25AF48501C0C5C9500C71DB6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				258D84CE1C37BC8F00DCD9AA /* Search.storyboard */,
 				7458D7B21C2B61FE008ABA85 /* SearchBar.swift */,
 				7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */,
-				25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */,
-				258D84CE1C37BC8F00DCD9AA /* Search.storyboard */,
 				258D84D21C37CE6600DCD9AA /* SearchTabBarViewController.swift */,
+				25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -226,9 +226,9 @@
 		25AF48511C0C5CA000C71DB6 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */,
 				258D84D61C37CFA100DCD9AA /* SchduleTabBarViewController.swift */,
 				258D84D81C37CFC500DCD9AA /* Schedule.storyboard */,
+				25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -236,20 +236,19 @@
 		25AF48521C0C5CA700C71DB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				25AF484C1C0C5C8C00C71DB6 /* ProfileVC.swift */,
 				258D84CC1C37BC8000DCD9AA /* Profile.storyboard */,
 				258D84D41C37CE8500DCD9AA /* ProfileTabBarViewController.swift */,
+				25AF484C1C0C5C8C00C71DB6 /* ProfileVC.swift */,
 			);
-			name = Profile;
-			path = Personal;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		25AF48531C0C5CAF00C71DB6 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */,
 				258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */,
 				258D84D01C37CE1700DCD9AA /* FavoriteTabBarViewController.swift */,
+				25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -306,11 +305,11 @@
 				25AF48501C0C5C9500C71DB6 /* Search */,
 				740DFC721C0C4FEA00CE36EA /* Shared */,
 				09DD2FE21C36F2430074037C /* User */,
-				7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */,
-				7436D0DA1BFFF47E00E7D545 /* Main.storyboard */,
 				7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */,
 				7436D0DD1BFFF47E00E7D545 /* Assets.xcassets */,
 				7436D0E21BFFF47E00E7D545 /* Info.plist */,
+				7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */,
+				7436D0DA1BFFF47E00E7D545 /* Main.storyboard */,
 				09DEBC651C3770D50033B579 /* iosClient-Bridging-Header.h */,
 			);
 			path = iosClient;
@@ -594,7 +593,7 @@
 				7436D0DB1BFFF47E00E7D545 /* Base */,
 			);
 			name = Main.storyboard;
-			path = Storyboards/.;
+			path = .;
 			sourceTree = "<group>";
 		};
 		7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */ = {
@@ -603,7 +602,7 @@
 				7436D0E01BFFF47E00E7D545 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = Storyboards/.;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
