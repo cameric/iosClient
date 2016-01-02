@@ -26,6 +26,9 @@ func userFromQueryResult(result: AnyObject!) throws -> User {
     
     // Try to get each of the necessary properties from the response. Return nil if any one does not
     // exist or is not convertible to the expected type, which would render the user info invalid
+    guard let uid: String = resultDict["objectId"] as? String else {
+        throw QueryError.IncompleteResponse(missing: "objectId")
+    }
     guard let username: String = resultDict["username"] as? String else {
         throw QueryError.IncompleteResponse(missing: "username")
     }
@@ -37,15 +40,36 @@ func userFromQueryResult(result: AnyObject!) throws -> User {
     }
     
     // TODO: A user's avatar can probably be nil (not set), so maybe we shouldn't consider the user invalid if it's nil...
-    guard let avatar: AVFile = resultDict["avatar"] as? AVFile else {
-        throw QueryError.IncompleteResponse(missing: "email")
-    }
+//    guard let avatar: AVFile = resultDict["avatar"] as? AVFile else {
+//        throw QueryError.IncompleteResponse(missing: "email")
+//    }
     
     return User(
+        uid: uid,
         username: username,
         name: name,
-        email: email,
-        avatar: UIImage(data: avatar.getData()))
+        email: email)
+}
+
+/**
+ Construct a user object if he/she has logged in
+
+ - returns: a formulated user object if the corresponding user session 
+     can be found from LeanCloud server. 
+        Return nil if the user hasn't logged in yet
+ 
+ Note that guard is not used here because currentUser() is guaranteed to 
+ return a dictionary that includes the corrsponding keys
+*/
+func getCurrentUserIfLoggedIn() -> User? {
+    if let curUser = AVUser.currentUser() {
+        return User(
+            uid: curUser["objectId"] as! String,
+            username: curUser["username"] as! String,
+            name: curUser["name"] as! String,
+            email: curUser["email"] as! String)
+    }
+    return nil
 }
 
 /**

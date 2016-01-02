@@ -14,6 +14,8 @@
 		09D08E0B1C3755CA00905187 /* AppointmentQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D08E0A1C3755CA00905187 /* AppointmentQuery.swift */; };
 		09DD2FE51C36F24C0074037C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD2FE31C36F24C0074037C /* LoginVC.swift */; };
 		09DD2FE61C36F24C0074037C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD2FE41C36F24C0074037C /* SignupVC.swift */; };
+		2548B6D41C37EBB000CB4906 /* UserModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548B6D31C37EBB000CB4906 /* UserModuleViewController.swift */; };
+		2548B6D61C37FD5800CB4906 /* DetailedProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */; };
 		258D84C71C37BBE500DCD9AA /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84C61C37BBE500DCD9AA /* User.storyboard */; };
 		258D84C91C37BBFE00DCD9AA /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */; };
 		258D84CD1C37BC8000DCD9AA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84CC1C37BC8000DCD9AA /* Profile.storyboard */; };
@@ -73,6 +75,8 @@
 		09DD2FE31C36F24C0074037C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		09DD2FE41C36F24C0074037C /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		09DEBC651C3770D50033B579 /* iosClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		2548B6D31C37EBB000CB4906 /* UserModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModuleViewController.swift; sourceTree = "<group>"; };
+		2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedProfileVC.swift; sourceTree = "<group>"; };
 		258D84C61C37BBE500DCD9AA /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
 		258D84CC1C37BC8000DCD9AA /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				09DD2FE31C36F24C0074037C /* LoginVC.swift */,
 				09DD2FE41C36F24C0074037C /* SignupVC.swift */,
 				258D84C61C37BBE500DCD9AA /* User.storyboard */,
+				2548B6D31C37EBB000CB4906 /* UserModuleViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				258D84CC1C37BC8000DCD9AA /* Profile.storyboard */,
 				258D84D41C37CE8500DCD9AA /* ProfileTabBarViewController.swift */,
 				25AF484C1C0C5C8C00C71DB6 /* ProfileVC.swift */,
+				2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2548B6D61C37FD5800CB4906 /* DetailedProfileVC.swift in Sources */,
 				7458D7B71C2BB439008ABA85 /* ColorScheme.swift in Sources */,
 				09D08E091C37533A00905187 /* AppointmentModel.swift in Sources */,
 				25AF484D1C0C5C8C00C71DB6 /* ProfileVC.swift in Sources */,
@@ -550,6 +557,7 @@
 				25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */,
 				258D84D51C37CE8500DCD9AA /* ProfileTabBarViewController.swift in Sources */,
 				09D08E0B1C3755CA00905187 /* AppointmentQuery.swift in Sources */,
+				2548B6D41C37EBB000CB4906 /* UserModuleViewController.swift in Sources */,
 				7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */,
 				0979C20D1C34BFB1000BF8F8 /* UserModel.swift in Sources */,
 			);
