@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092B23881C34C40800614EFD /* UserQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B23871C34C40800614EFD /* UserQuery.swift */; };
+		0930C0D61C35EAAB0065FD9F /* QueryWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930C0D51C35EAAB0065FD9F /* QueryWrapper.swift */; };
+		0979C20D1C34BFB1000BF8F8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979C20C1C34BFB1000BF8F8 /* UserModel.swift */; };
+		09DD2FE51C36F24C0074037C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD2FE31C36F24C0074037C /* LoginVC.swift */; };
+		09DD2FE61C36F24C0074037C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD2FE41C36F24C0074037C /* SignupVC.swift */; };
 		25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */; };
 		25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */; };
 		25AF48411C0C580400C71DB6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */; };
@@ -17,6 +22,7 @@
 		25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */; };
 		25AF484D1C0C5C8C00C71DB6 /* PersonalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484C1C0C5C8C00C71DB6 /* PersonalVC.swift */; };
 		25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */; };
+		71E8776821B97429B4670096 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46400D1E132AC462656E376 /* Pods.framework */; };
 		7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */; };
 		7436D0DC1BFFF47E00E7D545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7436D0DA1BFFF47E00E7D545 /* Main.storyboard */; };
 		7436D0DE1BFFF47E00E7D545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7436D0DD1BFFF47E00E7D545 /* Assets.xcassets */; };
@@ -48,6 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092B23871C34C40800614EFD /* UserQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserQuery.swift; sourceTree = "<group>"; };
+		0930C0D51C35EAAB0065FD9F /* QueryWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryWrapper.swift; sourceTree = "<group>"; };
+		0979C20C1C34BFB1000BF8F8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		09DD2FE31C36F24C0074037C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		09DD2FE41C36F24C0074037C /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
 		25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -58,6 +69,7 @@
 		25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		25AF484C1C0C5C8C00C71DB6 /* PersonalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalVC.swift; sourceTree = "<group>"; };
 		25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		4B644F80E0D1DCB359CC07F6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7436D0D11BFFF47E00E7D545 /* ProjectKarma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectKarma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7436D0DB1BFFF47E00E7D545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,9 +84,11 @@
 		7436D0F81BFFF47E00E7D545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7458D7B21C2B61FE008ABA85 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarVC.swift; sourceTree = "<group>"; };
-		7458D7B61C2BB439008ABA85 /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorScheme.swift; path = ../ColorScheme.swift; sourceTree = "<group>"; };
-		7458D7B81C2BB8F3008ABA85 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Font.swift; path = ../Font.swift; sourceTree = "<group>"; };
-		7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchUserListCell.swift; path = ../../SearchUserListCell.swift; sourceTree = "<group>"; };
+		7458D7B61C2BB439008ABA85 /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		7458D7B81C2BB8F3008ABA85 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserListCell.swift; sourceTree = "<group>"; };
+		86AAACBCF58F19FD17A2E6F8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D46400D1E132AC462656E376 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,7 @@
 				25AF48411C0C580400C71DB6 /* SystemConfiguration.framework in Frameworks */,
 				25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */,
 				25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */,
+				71E8776821B97429B4670096 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +123,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0979C20B1C34BF8D000BF8F8 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				0979C20C1C34BFB1000BF8F8 /* UserModel.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		0979C20E1C34C2BC000BF8F8 /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				0930C0D51C35EAAB0065FD9F /* QueryWrapper.swift */,
+				092B23871C34C40800614EFD /* UserQuery.swift */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
+		09DD2FE21C36F2430074037C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				09DD2FE31C36F24C0074037C /* LoginVC.swift */,
+				09DD2FE41C36F24C0074037C /* SignupVC.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		1D4EEE85A7E75FB639519AEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D46400D1E132AC462656E376 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		25AF483A1C0C57B100C71DB6 /* AVOSCloud */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,23 +169,23 @@
 		25AF483F1C0C57B500C71DB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25AF483A1C0C57B100C71DB6 /* AVOSCloud */,
+				25AF48461C0C581D00C71DB6 /* CoreLocation.framework */,
+				25AF48441C0C581500C71DB6 /* CoreTelephony.framework */,
 				25AF48421C0C580D00C71DB6 /* MobileCoreServices.framework */,
 				25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */,
-				25AF48441C0C581500C71DB6 /* CoreTelephony.framework */,
-				25AF48461C0C581D00C71DB6 /* CoreLocation.framework */,
-				25AF483A1C0C57B100C71DB6 /* AVOSCloud */,
 			);
-			name = Frameworks;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		25AF48501C0C5C9500C71DB6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */,
-				7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */,
 				7458D7B21C2B61FE008ABA85 /* SearchBar.swift */,
+				7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */,
+				25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */,
 			);
-			name = Search;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		25AF48511C0C5CA000C71DB6 /* Schedule */ = {
@@ -144,7 +193,7 @@
 			children = (
 				25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */,
 			);
-			name = Schedule;
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		25AF48521C0C5CA700C71DB6 /* Personal */ = {
@@ -152,7 +201,7 @@
 			children = (
 				25AF484C1C0C5C8C00C71DB6 /* PersonalVC.swift */,
 			);
-			name = Personal;
+			path = Personal;
 			sourceTree = "<group>";
 		};
 		25AF48531C0C5CAF00C71DB6 /* Favorite */ = {
@@ -160,15 +209,15 @@
 			children = (
 				25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */,
 			);
-			name = Favorite;
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 		740DFC721C0C4FEA00CE36EA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */,
 				7458D7B61C2BB439008ABA85 /* ColorScheme.swift */,
 				7458D7B81C2BB8F3008ABA85 /* Font.swift */,
+				7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -183,10 +232,12 @@
 		7436D0C81BFFF47E00E7D545 = {
 			isa = PBXGroup;
 			children = (
+				1D4EEE85A7E75FB639519AEC /* Frameworks */,
+				FE27A49ECD45E37F8253C917 /* Pods */,
+				7436D0D21BFFF47E00E7D545 /* Products */,
 				7436D0D31BFFF47E00E7D545 /* ProjectKarma */,
 				7436D0EA1BFFF47E00E7D545 /* ProjectKarmaTests */,
 				7436D0F51BFFF47E00E7D545 /* ProjectKarmaUITests */,
-				7436D0D21BFFF47E00E7D545 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,18 +254,21 @@
 		7436D0D31BFFF47E00E7D545 /* ProjectKarma */ = {
 			isa = PBXGroup;
 			children = (
-				25AF483F1C0C57B500C71DB6 /* Frameworks */,
+				0979C20B1C34BF8D000BF8F8 /* DataModels */,
 				25AF48531C0C5CAF00C71DB6 /* Favorite */,
-				25AF48521C0C5CA700C71DB6 /* Personal */,
-				25AF48501C0C5C9500C71DB6 /* Search */,
-				25AF48511C0C5CA000C71DB6 /* Schedule */,
-				7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */,
-				7436D0DA1BFFF47E00E7D545 /* Main.storyboard */,
-				740DFC721C0C4FEA00CE36EA /* Shared */,
+				25AF483F1C0C57B500C71DB6 /* Frameworks */,
 				740DFC731C0C4FEA00CE36EA /* Icons */,
+				25AF48521C0C5CA700C71DB6 /* Personal */,
+				0979C20E1C34C2BC000BF8F8 /* Query */,
+				25AF48511C0C5CA000C71DB6 /* Schedule */,
+				25AF48501C0C5C9500C71DB6 /* Search */,
+				740DFC721C0C4FEA00CE36EA /* Shared */,
+				09DD2FE21C36F2430074037C /* User */,
+				7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */,
 				7436D0DD1BFFF47E00E7D545 /* Assets.xcassets */,
-				7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */,
 				7436D0E21BFFF47E00E7D545 /* Info.plist */,
+				7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */,
+				7436D0DA1BFFF47E00E7D545 /* Main.storyboard */,
 			);
 			path = ProjectKarma;
 			sourceTree = "<group>";
@@ -222,8 +276,8 @@
 		7436D0EA1BFFF47E00E7D545 /* ProjectKarmaTests */ = {
 			isa = PBXGroup;
 			children = (
-				7436D0EB1BFFF47E00E7D545 /* ProjectKarmaTests.swift */,
 				7436D0ED1BFFF47E00E7D545 /* Info.plist */,
+				7436D0EB1BFFF47E00E7D545 /* ProjectKarmaTests.swift */,
 			);
 			path = ProjectKarmaTests;
 			sourceTree = "<group>";
@@ -231,10 +285,19 @@
 		7436D0F51BFFF47E00E7D545 /* ProjectKarmaUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7436D0F61BFFF47E00E7D545 /* ProjectKarmaUITests.swift */,
 				7436D0F81BFFF47E00E7D545 /* Info.plist */,
+				7436D0F61BFFF47E00E7D545 /* ProjectKarmaUITests.swift */,
 			);
 			path = ProjectKarmaUITests;
+			sourceTree = "<group>";
+		};
+		FE27A49ECD45E37F8253C917 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86AAACBCF58F19FD17A2E6F8 /* Pods.debug.xcconfig */,
+				4B644F80E0D1DCB359CC07F6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7436D0FB1BFFF47E00E7D545 /* Build configuration list for PBXNativeTarget "ProjectKarma" */;
 			buildPhases = (
+				2E6897AE02118FE13003FDF4 /* Check Pods Manifest.lock */,
 				7436D0CD1BFFF47E00E7D545 /* Sources */,
 				7436D0CE1BFFF47E00E7D545 /* Frameworks */,
 				7436D0CF1BFFF47E00E7D545 /* Resources */,
+				4C556F0CA37C227D6D710A19 /* Embed Pods Frameworks */,
+				0F4C8C66067F0573F48E427C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -364,6 +430,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F4C8C66067F0573F48E427C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E6897AE02118FE13003FDF4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C556F0CA37C227D6D710A19 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7436D0CD1BFFF47E00E7D545 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -371,14 +485,19 @@
 			files = (
 				7458D7B71C2BB439008ABA85 /* ColorScheme.swift in Sources */,
 				25AF484D1C0C5C8C00C71DB6 /* PersonalVC.swift in Sources */,
+				09DD2FE51C36F24C0074037C /* LoginVC.swift in Sources */,
 				25AF48491C0C5C7F00C71DB6 /* SearchVC.swift in Sources */,
 				7458D7B51C2B6301008ABA85 /* SearchBarVC.swift in Sources */,
 				7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */,
+				09DD2FE61C36F24C0074037C /* SignupVC.swift in Sources */,
 				7458D7B91C2BB8F3008ABA85 /* Font.swift in Sources */,
 				7458D7F91C2BF2BE008ABA85 /* SearchUserListCell.swift in Sources */,
+				0930C0D61C35EAAB0065FD9F /* QueryWrapper.swift in Sources */,
 				25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */,
+				092B23881C34C40800614EFD /* UserQuery.swift in Sources */,
 				25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */,
 				7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */,
+				0979C20D1C34BFB1000BF8F8 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +539,7 @@
 				7436D0DB1BFFF47E00E7D545 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */ = {
@@ -428,6 +548,7 @@
 				7436D0E01BFFF47E00E7D545 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -518,13 +639,12 @@
 		};
 		7436D0FC1BFFF47E00E7D545 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86AAACBCF58F19FD17A2E6F8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ProjectKarma/AVOSCloud",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ProjectKarma/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -540,13 +660,12 @@
 		};
 		7436D0FD1BFFF47E00E7D545 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B644F80E0D1DCB359CC07F6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ProjectKarma/AVOSCloud",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ProjectKarma/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
