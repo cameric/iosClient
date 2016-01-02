@@ -78,7 +78,7 @@
 		09DD2FE41C36F24C0074037C /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		09DEBC651C3770D50033B579 /* iosClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosClient-Bridging-Header.h"; sourceTree = "<group>"; };
 		2548B6D31C37EBB000CB4906 /* UserModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModuleViewController.swift; sourceTree = "<group>"; };
-		2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedProfileVC.swift; path = iosClient/Profile/DetailedProfileVC.swift; sourceTree = "<group>"; };
+		2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedProfileVC.swift; sourceTree = "<group>"; };
 		2548B6D81C381A7D00CB4906 /* DetailedProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailedProfile.storyboard; sourceTree = "<group>"; };
 		2548B6DA1C381AAF00CB4906 /* DetailedProfileModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedProfileModuleViewController.swift; sourceTree = "<group>"; };
 		258D84C61C37BBE500DCD9AA /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
@@ -202,12 +202,11 @@
 		2548B6D71C381A5200CB4906 /* DetailedProfile */ = {
 			isa = PBXGroup;
 			children = (
-				2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */,
 				2548B6D81C381A7D00CB4906 /* DetailedProfile.storyboard */,
 				2548B6DA1C381AAF00CB4906 /* DetailedProfileModuleViewController.swift */,
+				2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */,
 			);
-			name = DetailedProfile;
-			path = ..;
+			path = DetailedProfile;
 			sourceTree = "<group>";
 		};
 		25AF483A1C0C57B100C71DB6 /* AVOSCloud */ = {
@@ -315,8 +314,8 @@
 		7436D0D31BFFF47E00E7D545 /* iosClient */ = {
 			isa = PBXGroup;
 			children = (
-				2548B6D71C381A5200CB4906 /* DetailedProfile */,
 				0979C20B1C34BF8D000BF8F8 /* DataModels */,
+				2548B6D71C381A5200CB4906 /* DetailedProfile */,
 				25AF48531C0C5CAF00C71DB6 /* Favorite */,
 				25AF483F1C0C57B500C71DB6 /* Frameworks */,
 				740DFC731C0C4FEA00CE36EA /* Icons */,
