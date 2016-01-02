@@ -17,6 +17,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var loggedInView: UIView!
     @IBOutlet weak var loggedInNameLabel: UILabel!
     
+    @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,6 +26,7 @@ class ProfileVC: UIViewController {
             notLoggedInView.hidden = true
             loggedInNameLabel.text = curUser.name
             loggedInView.hidden = false
+            logoutButton.hidden = false
         }
     }
     
@@ -43,5 +46,13 @@ class ProfileVC: UIViewController {
 //        loggedInView.backgroundColor = UIColor.lightGrayColor()
 //    }
     
+    @IBAction func logout(sender: UIButton) {
+        logoutButton.hidden = true
+        loggedInView.hidden = true
+        notLoggedInView.hidden = false
+        
+        // Clear local storage
+        AVUser.logOut()
+    }
     
 }

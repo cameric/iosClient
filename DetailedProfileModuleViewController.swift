@@ -1,5 +1,5 @@
 //
-//  DetailedProfileVC.swift
+//  DetailedProfileModuleViewController.swift
 //  iosClient
 //
 //  Created by Tony Zhang on 1/2/16.
@@ -7,29 +7,19 @@
 //
 
 import UIKit
-import AVOSCloud
 
-class DetailedProfileVC: UIViewController {
-    
-    // MARK: Properties
-    var loggedInUser: User?
-    @IBOutlet weak var nameLabel: UILabel!
-    
+class DetailedProfileModuleViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        do {
-//            let tmpUser = try userFromQueryResult(AVUser.currentUser())
-//            self.loggedInUser = tmpUser
-//            print(self.loggedInUser!.name)
-//        } catch {
-//            self.nameLabel.text = "您还没有登陆！"
-//        }
         
-        if let curUser = getCurrentUserIfLoggedIn() {
-            print(curUser.name)
-        }
+        let storyboard = UIStoryboard(name: "DetailedProfile", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController() as UIViewController!
+        addChildViewController(controller)
+        view.addSubview(controller.view)
+        controller.didMoveToParentViewController(self)
     }
 
     override func didReceiveMemoryWarning() {

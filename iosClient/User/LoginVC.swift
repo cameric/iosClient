@@ -16,8 +16,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPwd: UITextField!
     @IBOutlet weak var invalidLoginInfo: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
     
     var showLoginInfo = false
+    var loggedInUser: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return false // We do not want UITextField to insert line-breaks.
     }
     
+    // MARK: Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if loginButton === sender {
+            let targetViewController = segue.destinationViewController as! DetailedProfileVC
+            targetViewController.loggedInUser = self.loggedInUser!
+        }
+    }
+    
     // MARK: Actions
     @IBAction func login(sender: UIButton) {
         if showLoginInfo {
@@ -51,14 +61,23 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         if let username = inputEmail!.text {
             if let pwd = inputPwd!.text {
-                AVUser.logInWithUsernameInBackground(username, password: pwd, block: { (user: AVUser!, error: NSError!) in
-                    if error != nil {
-                        self.showLoginInfo = true
-                        self.invalidLoginInfo.text = "用户名或密码错误"
-                    } else {
-                        print("\(user.objectForKey("name"))")
-                    }
-                })
+                AVUser.logInWithUsernameInBackground(username, password: pwd, block: loginCallback)
+            }
+        }
+    }
+    
+    func loginCallback(user: AVUser!, error: NSError!) {
+        if error != nil {
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "用户名或密码错误"
+        } else {
+            do {
+                let tmpUser = try userFromQueryResult(user)
+                self.loggedInUser = tmpUser
+                self.performSegueWithIdentifier("loggedInJumpToDetailedProfileSegue",
+                    sender: self)
+            } catch {
+                self.invalidLoginInfo.text = "登录过程中出现错误，请重试"
             }
         }
     }

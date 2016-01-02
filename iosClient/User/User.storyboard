@@ -40,6 +40,7 @@
                                         </state>
                                         <connections>
                                             <action selector="login:" destination="pq6-eD-h3y" eventType="touchUpInside" id="wRo-dS-q5T"/>
+                                            <segue destination="aeV-Fe-Q4h" kind="show" identifier="loggedInJumpToDetailedProfileSegue" id="5ag-RE-e5v"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fee-K5-vjX">
@@ -129,16 +130,17 @@
                         <outlet property="inputEmail" destination="4h5-u2-6Ax" id="EU9-Cr-8ae"/>
                         <outlet property="inputPwd" destination="GSf-ES-eWp" id="XmD-Cc-kOW"/>
                         <outlet property="invalidLoginInfo" destination="SmQ-Wh-aV9" id="Di2-9p-iZq"/>
+                        <outlet property="loginButton" destination="Vh9-0G-XMN" id="Jzf-FJ-WIA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdw-oR-Tfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1619" y="1626"/>
         </scene>
-        <!--View Controller-->
+        <!--SignupVC-->
         <scene sceneID="Hla-a0-IY1">
             <objects>
-                <viewController id="thV-FM-T3B" sceneMemberID="viewController">
+                <viewController id="thV-FM-T3B" customClass="signupVC" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x6l-Z9-SGJ"/>
                         <viewControllerLayoutGuide type="bottom" id="88u-Ux-paN"/>
@@ -152,6 +154,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6AV-rB-0bi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2328" y="1626"/>
+        </scene>
+        <!--DetailedProfile-->
+        <scene sceneID="7pv-qU-o36">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailedProfile" id="aeV-Fe-Q4h" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCc-mB-ysk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2352" y="2089"/>
         </scene>
     </scenes>
 </document>
