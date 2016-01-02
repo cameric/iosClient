@@ -1,5 +1,5 @@
 //
-//  Query.swift
+//  QueryUtils.swift
 //  iosClient
 //
 //  Created by Spencer Michaels on 12/31/15.
