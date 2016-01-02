@@ -26,3 +26,31 @@ Install:
 Run (**do this before you commit if you've added new files/groups in Xcode**):
 
     synx ./iosClient.xcodeproj
+
+## 解决RubyGem国内被墙的问题
+如果 `ping https://rubygems.org/` 一直timeout，尝试替换成国内淘宝的镜像：
+
+	gem sources --remove http://rubygems.org/
+	gem sources --remove https://rubygems.org/
+	gem sources -a https://ruby.taobao.org/
+	gem sources -l
+
+这时source应该只有淘宝的镜像：
+
+	*** CURRENT SOURCES ***
+
+	https://ruby.taobao.org/
+
+如果在过程中出现ssl问题，首先安装最新stable版本ruby：
+
+	rbenv install 2.1.2
+
+然后检查当前ruby的版本：
+
+	ruby -v
+
+如果不是v2.1.2，用rvm切换：
+
+	rvm use 2.1.2
+
+ssl配置更新完后就可以添加境内source
