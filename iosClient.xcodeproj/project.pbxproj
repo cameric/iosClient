@@ -14,6 +14,15 @@
 		09D08E0B1C3755CA00905187 /* AppointmentQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D08E0A1C3755CA00905187 /* AppointmentQuery.swift */; };
 		09DD2FE51C36F24C0074037C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD2FE31C36F24C0074037C /* LoginVC.swift */; };
 		09DD2FE61C36F24C0074037C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD2FE41C36F24C0074037C /* SignupVC.swift */; };
+		258D84C71C37BBE500DCD9AA /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84C61C37BBE500DCD9AA /* User.storyboard */; };
+		258D84C91C37BBFE00DCD9AA /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */; };
+		258D84CD1C37BC8000DCD9AA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84CC1C37BC8000DCD9AA /* Profile.storyboard */; };
+		258D84CF1C37BC8F00DCD9AA /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84CE1C37BC8F00DCD9AA /* Search.storyboard */; };
+		258D84D11C37CE1700DCD9AA /* FavoriteTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D84D01C37CE1700DCD9AA /* FavoriteTabBarViewController.swift */; };
+		258D84D31C37CE6600DCD9AA /* SearchTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D84D21C37CE6600DCD9AA /* SearchTabBarViewController.swift */; };
+		258D84D51C37CE8500DCD9AA /* ProfileTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D84D41C37CE8500DCD9AA /* ProfileTabBarViewController.swift */; };
+		258D84D71C37CFA100DCD9AA /* SchduleTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D84D61C37CFA100DCD9AA /* SchduleTabBarViewController.swift */; };
+		258D84D91C37CFC500DCD9AA /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84D81C37CFC500DCD9AA /* Schedule.storyboard */; };
 		25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */; };
 		25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */; };
 		25AF48411C0C580400C71DB6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */; };
@@ -22,7 +31,7 @@
 		25AF48471C0C581D00C71DB6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF48461C0C581D00C71DB6 /* CoreLocation.framework */; };
 		25AF48491C0C5C7F00C71DB6 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */; };
 		25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */; };
-		25AF484D1C0C5C8C00C71DB6 /* PersonalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484C1C0C5C8C00C71DB6 /* PersonalVC.swift */; };
+		25AF484D1C0C5C8C00C71DB6 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484C1C0C5C8C00C71DB6 /* ProfileVC.swift */; };
 		25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */; };
 		71E8776821B97429B4670096 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46400D1E132AC462656E376 /* Pods.framework */; };
 		7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */; };
@@ -64,6 +73,15 @@
 		09DD2FE31C36F24C0074037C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		09DD2FE41C36F24C0074037C /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		09DEBC651C3770D50033B579 /* iosClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		258D84C61C37BBE500DCD9AA /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		258D84CC1C37BC8000DCD9AA /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		258D84CE1C37BC8F00DCD9AA /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		258D84D01C37CE1700DCD9AA /* FavoriteTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTabBarViewController.swift; sourceTree = "<group>"; };
+		258D84D21C37CE6600DCD9AA /* SearchTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTabBarViewController.swift; sourceTree = "<group>"; };
+		258D84D41C37CE8500DCD9AA /* ProfileTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTabBarViewController.swift; sourceTree = "<group>"; };
+		258D84D61C37CFA100DCD9AA /* SchduleTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchduleTabBarViewController.swift; sourceTree = "<group>"; };
+		258D84D81C37CFC500DCD9AA /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
 		25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -72,7 +90,7 @@
 		25AF48461C0C581D00C71DB6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
-		25AF484C1C0C5C8C00C71DB6 /* PersonalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalVC.swift; sourceTree = "<group>"; };
+		25AF484C1C0C5C8C00C71DB6 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		4B644F80E0D1DCB359CC07F6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7436D0D11BFFF47E00E7D545 /* iosClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +170,7 @@
 			children = (
 				09DD2FE31C36F24C0074037C /* LoginVC.swift */,
 				09DD2FE41C36F24C0074037C /* SignupVC.swift */,
+				258D84C61C37BBE500DCD9AA /* User.storyboard */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -159,15 +178,6 @@
 		09DEBC661C3770DF0033B579 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		09DEBC671C3770FA0033B579 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */,
-				7436D0DA1BFFF47E00E7D545 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -207,6 +217,8 @@
 				7458D7B21C2B61FE008ABA85 /* SearchBar.swift */,
 				7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */,
 				25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */,
+				258D84CE1C37BC8F00DCD9AA /* Search.storyboard */,
+				258D84D21C37CE6600DCD9AA /* SearchTabBarViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -215,15 +227,20 @@
 			isa = PBXGroup;
 			children = (
 				25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */,
+				258D84D61C37CFA100DCD9AA /* SchduleTabBarViewController.swift */,
+				258D84D81C37CFC500DCD9AA /* Schedule.storyboard */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
 		};
-		25AF48521C0C5CA700C71DB6 /* Personal */ = {
+		25AF48521C0C5CA700C71DB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				25AF484C1C0C5C8C00C71DB6 /* PersonalVC.swift */,
+				25AF484C1C0C5C8C00C71DB6 /* ProfileVC.swift */,
+				258D84CC1C37BC8000DCD9AA /* Profile.storyboard */,
+				258D84D41C37CE8500DCD9AA /* ProfileTabBarViewController.swift */,
 			);
+			name = Profile;
 			path = Personal;
 			sourceTree = "<group>";
 		};
@@ -231,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */,
+				258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */,
+				258D84D01C37CE1700DCD9AA /* FavoriteTabBarViewController.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -281,13 +300,14 @@
 				25AF48531C0C5CAF00C71DB6 /* Favorite */,
 				25AF483F1C0C57B500C71DB6 /* Frameworks */,
 				740DFC731C0C4FEA00CE36EA /* Icons */,
-				25AF48521C0C5CA700C71DB6 /* Personal */,
+				25AF48521C0C5CA700C71DB6 /* Profile */,
 				0979C20E1C34C2BC000BF8F8 /* Query */,
 				25AF48511C0C5CA000C71DB6 /* Schedule */,
 				25AF48501C0C5C9500C71DB6 /* Search */,
 				740DFC721C0C4FEA00CE36EA /* Shared */,
-				09DEBC671C3770FA0033B579 /* Storyboards */,
 				09DD2FE21C36F2430074037C /* User */,
+				7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */,
+				7436D0DA1BFFF47E00E7D545 /* Main.storyboard */,
 				7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */,
 				7436D0DD1BFFF47E00E7D545 /* Assets.xcassets */,
 				7436D0E21BFFF47E00E7D545 /* Info.plist */,
@@ -432,9 +452,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258D84CD1C37BC8000DCD9AA /* Profile.storyboard in Resources */,
 				7436D0E11BFFF47E00E7D545 /* LaunchScreen.storyboard in Resources */,
+				258D84C71C37BBE500DCD9AA /* User.storyboard in Resources */,
 				7436D0DE1BFFF47E00E7D545 /* Assets.xcassets in Resources */,
+				258D84CF1C37BC8F00DCD9AA /* Search.storyboard in Resources */,
+				258D84C91C37BBFE00DCD9AA /* Favorite.storyboard in Resources */,
 				7436D0DC1BFFF47E00E7D545 /* Main.storyboard in Resources */,
+				258D84D91C37CFC500DCD9AA /* Schedule.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,18 +534,22 @@
 			files = (
 				7458D7B71C2BB439008ABA85 /* ColorScheme.swift in Sources */,
 				09D08E091C37533A00905187 /* AppointmentModel.swift in Sources */,
-				25AF484D1C0C5C8C00C71DB6 /* PersonalVC.swift in Sources */,
+				25AF484D1C0C5C8C00C71DB6 /* ProfileVC.swift in Sources */,
 				09DD2FE51C36F24C0074037C /* LoginVC.swift in Sources */,
+				258D84D11C37CE1700DCD9AA /* FavoriteTabBarViewController.swift in Sources */,
 				25AF48491C0C5C7F00C71DB6 /* SearchVC.swift in Sources */,
 				7458D7B51C2B6301008ABA85 /* SearchBarVC.swift in Sources */,
 				7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */,
 				09DD2FE61C36F24C0074037C /* SignupVC.swift in Sources */,
 				7458D7B91C2BB8F3008ABA85 /* Font.swift in Sources */,
+				258D84D71C37CFA100DCD9AA /* SchduleTabBarViewController.swift in Sources */,
 				7458D7F91C2BF2BE008ABA85 /* SearchUserListCell.swift in Sources */,
 				0930C0D61C35EAAB0065FD9F /* QueryUtils.swift in Sources */,
 				25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */,
+				258D84D31C37CE6600DCD9AA /* SearchTabBarViewController.swift in Sources */,
 				092B23881C34C40800614EFD /* UserQuery.swift in Sources */,
 				25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */,
+				258D84D51C37CE8500DCD9AA /* ProfileTabBarViewController.swift in Sources */,
 				09D08E0B1C3755CA00905187 /* AppointmentQuery.swift in Sources */,
 				7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */,
 				0979C20D1C34BFB1000BF8F8 /* UserModel.swift in Sources */,
@@ -565,7 +594,7 @@
 				7436D0DB1BFFF47E00E7D545 /* Base */,
 			);
 			name = Main.storyboard;
-			path = .;
+			path = Storyboards/.;
 			sourceTree = "<group>";
 		};
 		7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */ = {
@@ -574,7 +603,7 @@
 				7436D0E01BFFF47E00E7D545 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = .;
+			path = Storyboards/.;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
