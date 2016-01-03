@@ -19,8 +19,8 @@ Convert the result of an AVQuery to a User object.
 */
 func userFromQueryResult(result: AnyObject!) throws -> User {
     // The response from the server should be in the form of [String: AnyObject].
-    // If it isn't, the data retrieved is considered malformed.
-    guard let resultDict = result as? [String: AnyObject] else {
+    // If it isn't, the data retrieved is considered malformed.    
+    guard let resultDict = result as? AVObject else {
         throw QueryError.MalformedResponse
     }
     

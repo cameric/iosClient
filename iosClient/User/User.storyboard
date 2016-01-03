@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="550" width="560" height="30"/>
                                 <state key="normal" title="还没有账户？注册"/>
                                 <connections>
-                                    <segue destination="thV-FM-T3B" kind="showDetail" id="eSJ-Xg-w7Z"/>
+                                    <segue destination="thV-FM-T3B" kind="show" id="2UM-Aq-kq7"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="aHD-to-7uo">
@@ -40,7 +40,6 @@
                                         </state>
                                         <connections>
                                             <action selector="login:" destination="pq6-eD-h3y" eventType="touchUpInside" id="wRo-dS-q5T"/>
-                                            <segue destination="aeV-Fe-Q4h" kind="show" identifier="loggedInJumpToDetailedProfileSegue" id="5ag-RE-e5v"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fee-K5-vjX">
@@ -105,8 +104,16 @@
                                     <constraint firstAttribute="trailing" secondItem="GSf-ES-eWp" secondAttribute="trailing" id="WoU-rG-YKA"/>
                                 </constraints>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHw-sb-rhB">
+                                <rect key="frame" x="534" y="562" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="aeV-Fe-Q4h" kind="show" identifier="loggedInJumpToDetailedProfileSegue" id="WS5-rF-sjq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="aHD-to-7uo" secondAttribute="trailing" id="37B-h1-JM2"/>
                             <constraint firstItem="9jP-AE-aTb" firstAttribute="leading" secondItem="7fZ-iT-Pat" secondAttribute="leadingMargin" id="58B-nB-P8v"/>
@@ -124,6 +131,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="SmQ-Wh-aV9" secondAttribute="trailing" id="zZl-NM-dE7"/>
                             <constraint firstItem="9jP-AE-aTb" firstAttribute="top" secondItem="pW9-OO-FQA" secondAttribute="bottom" constant="50" id="zoU-JL-4EJ"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="N16-3E-thw" appends="YES" id="0Eb-Zc-qRV"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="A9t-nt-GJR"/>
                     <connections>
@@ -134,6 +144,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdw-oR-Tfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="N16-3E-thw">
+                    <connections>
+                        <action selector="dismissKeyboardDidTapOutsideTextField:" destination="pq6-eD-h3y" id="t1R-xj-Ddl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1619" y="1626"/>
         </scene>
@@ -161,7 +176,7 @@
                 <viewControllerPlaceholder storyboardName="DetailedProfile" id="aeV-Fe-Q4h" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCc-mB-ysk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2352" y="2089"/>
+            <point key="canvasLocation" x="1619" y="2116"/>
         </scene>
     </scenes>
 </document>

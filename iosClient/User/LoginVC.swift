@@ -44,9 +44,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return false // We do not want UITextField to insert line-breaks.
     }
     
+    @IBAction func dismissKeyboardDidTapOutsideTextField(sender: UITapGestureRecognizer) {
+        inputEmail.resignFirstResponder()
+        inputPwd.resignFirstResponder()
+    }
+    
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if loginButton === sender {
+        if segue.identifier == "loggedInJumpToDetailedProfileSegue" {
             let targetViewController = segue.destinationViewController as! DetailedProfileVC
             targetViewController.loggedInUser = self.loggedInUser!
         }
@@ -59,11 +64,19 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             self.invalidLoginInfo.text = ""
         }
         
-        if let username = inputEmail!.text {
-            if let pwd = inputPwd!.text {
-                AVUser.logInWithUsernameInBackground(username, password: pwd, block: loginCallback)
-            }
+        // User input check
+        guard let username = inputEmail!.text where username != "" else {
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "用户名不能为空"
+            return
         }
+        guard let pwd = inputPwd!.text where pwd != "" else {
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "密码不能为空"
+            return
+        }
+        
+        AVUser.logInWithUsernameInBackground(username, password: pwd, block: loginCallback)
     }
     
     func loginCallback(user: AVUser!, error: NSError!) {
@@ -71,6 +84,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             self.showLoginInfo = true
             self.invalidLoginInfo.text = "用户名或密码错误"
         } else {
+            // Perform segue after async call is resolved
             do {
                 let tmpUser = try userFromQueryResult(user)
                 self.loggedInUser = tmpUser
