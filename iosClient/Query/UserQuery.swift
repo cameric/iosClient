@@ -41,7 +41,7 @@ func userFromQueryResult(result: AnyObject!) throws -> User {
     
     // TODO: A user's avatar can probably be nil (not set), so maybe we shouldn't consider the user invalid if it's nil...
 //    guard let avatar: AVFile = resultDict["avatar"] as? AVFile else {
-//        throw QueryError.IncompleteResponse(missing: "email")
+//        throw QueryError.IncompleteResponse(missing: "avatar")
 //    }
     
     return User(
