@@ -11,10 +11,12 @@ import AVOSCloud
 import AVOSCloudIM
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
 
     var window: UIWindow?
 
+    // MARK: UIApplicationDelegate
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -30,15 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         WeiboSDK.registerApp(GlobalAPIKeys.Weibo_AppKey)
         
         return true
-    }
-    
-    // Enable the app to call Weibo app and push Weibo to foreground for further actions
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        return WeiboSDK.handleOpenURL(url, delegate: self as! WeiboSDKDelegate)
-    }
-    
-    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
-        return WeiboSDK.handleOpenURL(url, delegate: self as! WeiboSDKDelegate)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -63,6 +56,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: Weibo integration
+    
+    // Enable the app to call Weibo app and push Weibo to foreground for further actions
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return WeiboSDK.handleOpenURL(url, delegate: self as WeiboSDKDelegate)
+    }
+    
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return WeiboSDK.handleOpenURL(url, delegate: self as WeiboSDKDelegate)
+    }
+    
+    // MARK: WeiboSDKDelegate
+    
+    func didReceiveWeiboRequest(request: WBBaseRequest!) {
+        // Received a request from the Weibo client
+    }
+    
+    func didReceiveWeiboResponse(response: WBBaseResponse!) {
+        // Received a response from the Weibo client
+    }
 
 }
 

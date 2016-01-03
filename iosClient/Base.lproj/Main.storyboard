@@ -30,7 +30,7 @@
         <scene sceneID="tTp-pr-Oqa">
             <objects>
                 <viewControllerPlaceholder storyboardName="Search" id="gES-rT-SLJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发现" image="Search" id="VPt-Rq-rD0"/>
+                    <tabBarItem key="tabBarItem" title="发现" image="Search" selectedImage="Clock" id="VPt-Rq-rD0"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPb-TS-eQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

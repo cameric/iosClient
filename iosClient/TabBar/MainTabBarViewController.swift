@@ -17,7 +17,7 @@ class MainTabBarViewController: UITabBarController {
         
         // TODO: Not sure why the tab bar icons still don't show up
         // even if I have manually set up the images
-        for var i = 0; i < tabBar.items?.count; i++ {
+        /*for var i = 0; i < tabBar.items?.count; i++ {
             if let tabBarItem = tabBar.items?[i] as UITabBarItem! {
                 // Adjust tab images (Like mstysf says, these values will vary)
                 tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -6, 0);
@@ -25,15 +25,16 @@ class MainTabBarViewController: UITabBarController {
                 
                 var imageName = ""
                 switch (i) {
-                case 0: imageName = "Search"
-                case 1: imageName = "Rating"
-                case 2: imageName = "Clock"
-                case 3: imageName = "Contacts"
-                default: break
+                    case 0: imageName = "Search"
+                    case 1: imageName = "Rating"
+                    case 2: imageName = "Clock"
+                    case 3: imageName = "Contacts"
+                    default: break
                 }
                 tabBarItem.image = UIImage(named:imageName)!.imageWithRenderingMode(.AlwaysOriginal)
+                tabBarItem.selectedImage = UIImage(named:imageName)!.imageWithRenderingMode(.AlwaysOriginal)
             }
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
