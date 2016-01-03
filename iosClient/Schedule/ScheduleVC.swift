@@ -8,12 +8,26 @@
 
 import UIKit
 import Foundation
+import JTCalendar
 
-class ScheduleVC: UIViewController {
+
+class ScheduleVC: UIViewController, JTCalendarDelegate {
+    @IBOutlet weak var calendarMenuView: JTCalendarMenuView!
+    @IBOutlet weak var horizCalendarView: JTHorizontalCalendarView!
+    
+    var calendarManager: JTCalendarManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        calendarManager = JTCalendarManager()
+        calendarManager.delegate = self
+        
+        calendarManager.menuView = calendarMenuView
+        calendarManager.contentView = horizCalendarView
+        calendarManager.setDate(NSDate())
+        
+        calendarMenuView.backgroundColor = ColorScheme.backgroundColor()
     }
     
     override func didReceiveMemoryWarning() {

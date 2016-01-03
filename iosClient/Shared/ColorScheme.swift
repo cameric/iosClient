@@ -30,7 +30,7 @@ struct ColorScheme {
         return UIColor(red: 1, green: 0.667, blue: 0.388, alpha: 1)
     }
     
-    static func frontColor() -> UIColor {
+    static func foregroundColor() -> UIColor {
         return UIColor.whiteColor()
     }
     
