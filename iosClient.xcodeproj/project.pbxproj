@@ -14,18 +14,13 @@
 		09D08E0B1C3755CA00905187 /* AppointmentQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D08E0A1C3755CA00905187 /* AppointmentQuery.swift */; };
 		09DD2FE51C36F24C0074037C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD2FE31C36F24C0074037C /* LoginVC.swift */; };
 		09DD2FE61C36F24C0074037C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD2FE41C36F24C0074037C /* SignupVC.swift */; };
-		2548B6D41C37EBB000CB4906 /* UserModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548B6D31C37EBB000CB4906 /* UserModuleViewController.swift */; };
 		2548B6D61C37FD5800CB4906 /* DetailedProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */; };
 		2548B6D91C381A7D00CB4906 /* DetailedProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2548B6D81C381A7D00CB4906 /* DetailedProfile.storyboard */; };
-		2548B6DB1C381AAF00CB4906 /* DetailedProfileModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548B6DA1C381AAF00CB4906 /* DetailedProfileModuleViewController.swift */; };
+		2548B6DD1C38C89700CB4906 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */; };
 		258D84C71C37BBE500DCD9AA /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84C61C37BBE500DCD9AA /* User.storyboard */; };
 		258D84C91C37BBFE00DCD9AA /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */; };
 		258D84CD1C37BC8000DCD9AA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84CC1C37BC8000DCD9AA /* Profile.storyboard */; };
 		258D84CF1C37BC8F00DCD9AA /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84CE1C37BC8F00DCD9AA /* Search.storyboard */; };
-		258D84D11C37CE1700DCD9AA /* FavoriteTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D84D01C37CE1700DCD9AA /* FavoriteTabBarViewController.swift */; };
-		258D84D31C37CE6600DCD9AA /* SearchTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D84D21C37CE6600DCD9AA /* SearchTabBarViewController.swift */; };
-		258D84D51C37CE8500DCD9AA /* ProfileTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D84D41C37CE8500DCD9AA /* ProfileTabBarViewController.swift */; };
-		258D84D71C37CFA100DCD9AA /* SchduleTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D84D61C37CFA100DCD9AA /* SchduleTabBarViewController.swift */; };
 		258D84D91C37CFC500DCD9AA /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84D81C37CFC500DCD9AA /* Schedule.storyboard */; };
 		25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */; };
 		25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */; };
@@ -77,18 +72,13 @@
 		09DD2FE31C36F24C0074037C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		09DD2FE41C36F24C0074037C /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		09DEBC651C3770D50033B579 /* iosClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosClient-Bridging-Header.h"; sourceTree = "<group>"; };
-		2548B6D31C37EBB000CB4906 /* UserModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModuleViewController.swift; sourceTree = "<group>"; };
 		2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedProfileVC.swift; sourceTree = "<group>"; };
 		2548B6D81C381A7D00CB4906 /* DetailedProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailedProfile.storyboard; sourceTree = "<group>"; };
-		2548B6DA1C381AAF00CB4906 /* DetailedProfileModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedProfileModuleViewController.swift; sourceTree = "<group>"; };
+		2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		258D84C61C37BBE500DCD9AA /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
 		258D84CC1C37BC8000DCD9AA /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		258D84CE1C37BC8F00DCD9AA /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		258D84D01C37CE1700DCD9AA /* FavoriteTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTabBarViewController.swift; sourceTree = "<group>"; };
-		258D84D21C37CE6600DCD9AA /* SearchTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTabBarViewController.swift; sourceTree = "<group>"; };
-		258D84D41C37CE8500DCD9AA /* ProfileTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTabBarViewController.swift; sourceTree = "<group>"; };
-		258D84D61C37CFA100DCD9AA /* SchduleTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchduleTabBarViewController.swift; sourceTree = "<group>"; };
 		258D84D81C37CFC500DCD9AA /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
@@ -179,7 +169,6 @@
 				09DD2FE31C36F24C0074037C /* LoginVC.swift */,
 				09DD2FE41C36F24C0074037C /* SignupVC.swift */,
 				258D84C61C37BBE500DCD9AA /* User.storyboard */,
-				2548B6D31C37EBB000CB4906 /* UserModuleViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -203,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				2548B6D81C381A7D00CB4906 /* DetailedProfile.storyboard */,
-				2548B6DA1C381AAF00CB4906 /* DetailedProfileModuleViewController.swift */,
 				2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */,
 			);
 			path = DetailedProfile;
@@ -236,7 +224,6 @@
 				258D84CE1C37BC8F00DCD9AA /* Search.storyboard */,
 				7458D7B21C2B61FE008ABA85 /* SearchBar.swift */,
 				7458D7B41C2B6301008ABA85 /* SearchBarVC.swift */,
-				258D84D21C37CE6600DCD9AA /* SearchTabBarViewController.swift */,
 				25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */,
 			);
 			path = Search;
@@ -245,7 +232,6 @@
 		25AF48511C0C5CA000C71DB6 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				258D84D61C37CFA100DCD9AA /* SchduleTabBarViewController.swift */,
 				258D84D81C37CFC500DCD9AA /* Schedule.storyboard */,
 				25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */,
 			);
@@ -256,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				258D84CC1C37BC8000DCD9AA /* Profile.storyboard */,
-				258D84D41C37CE8500DCD9AA /* ProfileTabBarViewController.swift */,
 				25AF484C1C0C5C8C00C71DB6 /* ProfileVC.swift */,
 			);
 			path = Profile;
@@ -266,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */,
-				258D84D01C37CE1700DCD9AA /* FavoriteTabBarViewController.swift */,
 				25AF484E1C0C5C9100C71DB6 /* FavoriteVC.swift */,
 			);
 			path = Favorite;
@@ -331,6 +315,7 @@
 				7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */,
 				7436D0DA1BFFF47E00E7D545 /* Main.storyboard */,
 				09DEBC651C3770D50033B579 /* iosClient-Bridging-Header.h */,
+				2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */,
 			);
 			path = iosClient;
 			sourceTree = "<group>";
@@ -557,24 +542,19 @@
 				09D08E091C37533A00905187 /* AppointmentModel.swift in Sources */,
 				25AF484D1C0C5C8C00C71DB6 /* ProfileVC.swift in Sources */,
 				09DD2FE51C36F24C0074037C /* LoginVC.swift in Sources */,
-				258D84D11C37CE1700DCD9AA /* FavoriteTabBarViewController.swift in Sources */,
 				25AF48491C0C5C7F00C71DB6 /* SearchVC.swift in Sources */,
 				7458D7B51C2B6301008ABA85 /* SearchBarVC.swift in Sources */,
 				7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */,
 				09DD2FE61C36F24C0074037C /* SignupVC.swift in Sources */,
 				7458D7B91C2BB8F3008ABA85 /* Font.swift in Sources */,
-				258D84D71C37CFA100DCD9AA /* SchduleTabBarViewController.swift in Sources */,
 				7458D7F91C2BF2BE008ABA85 /* SearchUserListCell.swift in Sources */,
+				2548B6DD1C38C89700CB4906 /* MainTabBarViewController.swift in Sources */,
 				0930C0D61C35EAAB0065FD9F /* QueryUtils.swift in Sources */,
 				25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */,
-				258D84D31C37CE6600DCD9AA /* SearchTabBarViewController.swift in Sources */,
 				092B23881C34C40800614EFD /* UserQuery.swift in Sources */,
 				25AF484F1C0C5C9100C71DB6 /* FavoriteVC.swift in Sources */,
-				258D84D51C37CE8500DCD9AA /* ProfileTabBarViewController.swift in Sources */,
 				09D08E0B1C3755CA00905187 /* AppointmentQuery.swift in Sources */,
-				2548B6D41C37EBB000CB4906 /* UserModuleViewController.swift in Sources */,
 				7458D7B31C2B61FE008ABA85 /* SearchBar.swift in Sources */,
-				2548B6DB1C381AAF00CB4906 /* DetailedProfileModuleViewController.swift in Sources */,
 				0979C20D1C34BFB1000BF8F8 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

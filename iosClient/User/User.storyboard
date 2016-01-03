@@ -34,7 +34,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="lWb-6Q-BFY"/>
                                         </constraints>
-                                        <state key="normal" title="登陆">
+                                        <state key="normal" title="登录">
                                             <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -49,7 +49,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="DtG-b0-UJK"/>
                                         </constraints>
-                                        <state key="normal" title="微信登陆">
+                                        <state key="normal" title="微信登录">
                                             <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
@@ -59,7 +59,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="SQO-Li-78K"/>
                                         </constraints>
-                                        <state key="normal" title="新浪微博登陆">
+                                        <state key="normal" title="新浪微博登录">
                                             <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
