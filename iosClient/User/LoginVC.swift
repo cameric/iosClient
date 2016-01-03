@@ -52,6 +52,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loggedInJumpToDetailedProfileSegue" {
+            // Pass the logged in info to detailed profile view controller
             let targetViewController = segue.destinationViewController as! DetailedProfileVC
             targetViewController.loggedInUser = self.loggedInUser!
         }

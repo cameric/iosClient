@@ -22,12 +22,6 @@
 		258D84CD1C37BC8000DCD9AA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84CC1C37BC8000DCD9AA /* Profile.storyboard */; };
 		258D84CF1C37BC8F00DCD9AA /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84CE1C37BC8F00DCD9AA /* Search.storyboard */; };
 		258D84D91C37CFC500DCD9AA /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84D81C37CFC500DCD9AA /* Schedule.storyboard */; };
-		25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */; };
-		25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */; };
-		25AF48411C0C580400C71DB6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */; };
-		25AF48431C0C580D00C71DB6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF48421C0C580D00C71DB6 /* MobileCoreServices.framework */; };
-		25AF48451C0C581500C71DB6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF48441C0C581500C71DB6 /* CoreTelephony.framework */; };
-		25AF48471C0C581D00C71DB6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AF48461C0C581D00C71DB6 /* CoreLocation.framework */; };
 		25AF48491C0C5C7F00C71DB6 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */; };
 		25AF484B1C0C5C8500C71DB6 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */; };
 		25AF484D1C0C5C8C00C71DB6 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484C1C0C5C8C00C71DB6 /* ProfileVC.swift */; };
@@ -80,12 +74,6 @@
 		258D84CC1C37BC8000DCD9AA /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		258D84CE1C37BC8F00DCD9AA /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		258D84D81C37CFC500DCD9AA /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
-		25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
-		25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
-		25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		25AF48421C0C580D00C71DB6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		25AF48441C0C581500C71DB6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		25AF48461C0C581D00C71DB6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		25AF48481C0C5C7F00C71DB6 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		25AF484A1C0C5C8500C71DB6 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		25AF484C1C0C5C8C00C71DB6 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -117,12 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25AF48471C0C581D00C71DB6 /* CoreLocation.framework in Frameworks */,
-				25AF48451C0C581500C71DB6 /* CoreTelephony.framework in Frameworks */,
-				25AF48431C0C580D00C71DB6 /* MobileCoreServices.framework in Frameworks */,
-				25AF48411C0C580400C71DB6 /* SystemConfiguration.framework in Frameworks */,
-				25AF483D1C0C57B100C71DB6 /* AVOSCloud.framework in Frameworks */,
-				25AF483E1C0C57B100C71DB6 /* AVOSCloudIM.framework in Frameworks */,
 				71E8776821B97429B4670096 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,27 +185,6 @@
 				2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		25AF483A1C0C57B100C71DB6 /* AVOSCloud */ = {
-			isa = PBXGroup;
-			children = (
-				25AF483B1C0C57B100C71DB6 /* AVOSCloud.framework */,
-				25AF483C1C0C57B100C71DB6 /* AVOSCloudIM.framework */,
-			);
-			path = AVOSCloud;
-			sourceTree = "<group>";
-		};
-		25AF483F1C0C57B500C71DB6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				25AF483A1C0C57B100C71DB6 /* AVOSCloud */,
-				25AF48461C0C581D00C71DB6 /* CoreLocation.framework */,
-				25AF48441C0C581500C71DB6 /* CoreTelephony.framework */,
-				25AF48421C0C580D00C71DB6 /* MobileCoreServices.framework */,
-				25AF48401C0C580400C71DB6 /* SystemConfiguration.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		25AF48501C0C5C9500C71DB6 /* Search */ = {
@@ -309,7 +270,6 @@
 				0979C20B1C34BF8D000BF8F8 /* DataModels */,
 				2548B6D71C381A5200CB4906 /* DetailedProfile */,
 				25AF48531C0C5CAF00C71DB6 /* Favorite */,
-				25AF483F1C0C57B500C71DB6 /* Frameworks */,
 				740DFC731C0C4FEA00CE36EA /* Icons */,
 				25AF48521C0C5CA700C71DB6 /* Profile */,
 				0979C20E1C34C2BC000BF8F8 /* Query */,
@@ -718,9 +678,11 @@
 					"-ObjC",
 					"-licucore",
 					"-lz",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Cameric.iosClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iosClient/iosClient-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -739,9 +701,11 @@
 					"-ObjC",
 					"-licucore",
 					"-lz",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Cameric.iosClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iosClient/iosClient-Bridging-Header.h";
 			};
 			name = Release;
 		};
