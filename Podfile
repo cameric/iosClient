@@ -4,3 +4,4 @@ use_frameworks!
 pod 'AVOSCloudDynamic', '~> 3.1'
 pod 'AVOSCloudIMDynamic', '~> 3.1'
 pod 'WeiboSDK'
+pod 'JTCalendar', '~> 2.0'

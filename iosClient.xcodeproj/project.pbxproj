@@ -67,7 +67,7 @@
 		09DD2FE31C36F24C0074037C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		09DD2FE41C36F24C0074037C /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		09DEBC651C3770D50033B579 /* iosClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosClient-Bridging-Header.h"; sourceTree = "<group>"; };
-		252095781C3949A700877546 /* GlobalAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalAPIKeys.swift; sourceTree = "<group>"; };
+		252095781C3949A700877546 /* GlobalAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalAPIKeys.swift; path = ../DataModels/GlobalAPIKeys.swift; sourceTree = "<group>"; };
 		2548B6D51C37FD5800CB4906 /* DetailedProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedProfileVC.swift; sourceTree = "<group>"; };
 		2548B6D81C381A7D00CB4906 /* DetailedProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailedProfile.storyboard; sourceTree = "<group>"; };
 		2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +133,6 @@
 			children = (
 				09D08E081C37533A00905187 /* AppointmentModel.swift */,
 				0979C20C1C34BFB1000BF8F8 /* UserModel.swift */,
-				252095781C3949A700877546 /* GlobalAPIKeys.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -231,6 +230,7 @@
 		740DFC721C0C4FEA00CE36EA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				252095781C3949A700877546 /* GlobalAPIKeys.swift */,
 				7458D7B61C2BB439008ABA85 /* ColorScheme.swift */,
 				7458D7B81C2BB8F3008ABA85 /* Font.swift */,
 				7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */,

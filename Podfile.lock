@@ -2,16 +2,19 @@ PODS:
   - AVOSCloudDynamic (3.1.7.1)
   - AVOSCloudIMDynamic (3.1.7.1):
     - AVOSCloudDynamic
+  - JTCalendar (2.1.4)
   - WeiboSDK (3.1.3)
 
 DEPENDENCIES:
   - AVOSCloudDynamic (~> 3.1)
   - AVOSCloudIMDynamic (~> 3.1)
+  - JTCalendar (~> 2.0)
   - WeiboSDK
 
 SPEC CHECKSUMS:
   AVOSCloudDynamic: 532aa15204f82638c93a6f47f3c91bc18b96304c
   AVOSCloudIMDynamic: 6c2d176471c8d6423ed8bb8bab1e43dcceadd215
+  JTCalendar: 9b1352c7ec41cc26b19c189d6608ba48060a53d9
   WeiboSDK: acb067053668102cf07d01aa7604350162c2e466
 
 COCOAPODS: 0.39.0
