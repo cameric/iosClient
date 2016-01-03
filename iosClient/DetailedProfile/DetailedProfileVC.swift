@@ -26,9 +26,8 @@ class DetailedProfileVC: UIViewController {
 //        } catch {
 //            self.nameLabel.text = "您还没有登陆！"
 //        }
-        
-        if let curUser = getCurrentUserIfLoggedIn() {
-            print(curUser.name)
+        if self.loggedInUser != nil {
+            print(loggedInUser!.name)
         }
     }
 

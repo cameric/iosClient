@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVOSCloud
 
-class LoginVC: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate, WeiboSDKDelegate {
     
     // MARK: Properties
     @IBOutlet weak var inputEmail: UITextField!
@@ -44,9 +44,15 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return false // We do not want UITextField to insert line-breaks.
     }
     
+    @IBAction func dismissKeyboardDidTapOutsideTextField(sender: UITapGestureRecognizer) {
+        inputEmail.resignFirstResponder()
+        inputPwd.resignFirstResponder()
+    }
+    
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if loginButton === sender {
+        if segue.identifier == "loggedInJumpToDetailedProfileSegue" {
+            // Pass the logged in info to detailed profile view controller
             let targetViewController = segue.destinationViewController as! DetailedProfileVC
             targetViewController.loggedInUser = self.loggedInUser!
         }
@@ -59,18 +65,28 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             self.invalidLoginInfo.text = ""
         }
         
-        if let username = inputEmail!.text {
-            if let pwd = inputPwd!.text {
-                AVUser.logInWithUsernameInBackground(username, password: pwd, block: loginCallback)
-            }
+        // User input check
+        guard let username = inputEmail!.text where username != "" else {
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "用户名不能为空"
+            return
         }
+        guard let pwd = inputPwd!.text where pwd != "" else {
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "密码不能为空"
+            return
+        }
+        
+        AVUser.logInWithUsernameInBackground(username, password: pwd, block: loginCallback)
     }
     
     func loginCallback(user: AVUser!, error: NSError!) {
         if error != nil {
+            print("\(error)")
             self.showLoginInfo = true
             self.invalidLoginInfo.text = "用户名或密码错误"
         } else {
+            // Perform segue after async call is resolved
             do {
                 let tmpUser = try userFromQueryResult(user)
                 self.loggedInUser = tmpUser
@@ -81,5 +97,40 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
+    
+    @IBAction func weiboLogin(sender: UIButton) {
+        let request = WBAuthorizeRequest.request() as! WBAuthorizeRequest
+        request.redirectURI = GlobalAPIKeys.Weibo_AppRedirectURI
+        request.scope = "all"
+        
+        WeiboSDK.sendRequest(request)
+    }
+    
+    func didReceiveWeiboRequest(request: WBBaseRequest!) {
+        
+    }
+    
+    func didReceiveWeiboResponse(response: WBBaseResponse!) {
+        let authorizeResponse = response as! WBAuthorizeResponse
+        switch authorizeResponse.statusCode {
+        case .Success:
+            //authorizeResponse.userID
+            //authorizeResponse.accessToken
+            self.performSegueWithIdentifier("loggedInJumpToDetailedProfileSegue",
+                sender: self)
+            
+        case .UserCancel:
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "用户取消微博登录"
+        case .SentFail:
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "微博登录请求发送失败"
+        case .AuthDeny:
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "微博登录验证失败"
+        default:
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "微博登录过程中出现错误"
+        }
+    }
 }

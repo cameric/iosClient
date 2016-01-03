@@ -15,18 +15,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         // Bootstrap AVOSCloud library
-        AVOSCloud.setApplicationId("lAeVhtmnzDG3lEVKI8fV7F9c", clientKey: "qWKHBug84HMSqXrR5DXjBQsO")
+        AVOSCloud.setApplicationId(GlobalAPIKeys.LeanEngine_AppId, clientKey: GlobalAPIKeys.LeanEngine_AppKey)
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         // DEV: Use the test server
         AVCloud.setProductionMode(false)
         
+        // Bootstrap Weibo SDK
+        WeiboSDK.enableDebugMode(true)
+        WeiboSDK.registerApp(GlobalAPIKeys.Weibo_AppKey)
+        
         return true
+    }
+    
+    // Enable the app to call Weibo app and push Weibo to foreground for further actions
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return WeiboSDK.handleOpenURL(url, delegate: self as! WeiboSDKDelegate)
+    }
+    
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return WeiboSDK.handleOpenURL(url, delegate: self as! WeiboSDKDelegate)
     }
 
     func applicationWillResignActive(application: UIApplication) {
