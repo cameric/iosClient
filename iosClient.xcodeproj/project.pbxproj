@@ -197,6 +197,14 @@
 			path = DetailedProfile;
 			sourceTree = "<group>";
 		};
+		2548B6DE1C38CC6500CB4906 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		25AF483A1C0C57B100C71DB6 /* AVOSCloud */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +316,7 @@
 				25AF48511C0C5CA000C71DB6 /* Schedule */,
 				25AF48501C0C5C9500C71DB6 /* Search */,
 				740DFC721C0C4FEA00CE36EA /* Shared */,
+				2548B6DE1C38CC6500CB4906 /* TabBar */,
 				09DD2FE21C36F2430074037C /* User */,
 				7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */,
 				7436D0DD1BFFF47E00E7D545 /* Assets.xcassets */,
@@ -315,7 +324,6 @@
 				7436D0DF1BFFF47E00E7D545 /* LaunchScreen.storyboard */,
 				7436D0DA1BFFF47E00E7D545 /* Main.storyboard */,
 				09DEBC651C3770D50033B579 /* iosClient-Bridging-Header.h */,
-				2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */,
 			);
 			path = iosClient;
 			sourceTree = "<group>";
