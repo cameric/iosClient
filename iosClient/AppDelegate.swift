@@ -15,15 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    // Weibo login constants
-    let weiboAppKey = "3437731304"
-    let weiboRedirectURI = "https://api.weibo.com/oauth2/default.html"
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         // Bootstrap AVOSCloud library
-        AVOSCloud.setApplicationId("lAeVhtmnzDG3lEVKI8fV7F9c", clientKey: "qWKHBug84HMSqXrR5DXjBQsO")
+        AVOSCloud.setApplicationId(GlobalAPIKeys.LeanEngine_AppId, clientKey: GlobalAPIKeys.LeanEngine_AppKey)
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         // DEV: Use the test server
@@ -31,19 +27,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Bootstrap Weibo SDK
         WeiboSDK.enableDebugMode(true)
-        WeiboSDK.registerApp(weiboAppKey)
+        WeiboSDK.registerApp(GlobalAPIKeys.Weibo_AppKey)
         
         return true
     }
     
     // Enable the app to call Weibo app and push Weibo to foreground for further actions
-//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-//        return WeiboSDK.handleOpenURL(url, delegate: self as! WeiboSDKDelegate)
-//    }
-//    
-//    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
-//        return WeiboSDK.handleOpenURL(url, delegate: self as! WeiboSDKDelegate)
-//    }
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return WeiboSDK.handleOpenURL(url, delegate: self as! WeiboSDKDelegate)
+    }
+    
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return WeiboSDK.handleOpenURL(url, delegate: self as! WeiboSDKDelegate)
+    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

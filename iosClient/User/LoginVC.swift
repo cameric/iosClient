@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVOSCloud
 
-class LoginVC: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate, WeiboSDKDelegate {
     
     // MARK: Properties
     @IBOutlet weak var inputEmail: UITextField!
@@ -82,6 +82,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     func loginCallback(user: AVUser!, error: NSError!) {
         if error != nil {
+            print("\(error)")
             self.showLoginInfo = true
             self.invalidLoginInfo.text = "用户名或密码错误"
         } else {
@@ -96,5 +97,40 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
+    
+    @IBAction func weiboLogin(sender: UIButton) {
+        let request = WBAuthorizeRequest.request() as! WBAuthorizeRequest
+        request.redirectURI = GlobalAPIKeys.Weibo_AppRedirectURI
+        request.scope = "all"
+        
+        WeiboSDK.sendRequest(request)
+    }
+    
+    func didReceiveWeiboRequest(request: WBBaseRequest!) {
+        
+    }
+    
+    func didReceiveWeiboResponse(response: WBBaseResponse!) {
+        let authorizeResponse = response as! WBAuthorizeResponse
+        switch authorizeResponse.statusCode {
+        case .Success:
+            //authorizeResponse.userID
+            //authorizeResponse.accessToken
+            self.performSegueWithIdentifier("loggedInJumpToDetailedProfileSegue",
+                sender: self)
+            
+        case .UserCancel:
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "用户取消微博登录"
+        case .SentFail:
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "微博登录请求发送失败"
+        case .AuthDeny:
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "微博登录验证失败"
+        default:
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "微博登录过程中出现错误"
+        }
+    }
 }

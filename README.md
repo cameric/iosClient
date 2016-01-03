@@ -54,3 +54,23 @@ Run (**do this before you commit if you've added new files/groups in Xcode**):
 	rvm use 2.1.2
 
 ssl配置更新完后就可以添加境内source
+
+## Note on HTTPS TLS/1 Domain Exceptions
+So far we integrate two third-party libraries: LeanEngine for Back-end services and 
+Weibo for third-party login. Unfortunately, both libararies haven't conformed to 
+the newest TLS/2 HTTPS license for cross-domain HTTP requests. However, during the most
+recent WWDC Apple recommended (or asked) every app to migrate their HTTP calls to TLS/2
+security level.
+
+Thus the only way to get around this (at this point) is to add the corresponding 
+domains for the two frameworks to the whitelist of our app. 
+All relative domains have been included in Info.plist.
+
+> Note: I made this section for reminder purposes. In the future if any (or both) of the 
+> frameworks update their API server to TLS/2 license, we will eliminate those domains
+> from exception list immediately for security reasons.
+> - Tony
+
+Reference:
+-  [Great StackOverflow page on this issue](http://stackoverflow.com/questions/30739473/nsurlsession-nsurlconnection-http-load-failed-on-ios-9)
+-  [Official Apple announcement on App Transport Security (ATS)](https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-DontLinkElementID_13)
