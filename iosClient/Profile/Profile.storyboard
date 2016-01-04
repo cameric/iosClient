@@ -121,12 +121,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPC-94-Huv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="h87-dD-HHV">
                     <connections>
-                        <action selector="showLoggedInWindow:" destination="ywd-OF-Fys" id="nqb-rx-eH4"/>
+                        <action selector="didTapLoginButton:" destination="ywd-OF-Fys" id="KPB-Mi-iOS"/>
                         <segue destination="he9-DV-X4r" kind="presentation" id="Di5-OZ-chI"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="nds-sD-XeP">
                     <connections>
+                        <action selector="didTapShowDetailedProfileButton:" destination="ywd-OF-Fys" id="Rp2-qY-DOx"/>
                         <segue destination="sO4-EV-1MU" kind="show" id="cyi-dT-wDD"/>
                     </connections>
                 </tapGestureRecognizer>

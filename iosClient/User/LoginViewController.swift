@@ -51,7 +51,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
     
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "loggedInJumpToDetailedProfileSegue" {
+        if segue.identifier == "loggedInJumpToProfileSegue" {
             // Pass the logged in info to detailed profile view controller
             let targetViewController = segue.destinationViewController as! ProfileViewController
             targetViewController.loggedInUser = self.loggedInUser!
@@ -68,7 +68,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
         // User input check
         guard let username = inputEmail!.text where username != "" else {
             self.showLoginInfo = true
-            self.invalidLoginInfo.text = "用户名不能为空"
+            self.invalidLoginInfo.text = "邮箱不能为空"
             return
         }
         guard let pwd = inputPwd!.text where pwd != "" else {
@@ -90,7 +90,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
             do {
                 let tmpUser = try UserQueryServices.userFromQueryResult(user)
                 self.loggedInUser = tmpUser
-                self.performSegueWithIdentifier("loggedInJumpToDetailedProfileSegue",
+                self.performSegueWithIdentifier("loggedInJumpToProfileSegue",
                     sender: self)
             } catch {
                 self.invalidLoginInfo.text = "登录过程中出现错误，请重试"

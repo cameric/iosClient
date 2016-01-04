@@ -21,44 +21,51 @@ class ProfileViewController: UIViewController {
     
     var loggedInUser: User?
     
+    func toggleLogInButton() {
+        if self.loggedInUser != nil {
+            notLoggedInView.hidden = true
+            loggedInNameLabel.text = self.loggedInUser!.name
+            loggedInView.hidden = false
+            logoutButton.hidden = false
+        } else {
+            notLoggedInView.hidden = false
+            loggedInView.hidden = true
+            logoutButton.hidden = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if let curUser = UserQueryServices.getCurrentUserIfLoggedIn() {
-            notLoggedInView.hidden = true
-            loggedInNameLabel.text = curUser.name
-            loggedInView.hidden = false
-            logoutButton.hidden = false
+            self.loggedInUser = curUser
         }
+        toggleLogInButton()
     }
     
     // MARK: Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let id = segue.identifier where id == "ShowDetailedProfileSegue" {
-            
-        }
-    }
-    
-    // MARK: Actions
-    @IBAction func showLoggedInWindow(sender: UITapGestureRecognizer) {
-        notLoggedInView.backgroundColor = UIColor.lightGrayColor()
-    }
-    
-//    @IBAction func showDetailedProfile(sender: UITapGestureRecognizer) {
-//        loggedInView.backgroundColor = UIColor.lightGrayColor()
+    // TODO: Pass useinfo to detailed profile page
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if let id = segue.identifier where id == "ShowDetailedProfileSegue" {
+//            
+//        }
 //    }
     
+    // MARK: Actions
+    @IBAction func didTapLoginButton(sender: UITapGestureRecognizer) {
+        notLoggedInView.backgroundColor = UIColor.lightGrayColor()
+    }
+    @IBAction func didTapShowDetailedProfileButton(sender: UITapGestureRecognizer) {
+        loggedInView.backgroundColor = UIColor.lightGrayColor()
+    }
+    
     @IBAction func finishedLoggedIn(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.sourceViewController as? LoginViewController, user = sourceViewController.loggedInUser {
-            // Placeholder
-        }
+        toggleLogInButton()
     }
     
     @IBAction func logout(sender: UIButton) {
-        logoutButton.hidden = true
-        loggedInView.hidden = true
-        notLoggedInView.hidden = false
-        
+        self.loggedInUser = nil
+        toggleLogInButton()
         // Clear local storage
         AVUser.logOut()
     }
