@@ -49,7 +49,6 @@ class QueryUtils {
                 } catch let err {
                     onCompletion(nil, err)
                 }
-                
             }
         }
     }
