@@ -1,5 +1,5 @@
 //
-//  ProfileVC.swift
+//  ProfileViewController.swift
 //  iosClient
 //
 //  Created by Cam on 11/20/15.
@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVOSCloud
 
-class ProfileVC: UIViewController {
+class ProfileViewController: UIViewController {
     
     // MARK: Properties
     @IBOutlet weak var notLoggedInView: UIView!
