@@ -17,7 +17,7 @@
 		252095791C3949A700877546 /* GlobalAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252095781C3949A700877546 /* GlobalAPIKeys.swift */; };
 		2548B6D61C37FD5800CB4906 /* DetailedProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548B6D51C37FD5800CB4906 /* DetailedProfileViewController.swift */; };
 		2548B6D91C381A7D00CB4906 /* DetailedProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2548B6D81C381A7D00CB4906 /* DetailedProfile.storyboard */; };
-		2548B6DD1C38C89700CB4906 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */; };
+		2548B6DD1C38C89700CB4906 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548B6DC1C38C89700CB4906 /* TabBarViewController.swift */; };
 		258D84C71C37BBE500DCD9AA /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84C61C37BBE500DCD9AA /* User.storyboard */; };
 		258D84C91C37BBFE00DCD9AA /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */; };
 		258D84CD1C37BC8000DCD9AA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258D84CC1C37BC8000DCD9AA /* Profile.storyboard */; };
@@ -70,7 +70,7 @@
 		252095781C3949A700877546 /* GlobalAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalAPIKeys.swift; path = ../DataModels/GlobalAPIKeys.swift; sourceTree = "<group>"; };
 		2548B6D51C37FD5800CB4906 /* DetailedProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedProfileViewController.swift; sourceTree = "<group>"; };
 		2548B6D81C381A7D00CB4906 /* DetailedProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailedProfile.storyboard; sourceTree = "<group>"; };
-		2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		2548B6DC1C38C89700CB4906 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		258D84C61C37BBE500DCD9AA /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		258D84C81C37BBFE00DCD9AA /* Favorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
 		258D84CC1C37BC8000DCD9AA /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		2548B6DE1C38CC6500CB4906 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				2548B6DC1C38C89700CB4906 /* MainTabBarViewController.swift */,
+				2548B6DC1C38C89700CB4906 /* TabBarViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -519,7 +519,7 @@
 				09DD2FE61C36F24C0074037C /* SignupViewController.swift in Sources */,
 				7458D7B91C2BB8F3008ABA85 /* Font.swift in Sources */,
 				7458D7F91C2BF2BE008ABA85 /* SearchUserListCell.swift in Sources */,
-				2548B6DD1C38C89700CB4906 /* MainTabBarViewController.swift in Sources */,
+				2548B6DD1C38C89700CB4906 /* TabBarViewController.swift in Sources */,
 				0930C0D61C35EAAB0065FD9F /* QueryUtils.swift in Sources */,
 				25AF484B1C0C5C8500C71DB6 /* ScheduleViewController.swift in Sources */,
 				092B23881C34C40800614EFD /* UserQuery.swift in Sources */,

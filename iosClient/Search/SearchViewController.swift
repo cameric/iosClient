@@ -88,7 +88,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func configureCustomSearchController() {
-        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tableView_.frame.size.width, 50.0), searchBarFont: Font.fontWithSize(16.0), searchBarTextColor: ColorScheme.fontColor(), searchBarTintColor: ColorScheme.mainColor())
+        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tableView_.frame.size.width, 50.0), searchBarFont: Font.fontWithSize(16.0), searchBarTextColor: ColorScheme.fontColor, searchBarTintColor: ColorScheme.mainColor)
         
         customSearchController.customSearchBar.placeholder = "Doctor Zhou"
         tableView_.tableHeaderView = customSearchController.customSearchBar

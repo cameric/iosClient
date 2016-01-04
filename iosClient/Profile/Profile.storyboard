@@ -79,7 +79,7 @@
                                     <outletCollection property="gestureRecognizers" destination="h87-dD-HHV" appends="YES" id="4dD-E5-rcG"/>
                                 </connections>
                             </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J55-5q-S6y">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J55-5q-S6y">
                                 <rect key="frame" x="20" y="530" width="560" height="50"/>
                                 <color key="backgroundColor" red="0.87450980392156863" green="0.24313725490196078" blue="0.24313725490196078" alpha="0.68821262668918914" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -106,7 +106,11 @@
                             <constraint firstItem="0jp-44-rxN" firstAttribute="leading" secondItem="w5o-BR-058" secondAttribute="leading" id="x9e-JK-ac0"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="Contacts" id="tpc-gU-Vg0">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="我的" id="iLN-Hs-CpF"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="loggedInNameLabel" destination="TMO-JN-GqH" id="fKu-lU-m9h"/>
                         <outlet property="loggedInView" destination="0jp-44-rxN" id="OeY-81-gCE"/>
@@ -164,4 +168,7 @@
             <point key="canvasLocation" x="-344" y="-799"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Contacts" width="38" height="38"/>
+    </resources>
 </document>

@@ -45,7 +45,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="Search" id="P8s-XE-rHc">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="发现" id="QT4-F1-MOD"/>
                     <connections>

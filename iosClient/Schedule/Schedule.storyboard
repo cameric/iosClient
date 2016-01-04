@@ -56,7 +56,11 @@
                             <constraint firstItem="h1y-W9-RaJ" firstAttribute="centerX" secondItem="suj-Jg-L7g" secondAttribute="centerX" id="yOI-OT-lU5"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="Clock" id="ITN-o6-fA4">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="预约" id="qOs-iY-c8N"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarMenuView" destination="h1y-W9-RaJ" id="Qin-do-4Cu"/>
                         <outlet property="horizCalendarView" destination="lOD-hT-B7V" id="1Pd-eT-oFg"/>
@@ -67,4 +71,7 @@
             <point key="canvasLocation" x="394" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Clock" width="38" height="38"/>
+    </resources>
 </document>

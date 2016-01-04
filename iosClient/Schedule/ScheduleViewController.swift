@@ -52,7 +52,7 @@ class ScheduleViewController: UIViewController, JTCalendarDelegate {
         calendarManager.contentView = horizCalendarView
         calendarManager.setDate(NSDate())
         
-        calendarMenuView.backgroundColor = ColorScheme.backgroundColor()
+        calendarMenuView.backgroundColor = ColorScheme.backgroundColor
     }
     
     override func didReceiveMemoryWarning() {

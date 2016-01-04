@@ -5,15 +5,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Main Tab Bar View Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="MainTabBarViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="TabBarViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="barTintColor" red="1" green="0.4549019608" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="gES-rT-SLJ" kind="relationship" relationship="viewControllers" id="fEE-fd-ZZG"/>
@@ -29,49 +30,205 @@
         <!--Search-->
         <scene sceneID="tTp-pr-Oqa">
             <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="gES-rT-SLJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发现" image="Search" id="VPt-Rq-rD0"/>
-                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPb-TS-eQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Search" id="gES-rT-SLJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发现" image="7171CD39-B25F-4381-BC2C-9AB7C3E93A30" id="VPt-Rq-rD0"/>
+                </viewControllerPlaceholder>
             </objects>
             <point key="canvasLocation" x="648.5" y="-195"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="QlC-XG-vgl">
             <objects>
-                <viewControllerPlaceholder storyboardName="Favorite" id="2WQ-xg-LLe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="收藏" image="Rating" id="elW-Yr-WS5"/>
-                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywr-y0-O0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Favorite" id="2WQ-xg-LLe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="收藏" image="116CE4A4-D86C-4600-985C-8B2974D6A5DE" id="elW-Yr-WS5"/>
+                </viewControllerPlaceholder>
             </objects>
             <point key="canvasLocation" x="648.5" y="-77"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="yQV-Z8-KMc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ect-1G-KyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Schedule" id="jbX-sC-IoD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="预约" image="Clock" id="qTy-Rg-dIU"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ect-1G-KyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="648.5" y="49"/>
         </scene>
         <!--Profile-->
         <scene sceneID="xlG-9x-UsR">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="wyy-gz-veL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="Contacts" id="yQi-qH-Tlt"/>
-                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2BV-Hj-axP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Profile" id="wyy-gz-veL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="A0A8903C-5981-49D3-AA0C-7C0E2F5BF961" id="yQi-qH-Tlt"/>
+                </viewControllerPlaceholder>
             </objects>
             <point key="canvasLocation" x="648" y="185"/>
         </scene>
     </scenes>
     <resources>
+        <image name="116CE4A4-D86C-4600-985C-8B2974D6A5DE" width="38" height="38">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGQkNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QDwcI
+ERYbHCUmJygwMzY8P1UkbnVsbNQJCgsMDQ4PEFYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVwc1dOU0Nv
+bG9ygA4SAMAAAIACgAzSEgkTFVpOUy5vYmplY3RzoRSAA4AL0hIJFxqiGBmABIAFgAoQANUdHh8gCSEb
+IiMkVk5TU2l6ZV8QD05TQml0c1BlclNhbXBsZV8QEE5TQ29sb3JTcGFjZU5hbWVZTlNQREZEYXRhgAaA
+B4AIgAlYezM4LCAzOH1fEBlOU0NhbGlicmF0ZWRSR0JDb2xvclNwYWNlTxEGfiVQREYtMS40CiW17a77
+CjMgMCBvYmoKPDwgL0xlbmd0aCA0IDAgUgogICAvRmlsdGVyIC9GbGF0ZURlY29kZQo+PgpzdHJlYW0K
+eJxtlEluVTEQRedehTeAcbncrgAJiUFgiBigjxKEXgaBAdvnlpuyf4ii6Lvsau+zz4vxVv5+P9n33719
++gObi0v22T6a5EKyHLsVnac8DLbMLtYoiyAuN6y674XFcJzuY9uwuHRXFh+NlmxH4jST9SJhJuzGiDAr
+cjv05c3uTi/7c/bN6Ho69arB5RxlzXwaa4I9gsxQOaPc8NrVjmKj1nAcY6TDmpPI0qxJZpqRURxXSRZ5
+fhqqrsDwjiKhdZg+FhuqYwoIp+RKYRuCY8RetjkO1QZyDYpctrjo0TLsmgvs6hrs4F2OVaLZ1RQsZZea
+uJM0VS15x1XUIXIlZ0QlJpgG/nLQXMq9eO8Nmz7JKCE6oqKnAa1x1GCYIQbkWMkD9y60OGaShTaHmb3Y
+q3ecUwlrNnPJqoSyZ6fmYuJDm1O6S7VEIy3K5UUlaQ1pRLOrV25JfupokBzV2u3UxM6wISbCSvcfhQki
+Zxr+DQvYlPI496UPmGsdA3MQTUd6g35JBIgz35RzXINusnwcPY5SXsPx5WMQPVd6bCRuuzxswq3S9kjm
+tNo94kQmnU4SVX+MD7vltuW5U+8NOR8nND5/ADSoQ0PO/2L7I/5/ma/fLD6p/WGi/WRfLHXvd/LT2XJ7
+nk90c0XBwUqBjYD1/l+jwszXf6Bg06U/twMeBzRuR45rZpm578HGipbNlYHDzYPLnpjgV2/7thnTybKY
+8hpAvEuxcqVnS/Y/DN2sOfo/yXPHnyHO+noFd6xtrrR+4xUr8wotrMgNo7yxAjv3xgZW5AKlsLGCmyTb
+ipVQOh8UK3iocsE2V+DQ+Lhq0cV4gEWPJ1k0fqFFC0y0aAMTLdrgRIv2P9Ey59to0fknWlSeQ7v9EjBW
+SgdYUE6yKljkpY72BljE7mSaYJEHF8IGC8I8tw0W2BzjBou81A66ARaoMNIvsMBt5JtyjgujYNnHHSwa
+vsCi6SdYtPxURdsbYNHuJ1h0ugUWHX+CReW5U+8NOb/YB/Ng/gFAiqz1CmVuZHN0cmVhbQplbmRvYmoK
+NCAwIG9iagogICA3NjMKZW5kb2JqCjIgMCBvYmoKPDwKICAgL0V4dEdTdGF0ZSA8PAogICAgICAvYTAg
+PDwgL0NBIDEgL2NhIDEgPj4KICAgICAgL2ExIDw8IC9DQSAwIC9jYSAwID4+CiAgID4+Cj4+CmVuZG9i
+ago1IDAgb2JqCjw8IC9UeXBlIC9QYWdlCiAgIC9QYXJlbnQgMSAwIFIKICAgL01lZGlhQm94IFsgMCAw
+IDM3LjUgMzcuNSBdCiAgIC9Db250ZW50cyAzIDAgUgogICAvR3JvdXAgPDwKICAgICAgL1R5cGUgL0dy
+b3VwCiAgICAgIC9TIC9UcmFuc3BhcmVuY3kKICAgICAgL0NTIC9EZXZpY2VSR0IKICAgPj4KICAgL1Jl
+c291cmNlcyAyIDAgUgo+PgplbmRvYmoKMSAwIG9iago8PCAvVHlwZSAvUGFnZXMKICAgL0tpZHMgWyA1
+IDAgUiBdCiAgIC9Db3VudCAxCj4+CmVuZG9iago2IDAgb2JqCjw8IC9DcmVhdG9yIChjYWlybyAxLjgu
+OCAoaHR0cDovL2NhaXJvZ3JhcGhpY3Mub3JnKSkKICAgL1Byb2R1Y2VyIChjYWlybyAxLjguOCAoaHR0
+cDovL2NhaXJvZ3JhcGhpY3Mub3JnKSkKPj4KZW5kb2JqCjcgMCBvYmoKPDwgL1R5cGUgL0NhdGFsb2cK
+ICAgL1BhZ2VzIDEgMCBSCj4+CmVuZG9iagp4cmVmCjAgOAowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAw
+MDExNzggMDAwMDAgbiAKMDAwMDAwMDg3NiAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAw
+MDA4NTQgMDAwMDAgbiAKMDAwMDAwMDk3NiAwMDAwMCBuIAowMDAwMDAxMjQzIDAwMDAwIG4gCjAwMDAw
+MDEzNjggMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSA4CiAgIC9Sb290IDcgMCBSCiAgIC9JbmZvIDYg
+MCBSCj4+CnN0YXJ0eHJlZgoxNDIwCiUlRU9GCtIpKissWiRjbGFzc25hbWVYJGNsYXNzZXNdTlNQREZJ
+bWFnZVJlcKMtLi9dTlNQREZJbWFnZVJlcFpOU0ltYWdlUmVwWE5TT2JqZWN00ikqMTJXTlNBcnJheaIx
+L9IpKjQ1Xk5TTXV0YWJsZUFycmF5ozQxL9M3OAk5OjtXTlNXaGl0ZVxOU0NvbG9yU3BhY2VEMCAwABAD
+gA3SKSo9PldOU0NvbG9yoj0v0ikqQEFXTlNJbWFnZaJAL18QD05TS2V5ZWRBcmNoaXZlctFERVRyb290
+gAEACAARABoAIwAtADIANwBJAE8AWABfAGwAcwB7AH0AggCEAIYAiwCWAJgAmgCcAKEApACmAKgAqgCs
+ALcAvgDQAOMA7QDvAPEA8wD1AP4BGgecB6EHrAe1B8MHxwfVB+AH6QfuB/YH+Qf+CA0IEQgYCCAILQgy
+CDQINgg7CEMIRghLCFMIVghoCGsIcAAAAAAAAAIBAAAAAAAAAEYAAAAAAAAAAAAAAAAAAAhyA
+</mutableData>
+        </image>
+        <image name="7171CD39-B25F-4381-BC2C-9AB7C3E93A30" width="38" height="38">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGQkNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QDwcI
+ERYbHCUmJygwMzY8P1UkbnVsbNQJCgsMDQ4PEFYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVwc1dOU0Nv
+bG9ygA4SAMAAAIACgAzSEgkTFVpOUy5vYmplY3RzoRSAA4AL0hIJFxqiGBmABIAFgAoQANUdHh8gCSEb
+IiMkVk5TU2l6ZV8QD05TQml0c1BlclNhbXBsZV8QEE5TQ29sb3JTcGFjZU5hbWVZTlNQREZEYXRhgAaA
+B4AIgAlYezM4LCAzOH1fEBlOU0NhbGlicmF0ZWRSR0JDb2xvclNwYWNlTxEE/CVQREYtMS40CiW17a77
+CjMgMCBvYmoKPDwgL0xlbmd0aCA0IDAgUgogICAvRmlsdGVyIC9GbGF0ZURlY29kZQo+PgpzdHJlYW0K
+eJxlkkFOAzEMRfc5hS+AiZ1kPHMCJCQWhSVigQYVhOiisOD62LHTaYuqdvxT+9vOm2PKYJ/vd7h9zfD+
+o7oINjjAPlFDaVAasukZhZZQBXjBVsgC1uxVA82u0xJpi1V6ferxCjT3iq6YkLImZJzqDFyQsxow0lTN
+q2AWYCwMX9aQZkgVa1HFzZ5Ue4FKwVIr0KSnFVg7AC1YyuRxzOaxD5z0TGaKPc43XOFjbFzs92BTLlJC
+spiPcOlRGIu1ZpGRSmROYeNi1Y2bJXZVbUIvqduAPXRzT/aWF+P8H28f7B7vlB11dvbHrx7f6/czPb9A
+xgxvqcIDHIF69o09OuL1EIZ8Dpidr+CiMI1qh6uDZr29SJGNrsfphNd18OUJ58aDr7IzMoOvgx2A/SwN
+wlayyEZYDfMUVLWTvScen/j6wEE38UaXr+Besg20uphRlDDsQNlYe5oucvJLLgZXV52gl9QxlgXuG1C3
+WytxaVdDPcEu7dIfZJ6v1AplbmRzdHJlYW0KZW5kb2JqCjQgMCBvYmoKICAgMzc3CmVuZG9iagoyIDAg
+b2JqCjw8CiAgIC9FeHRHU3RhdGUgPDwKICAgICAgL2EwIDw8IC9DQSAxIC9jYSAxID4+CiAgICAgIC9h
+MSA8PCAvQ0EgMCAvY2EgMCA+PgogICA+Pgo+PgplbmRvYmoKNSAwIG9iago8PCAvVHlwZSAvUGFnZQog
+ICAvUGFyZW50IDEgMCBSCiAgIC9NZWRpYUJveCBbIDAgMCAzNy41IDM3LjUgXQogICAvQ29udGVudHMg
+MyAwIFIKICAgL0dyb3VwIDw8CiAgICAgIC9UeXBlIC9Hcm91cAogICAgICAvUyAvVHJhbnNwYXJlbmN5
+CiAgICAgIC9DUyAvRGV2aWNlUkdCCiAgID4+CiAgIC9SZXNvdXJjZXMgMiAwIFIKPj4KZW5kb2JqCjEg
+MCBvYmoKPDwgL1R5cGUgL1BhZ2VzCiAgIC9LaWRzIFsgNSAwIFIgXQogICAvQ291bnQgMQo+PgplbmRv
+YmoKNiAwIG9iago8PCAvQ3JlYXRvciAoY2Fpcm8gMS44LjggKGh0dHA6Ly9jYWlyb2dyYXBoaWNzLm9y
+ZykpCiAgIC9Qcm9kdWNlciAoY2Fpcm8gMS44LjggKGh0dHA6Ly9jYWlyb2dyYXBoaWNzLm9yZykpCj4+
+CmVuZG9iago3IDAgb2JqCjw8IC9UeXBlIC9DYXRhbG9nCiAgIC9QYWdlcyAxIDAgUgo+PgplbmRvYmoK
+eHJlZgowIDgKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwNzkyIDAwMDAwIG4gCjAwMDAwMDA0OTAg
+MDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNDY4IDAwMDAwIG4gCjAwMDAwMDA1OTAg
+MDAwMDAgbiAKMDAwMDAwMDg1NyAwMDAwMCBuIAowMDAwMDAwOTgyIDAwMDAwIG4gCnRyYWlsZXIKPDwg
+L1NpemUgOAogICAvUm9vdCA3IDAgUgogICAvSW5mbyA2IDAgUgo+PgpzdGFydHhyZWYKMTAzNAolJUVP
+RgrSKSorLFokY2xhc3NuYW1lWCRjbGFzc2VzXU5TUERGSW1hZ2VSZXCjLS4vXU5TUERGSW1hZ2VSZXBa
+TlNJbWFnZVJlcFhOU09iamVjdNIpKjEyV05TQXJyYXmiMS/SKSo0NV5OU011dGFibGVBcnJheaM0MS/T
+NzgJOTo7V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQA4AN0ikqPT5XTlNDb2xvcqI9L9IpKkBBV05T
+SW1hZ2WiQC9fEA9OU0tleWVkQXJjaGl2ZXLRREVUcm9vdIABAAgAEQAaACMALQAyADcASQBPAFgAXwBs
+AHMAewB9AIIAhACGAIsAlgCYAJoAnAChAKQApgCoAKoArAC3AL4A0ADjAO0A7wDxAPMA9QD+ARoGGgYf
+BioGMwZBBkUGUwZeBmcGbAZ0BncGfAaLBo8GlgaeBqsGsAayBrQGuQbBBsQGyQbRBtQG5gbpBu4AAAAA
+AAACAQAAAAAAAABGAAAAAAAAAAAAAAAAAAAG8A
+</mutableData>
+        </image>
+        <image name="A0A8903C-5981-49D3-AA0C-7C0E2F5BF961" width="38" height="38">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGQkNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QDwcI
+ERYbHCUmJygwMzY8P1UkbnVsbNQJCgsMDQ4PEFYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVwc1dOU0Nv
+bG9ygA4SAMAAAIACgAzSEgkTFVpOUy5vYmplY3RzoRSAA4AL0hIJFxqiGBmABIAFgAoQANUdHh8gCSEb
+IiMkVk5TU2l6ZV8QD05TQml0c1BlclNhbXBsZV8QEE5TQ29sb3JTcGFjZU5hbWVZTlNQREZEYXRhgAaA
+B4AIgAlYezM4LCAzOH1fEBlOU0NhbGlicmF0ZWRSR0JDb2xvclNwYWNlTxEOySVQREYtMS40CiW17a77
+CjMgMCBvYmoKPDwgL0xlbmd0aCA0IDAgUgogICAvRmlsdGVyIC9GbGF0ZURlY29kZQo+PgpzdHJlYW0K
+eJx1mUuuLLcRROdcRW3AJf4/KzAgwAPZQ0MDow3JMO4byBpo+8qISLK6gWcIT91RVc0ik/k7vL+FeOG/
+//16/fCveP36u+ky7nZ9u34Jad699au0O6ZuV1K7UxlXqfcq80r5Xukq5W4pXyndq5WrpLuYekHHWq6Q
+151Tg8ylXrnfbUyoOcuVyz1L18OtNOiaO581ke/ZOG7JNowNP6seNQ3Z0/X1Jm1ClLU26JgL1EjryvEu
+Y13B5hvHlda9MmeYbUoTesQCVUeB6qtBdd5qQ0/Obvfm3eqwccqdu01z4K6JYQtL/Z6x4dkP/UXdJjTH
+Lbxsqi0ONIeUfnmUfYc17XuNnaovqGJWsyfrnSPvxpJsmAob2N40M/gWegxfqxmVH9gYvGQOjsC35Lns
+SQxBg2UazK5Xsy4MhHXmu3VuxNw72zN3tNjmJTOueYF9zDWvsO5UqUrDwMOupmvdM19mgIyvyQzb7h7z
+Nc2ZsJx6N7s/7mgDFG56sAc6hNnD/rewCYXbVMyk9jw/S/EPPrG/7l98XcFkr3xbr1cxb7WN8dckOsGe
+QYn32nMzh+120eZsLh/ypM3PgvLgT0wvW0Futr5jiuxhsQ1lOtoX+F0e9PYqE9cOkSYMXRgAkGYdbIN5
+GFRcUD22rYJtMELodW7bugofxm5wyDrpeT5VaHpe6XysxWqjmBxNcj4ulT2KofVwoyvW8ileWwbpL2gY
+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
+9FqlvmiXLdGxbgiPeSxeDx9jRPb6zsd4/SrOxx4PzrxZDdrG4+Cu7HwMJfr2Z9N84+O1D5qz8N2Pl5Ez
+glv68PH7OTiPst80oa9riuJjqCZGyzo39C7ITzy7TjTFxzj+3tR7vOqRsxDR9s30dmu0jyd7+X+iMZqc
+j5O6APEx+9y1+RjREefDx96KnFVjQUgph4/R7bWx+XiqJxMed29vnY6bOjSxcagivLd09aAxy9980JjV
+bKNxrtuZ6oPFuToUe20LDsV+KHagGCPFvKEYGWMkp2CkpPpAsQd1OFCMqC/lgWJkpjE2FGdlxB14bR/9
+Sge/cKA4qyA4FKNv8DJf1YapiH/o4FCMWqMQ5GFc5xnbgWLrUrJqMIIAaHdib4iKg2Ox3xMXo7mZc3Mx
+Bs1vXIwy2vMGYV9L+JSHi73iORfDSj1tLvbMyWdh0+BW3lyc5YuHi7FBazoKIwHOcX24yBsO+R/kDhab
+9j9PsDfpAl9hsS03an8ci+0Cqdmbu7lt6We0iIRDxlnY52iMpjGuw8ZoNIlpDseFnZLTcWEqdTzmn2tE
+x3QrwbEeER3rt8LjM6742N8qQPYJkZDPZIMzsq9FjOzL3Id22woOyfxzwIZkmA+e65Ts3f+BZLenQ3LW
+GaVDsmDgUDL+8lT1Rz+2zOvhZH0/oCzppJyVSxyVsUPiA4dlvHKybwYr23TmHNenK3zPOf5x/RR+Cn8C
+0zu80gplbmRzdHJlYW0KZW5kb2JqCjQgMCBvYmoKICAgMjg4NQplbmRvYmoKMiAwIG9iago8PAogICAv
+RXh0R1N0YXRlIDw8CiAgICAgIC9hMCA8PCAvQ0EgMSAvY2EgMSA+PgogICAgICAvYTEgPDwgL0NBIDAg
+L2NhIDAgPj4KICAgPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL1BhZ2UKICAgL1BhcmVudCAx
+IDAgUgogICAvTWVkaWFCb3ggWyAwIDAgMzcuNSAzNy41IF0KICAgL0NvbnRlbnRzIDMgMCBSCiAgIC9H
+cm91cCA8PAogICAgICAvVHlwZSAvR3JvdXAKICAgICAgL1MgL1RyYW5zcGFyZW5jeQogICAgICAvQ1Mg
+L0RldmljZVJHQgogICA+PgogICAvUmVzb3VyY2VzIDIgMCBSCj4+CmVuZG9iagoxIDAgb2JqCjw8IC9U
+eXBlIC9QYWdlcwogICAvS2lkcyBbIDUgMCBSIF0KICAgL0NvdW50IDEKPj4KZW5kb2JqCjYgMCBvYmoK
+PDwgL0NyZWF0b3IgKGNhaXJvIDEuOC44IChodHRwOi8vY2Fpcm9ncmFwaGljcy5vcmcpKQogICAvUHJv
+ZHVjZXIgKGNhaXJvIDEuOC44IChodHRwOi8vY2Fpcm9ncmFwaGljcy5vcmcpKQo+PgplbmRvYmoKNyAw
+IG9iago8PCAvVHlwZSAvQ2F0YWxvZwogICAvUGFnZXMgMSAwIFIKPj4KZW5kb2JqCnhyZWYKMCA4CjAw
+MDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMzMwMSAwMDAwMCBuIAowMDAwMDAyOTk5IDAwMDAwIG4gCjAw
+MDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMjk3NiAwMDAwMCBuIAowMDAwMDAzMDk5IDAwMDAwIG4gCjAw
+MDAwMDMzNjYgMDAwMDAgbiAKMDAwMDAwMzQ5MSAwMDAwMCBuIAp0cmFpbGVyCjw8IC9TaXplIDgKICAg
+L1Jvb3QgNyAwIFIKICAgL0luZm8gNiAwIFIKPj4Kc3RhcnR4cmVmCjM1NDMKJSVFT0YK0ikqKyxaJGNs
+YXNzbmFtZVgkY2xhc3Nlc11OU1BERkltYWdlUmVwoy0uL11OU1BERkltYWdlUmVwWk5TSW1hZ2VSZXBY
+TlNPYmplY3TSKSoxMldOU0FycmF5ojEv0ikqNDVeTlNNdXRhYmxlQXJyYXmjNDEv0zc4CTk6O1dOU1do
+aXRlXE5TQ29sb3JTcGFjZUQwIDAAEAOADdIpKj0+V05TQ29sb3KiPS/SKSpAQVdOU0ltYWdlokAvXxAP
+TlNLZXllZEFyY2hpdmVy0URFVHJvb3SAAQAIABEAGgAjAC0AMgA3AEkATwBYAF8AbABzAHsAfQCCAIQA
+hgCLAJYAmACaAJwAoQCkAKYAqACqAKwAtwC+ANAA4wDtAO8A8QDzAPUA/gEaD+cP7A/3EAAQDhASECAQ
+KxA0EDkQQRBEEEkQWBBcEGMQaxB4EH0QfxCBEIYQjhCREJYQnhChELMQthC7AAAAAAAAAgEAAAAAAAAA
+RgAAAAAAAAAAAAAAAAAAEL0
+</mutableData>
+        </image>
         <image name="Clock" width="38" height="38"/>
-        <image name="Contacts" width="38" height="38"/>
-        <image name="Rating" width="38" height="38"/>
-        <image name="Search" width="38" height="38"/>
     </resources>
-    <color key="tintColor" red="1" green="0.45490196078431372" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
