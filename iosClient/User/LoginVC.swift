@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVOSCloud
 
-class LoginVC: UIViewController, UITextFieldDelegate, WeiboSDKDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelegate {
     
     // MARK: Properties
     @IBOutlet weak var inputEmail: UITextField!
@@ -53,7 +53,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, WeiboSDKDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loggedInJumpToDetailedProfileSegue" {
             // Pass the logged in info to detailed profile view controller
-            let targetViewController = segue.destinationViewController as! DetailedProfileVC
+            let targetViewController = segue.destinationViewController as! DetailedProfileViewController
             targetViewController.loggedInUser = self.loggedInUser!
         }
     }

@@ -1,5 +1,5 @@
 //
-//  ScheduleVC.swift
+//  ScheduleViewController.swift
 //  iosClient
 //
 //  Created by Cam on 11/20/15.
@@ -11,7 +11,7 @@ import Foundation
 import JTCalendar
 
 
-class ScheduleVC: UIViewController, JTCalendarDelegate {
+class ScheduleViewController: UIViewController, JTCalendarDelegate {
     @IBOutlet weak var calendarMenuView: JTCalendarMenuView!
     @IBOutlet weak var horizCalendarView: JTHorizontalCalendarView!
     

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--ScheduleVC-->
+        <!--Schedule View Controller-->
         <scene sceneID="43n-Mp-Otr">
             <objects>
-                <viewController id="KDs-6N-T1p" customClass="ScheduleVC" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScheduleViewController" id="KDs-6N-T1p" customClass="ScheduleViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZEP-oo-1K7"/>
                         <viewControllerLayoutGuide type="bottom" id="6mE-Bk-psI"/>

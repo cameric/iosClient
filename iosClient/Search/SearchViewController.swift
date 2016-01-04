@@ -1,5 +1,5 @@
 //
-//  SearchVC.swift
+//  SearchViewController.swift
 //  iosClient
 //
 //  Created by Cam on 11/20/15.
@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVOSCloud
 
-class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate, CustomSearchControllerDelegate {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate, CustomSearchControllerDelegate {
 
     @IBOutlet weak var tableView_: UITableView!
 

@@ -9,7 +9,7 @@
         <!--我的-->
         <scene sceneID="CNa-dw-NPZ">
             <objects>
-                <viewController id="ywd-OF-Fys" customClass="ProfileVC" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ywd-OF-Fys" customClass="ProfileViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VdY-vA-Iyf"/>
                         <viewControllerLayoutGuide type="bottom" id="qYA-CD-rjI"/>

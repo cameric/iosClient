@@ -1,5 +1,5 @@
 //
-//  DetailedProfileVC.swift
+//  DetailedProfileViewController.swift
 //  iosClient
 //
 //  Created by Tony Zhang on 1/2/16.
@@ -9,7 +9,7 @@
 import UIKit
 import AVOSCloud
 
-class DetailedProfileVC: UIViewController {
+class DetailedProfileViewController: UIViewController {
     
     // MARK: Properties
     var loggedInUser: User?

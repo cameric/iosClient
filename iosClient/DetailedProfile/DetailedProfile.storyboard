@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Detailed ProfileVC-->
+        <!--Detailed Profile View Controller-->
         <scene sceneID="WJN-3o-SGI">
             <objects>
-                <viewController id="qck-Ay-3rv" customClass="DetailedProfileVC" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qck-Ay-3rv" customClass="DetailedProfileViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kre-k3-tDU"/>
                         <viewControllerLayoutGuide type="bottom" id="rf7-QD-IN5"/>
