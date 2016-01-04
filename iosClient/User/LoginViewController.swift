@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVOSCloud
 
-class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelegate, WBHttpRequestDelegate {
     
     // MARK: Properties
     @IBOutlet weak var inputEmail: UITextField!
@@ -88,7 +88,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
         } else {
             // Perform segue after async call is resolved
             do {
-                let tmpUser = try userFromQueryResult(user)
+                let tmpUser = try UserQueryServices.userFromQueryResult(user)
                 self.loggedInUser = tmpUser
                 self.performSegueWithIdentifier("loggedInJumpToDetailedProfileSegue",
                     sender: self)
@@ -107,18 +107,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
     }
     
     func didReceiveWeiboRequest(request: WBBaseRequest!) {
-        
+        // Nothing to listen here
     }
     
     func didReceiveWeiboResponse(response: WBBaseResponse!) {
         let authorizeResponse = response as! WBAuthorizeResponse
+        // Perform action based on Weibo App feedback
         switch authorizeResponse.statusCode {
         case .Success:
-            //authorizeResponse.userID
-            //authorizeResponse.accessToken
-            self.performSegueWithIdentifier("loggedInJumpToDetailedProfileSegue",
-                sender: self)
-            
+            // Call LeanEngine cloud function to signup using Weibo API
+            UserQueryServices.signUpWithWeibo(authorizeResponse.userID,
+                accessToken: authorizeResponse.accessToken,
+                onCompletion: { (curUser: User!, error: ErrorType!) -> Void in
+                    if error != nil {
+                        self.showLoginInfo = true
+                        self.invalidLoginInfo.text = "微博登录过程中出现错误"
+                    } else {
+                        self.loggedInUser = curUser
+                        self.performSegueWithIdentifier("loggedInJumpToDetailedProfileSegue",
+                            sender: self)
+                    }
+            })
         case .UserCancel:
             self.showLoginInfo = true
             self.invalidLoginInfo.text = "用户取消微博登录"
