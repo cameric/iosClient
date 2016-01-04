@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7kC-Qv-dKY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5QE-WZ-7Oi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="tau-As-u9g">
+            <objects>
+                <navigationController id="5QE-WZ-7Oi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nn1-Gj-WzV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7kC-Qv-dKY" kind="relationship" relationship="rootViewController" id="OL1-cp-kLv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4b-Gz-0gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="-2"/>
+        </scene>
+        <!--发现-->
         <scene sceneID="iWx-z0-KTy">
             <objects>
                 <tableViewController id="7kC-Qv-dKY" customClass="SearchViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +31,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" id="PC8-bB-hjU" customClass="SearchUserListCell" customModule="iosClient" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PC8-bB-hjU" id="ZqX-y1-CLn">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -31,6 +47,7 @@
                     <tabBarItem key="tabBarItem" title="" image="Search" id="P8s-XE-rHc">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" title="发现" id="QT4-F1-MOD"/>
                     <connections>
                         <outlet property="tableView_" destination="gG6-Oh-Dpq" id="6MF-4Y-ujk"/>
                     </connections>

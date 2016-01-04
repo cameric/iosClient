@@ -10,6 +10,31 @@ import UIKit
 import Foundation
 import JTCalendar
 
+/*class CalendarDelegateManager: JTCalendarDelegateManager {
+    override func prepareMenuItemView(menuItemView: UIView!, date: NSDate!) {
+        if (manager!.delegate != nil && manager!.delegate!.respondsToSelector("prepareMenuItemView"))
+        {
+            manager!.delegate!.calendar!(self.manager, prepareMenuItemView: menuItemView, date: date)
+            return;
+        }
+        
+        let text: String?
+        
+        if (date != nil) {
+            let dateFormatter = manager!.dateHelper!.createDateFormatter()
+            dateFormatter.timeZone = manager?.dateHelper.calendar().timeZone
+            dateFormatter.locale = manager?.dateHelper.calendar().locale
+            dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+            dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+            
+            text = "aaa"
+        } else {
+            text = nil
+        }
+        
+        (menuItemView as! UILabel).text = text
+    }
+}*/
 
 class ScheduleViewController: UIViewController, JTCalendarDelegate {
     @IBOutlet weak var calendarMenuView: JTCalendarMenuView!
