@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVOSCloud
 
-class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelegate, WBHttpRequestDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelegate {
     
     // MARK: Properties
     @IBOutlet weak var inputEmail: UITextField!
@@ -53,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loggedInJumpToDetailedProfileSegue" {
             // Pass the logged in info to detailed profile view controller
-            let targetViewController = segue.destinationViewController as! DetailedProfileViewController
+            let targetViewController = segue.destinationViewController as! ProfileViewController
             targetViewController.loggedInUser = self.loggedInUser!
         }
     }
@@ -142,4 +142,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
             self.invalidLoginInfo.text = "微博登录过程中出现错误"
         }
     }
+    
+    @IBAction func cancelLogin(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }

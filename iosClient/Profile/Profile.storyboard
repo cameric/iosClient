@@ -122,7 +122,7 @@
                 <tapGestureRecognizer id="h87-dD-HHV">
                     <connections>
                         <action selector="showLoggedInWindow:" destination="ywd-OF-Fys" id="nqb-rx-eH4"/>
-                        <segue destination="he9-DV-X4r" kind="show" id="LVZ-1f-t8M"/>
+                        <segue destination="he9-DV-X4r" kind="presentation" id="Di5-OZ-chI"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="nds-sD-XeP">

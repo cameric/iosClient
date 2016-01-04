@@ -19,10 +19,12 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var logoutButton: UIButton!
     
+    var loggedInUser: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if let curUser = getCurrentUserIfLoggedIn() {
+        if let curUser = UserQueryServices.getCurrentUserIfLoggedIn() {
             notLoggedInView.hidden = true
             loggedInNameLabel.text = curUser.name
             loggedInView.hidden = false
@@ -45,6 +47,12 @@ class ProfileViewController: UIViewController {
 //    @IBAction func showDetailedProfile(sender: UITapGestureRecognizer) {
 //        loggedInView.backgroundColor = UIColor.lightGrayColor()
 //    }
+    
+    @IBAction func finishedLoggedIn(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? LoginViewController, user = sourceViewController.loggedInUser {
+            // Placeholder
+        }
+    }
     
     @IBAction func logout(sender: UIButton) {
         logoutButton.hidden = true
