@@ -16,6 +16,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputName: UITextField!
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPwd: UITextField!
+    @IBOutlet weak var acceptLicense: UISwitch!
     @IBOutlet weak var invalidInputLabel: UILabel!
     
     var showSignupInfo: Bool = false
@@ -82,6 +83,11 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         guard let pwd = inputPwd!.text where pwd != "" else {
             self.showSignupInfo = true
             self.invalidInputLabel.text = "密码不能为空"
+            return
+        }
+        guard acceptLicense!.on else {
+            self.showSignupInfo = true
+            self.invalidInputLabel.text = "请同意平台协议"
             return
         }
         

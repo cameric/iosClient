@@ -27,6 +27,7 @@
 		25AF484B1C0C5C8500C71DB6 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484A1C0C5C8500C71DB6 /* ScheduleViewController.swift */; };
 		25AF484D1C0C5C8C00C71DB6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484C1C0C5C8C00C71DB6 /* ProfileViewController.swift */; };
 		25AF484F1C0C5C9100C71DB6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF484E1C0C5C9100C71DB6 /* FavoriteViewController.swift */; };
+		25C7F2301C3A9F6900E25E8C /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C7F22F1C3A9F6900E25E8C /* ForgetPasswordViewController.swift */; };
 		71E8776821B97429B4670096 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46400D1E132AC462656E376 /* Pods.framework */; };
 		7436D0D51BFFF47E00E7D545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */; };
 		7436D0DC1BFFF47E00E7D545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7436D0DA1BFFF47E00E7D545 /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 		25AF484A1C0C5C8500C71DB6 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		25AF484C1C0C5C8C00C71DB6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		25AF484E1C0C5C9100C71DB6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		25C7F22F1C3A9F6900E25E8C /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		4B644F80E0D1DCB359CC07F6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7436D0D11BFFF47E00E7D545 /* iosClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7436D0D41BFFF47E00E7D545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				09DD2FE31C36F24C0074037C /* LoginViewController.swift */,
 				09DD2FE41C36F24C0074037C /* SignupViewController.swift */,
 				258D84C61C37BBE500DCD9AA /* User.storyboard */,
+				25C7F22F1C3A9F6900E25E8C /* ForgetPasswordViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				7458D7B71C2BB439008ABA85 /* ColorScheme.swift in Sources */,
 				09D08E091C37533A00905187 /* AppointmentModel.swift in Sources */,
 				25AF484D1C0C5C8C00C71DB6 /* ProfileViewController.swift in Sources */,
+				25C7F2301C3A9F6900E25E8C /* ForgetPasswordViewController.swift in Sources */,
 				09DD2FE51C36F24C0074037C /* LoginViewController.swift in Sources */,
 				25AF48491C0C5C7F00C71DB6 /* SearchViewController.swift in Sources */,
 				7458D7B51C2B6301008ABA85 /* CustomSearchController.swift in Sources */,
