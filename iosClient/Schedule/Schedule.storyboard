@@ -56,13 +56,7 @@
                             <constraint firstItem="h1y-W9-RaJ" firstAttribute="centerX" secondItem="suj-Jg-L7g" secondAttribute="centerX" id="yOI-OT-lU5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="预约" id="qOs-iY-c8N">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="e5s-hM-DcH" customClass="MMDrawerBarButtonItem">
-                            <connections>
-                                <action selector="clickMenuButton" destination="KDs-6N-T1p" id="nH9-KT-YkZ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="预约" id="qOs-iY-c8N"/>
                     <connections>
                         <outlet property="calendarMenuView" destination="h1y-W9-RaJ" id="Qin-do-4Cu"/>
                         <outlet property="horizCalendarView" destination="lOD-hT-B7V" id="1Pd-eT-oFg"/>

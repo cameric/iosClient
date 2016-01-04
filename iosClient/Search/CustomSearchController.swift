@@ -1,5 +1,5 @@
 //
-//  SearchBarViewController.swift
+//  CustomSearchController.swift
 //  iosClient
 //
 //  Created by Cam on 12/23/15.

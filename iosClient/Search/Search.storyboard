@@ -8,7 +8,7 @@
         <!--Search View Controller-->
         <scene sceneID="iWx-z0-KTy">
             <objects>
-                <tableViewController id="7kC-Qv-dKY" customClass="SearchViewController" sceneMemberID="viewController">
+                <tableViewController id="7kC-Qv-dKY" customClass="SearchViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gG6-Oh-Dpq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="tableView_" destination="gG6-Oh-Dpq" id="8DU-Ec-HdC"/>
+                        <outlet property="tableView_" destination="gG6-Oh-Dpq" id="6MF-4Y-ujk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sg-K8-Hjh" userLabel="First Responder" sceneMemberID="firstResponder"/>

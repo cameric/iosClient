@@ -1,5 +1,5 @@
 //
-//  DetailedProfileVC.swift
+//  DetailedProfileViewController.swift
 //  iosClient
 //
 //  Created by Tony Zhang on 1/2/16.
