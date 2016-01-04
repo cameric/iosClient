@@ -9,6 +9,7 @@
 import Foundation
 import AVOSCloud
 import UIKit
+import MBProgressHUD
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
     
@@ -85,10 +86,19 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         newUser.username = username
         newUser.email = username
         newUser.password = pwd
+        
+        // Set up loading view
+        let loginNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loginNotification.mode = MBProgressHUDMode.Indeterminate
+        loginNotification.labelText = "注册中..."
+        
         newUser.signUpInBackgroundWithBlock(signupCallback)
     }
     
     func signupCallback(succeeded: Bool, error: NSError!) {
+        // First hide notification
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        
         if succeeded {
             self.performSegueWithIdentifier("signedupJumpToProfileSegue", sender: self)
         } else {

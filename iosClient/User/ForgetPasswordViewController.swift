@@ -8,6 +8,7 @@
 
 import UIKit
 import AVOSCloud
+import MBProgressHUD
 
 class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
 
@@ -20,6 +21,7 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        inputEmail.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,8 +56,16 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
+        // Set up loading view
+        let loginNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loginNotification.mode = MBProgressHUDMode.Indeterminate
+        loginNotification.labelText = "正在发送验证邮件..."
+        
         AVUser.requestPasswordResetForEmailInBackground(email, block:
             { (succeeded: Bool, error: NSError!) -> Void in
+                // First hide notification
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                
                 if succeeded {
                     self.showInfo = true
                     self.invalidInputLabel.text = "邮件已发送！"

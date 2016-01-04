@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import AVOSCloud
+import MBProgressHUD
 
 class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelegate {
     
@@ -66,14 +67,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
             return
         }
         
+        // Set up loading view
+        let loginNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loginNotification.mode = MBProgressHUDMode.Indeterminate
+        loginNotification.labelText = "登录中..."
+        
         AVUser.logInWithUsernameInBackground(username, password: pwd, block: loginCallback)
     }
     
     func loginCallback(user: AVUser!, error: NSError!) {
+        // First hide notification
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        
         if error != nil {
             print("\(error)")
             self.showLoginInfo = true
-            self.invalidLoginInfo.text = "用户名或密码错误"
+            self.invalidLoginInfo.text = "登陆错误：\(error.localizedDescription) (\(error.code))"
         } else {
             // Perform segue after async call is resolved
             do {
@@ -88,6 +97,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
     }
     
     @IBAction func weiboLogin(sender: UIButton) {
+        self.showLoginInfo = true
+        self.invalidLoginInfo.text = "现在跳转至微博登录..."
+        
         let request = WBAuthorizeRequest.request() as! WBAuthorizeRequest
         request.redirectURI = GlobalAPIKeys.Weibo_AppRedirectURI
         request.scope = "all"

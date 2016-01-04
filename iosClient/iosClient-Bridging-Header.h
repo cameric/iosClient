@@ -6,3 +6,4 @@
 // #import <AVOSCloudIM/AVOSCloudIM.h>
 #import <WeiboSDK/WeiboSDK.h>
 #import <JTCalendar/JTCalendar.h>
+#import <MBProgressHUD/MBProgressHUD.h>
