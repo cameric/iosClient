@@ -1,5 +1,5 @@
 //
-//  ScheduleVC.swift
+//  ScheduleViewController.swift
 //  iosClient
 //
 //  Created by Cam on 11/20/15.
@@ -11,7 +11,7 @@ import Foundation
 import JTCalendar
 
 
-class ScheduleVC: UIViewController, JTCalendarDelegate {
+class ScheduleViewController: UIViewController, JTCalendarDelegate {
     @IBOutlet weak var calendarMenuView: JTCalendarMenuView!
     @IBOutlet weak var horizCalendarView: JTHorizontalCalendarView!
     
@@ -33,5 +33,10 @@ class ScheduleVC: UIViewController, JTCalendarDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func clickMenuButton() {
+        let appDelegate = UIApplication.sharedApplication().delegate
+        appDelegate?.performSelector("toggleStatusBar")
     }
 }

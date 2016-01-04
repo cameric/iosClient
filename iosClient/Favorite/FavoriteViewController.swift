@@ -1,5 +1,5 @@
 //
-//  FavoriteVC.swift
+//  FavoriteViewController.swift
 //  iosClient
 //
 //  Created by Cam on 11/20/15.
@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class FavoriteVC: UIViewController, UITableViewDelegate {
+class FavoriteViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

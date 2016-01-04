@@ -9,7 +9,7 @@
 import UIKit
 import AVOSCloud
 
-class DetailedProfileVC: UIViewController {
+class DetailedProfileViewController: UIViewController {
     
     // MARK: Properties
     var loggedInUser: User?

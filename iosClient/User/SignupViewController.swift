@@ -1,5 +1,5 @@
 //
-//  SignupVC.swift
+//  SignupViewController.swift
 //  iosClient
 //
 //  Created by Tony Zhang on 1/1/16.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class signupVC: UIViewController {
+class SignupViewController: UIViewController {
     
     // MARK: Default actions
     
