@@ -36,16 +36,18 @@ import JTCalendar
     }
 }*/
 
+
 class ScheduleViewController: UIViewController, JTCalendarDelegate {
     @IBOutlet weak var calendarMenuView: JTCalendarMenuView!
     @IBOutlet weak var horizCalendarView: JTHorizontalCalendarView!
     
-    var calendarManager: JTCalendarManager!
+    let calendarManager = JTCalendarManager()
+    
+    var dateSelected: NSDate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calendarManager = JTCalendarManager()
         calendarManager.delegate = self
         
         calendarManager.menuView = calendarMenuView
@@ -60,8 +62,75 @@ class ScheduleViewController: UIViewController, JTCalendarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func clickMenuButton() {
-        let appDelegate = UIApplication.sharedApplication().delegate
-        appDelegate?.performSelector("toggleStatusBar")
+    // MARK: JTCalendarManager delegate
+    
+    /**
+        Called when a day view is tapped.
+    
+        - parameter calendar The calendar manager concerning the day view.
+        - parameter view The day view that was tapped.
+    */
+    func calendar(calendar: JTCalendarManager!, didTouchDayView view: UIView!) {
+        guard let dayView = view as? JTCalendarDayView else {
+            // Wrong view. Error?
+            return
+        }
+        
+        dateSelected = dayView.date
+        
+        // If we click on a date from another month, switch to that month
+        let contentView = (calendar.contentView as! JTContent)
+        if (!calendarManager.dateHelper.date(contentView.date(), isTheSameMonthThan: dayView.date)) {
+            if (contentView.date().compare(dayView.date) == NSComparisonResult.OrderedAscending) {
+                contentView.loadNextPageWithAnimation()
+            } else {
+                contentView.loadPreviousPageWithAnimation()
+            }
+        }
+        
+        calendar.reload()
+    }
+    
+    /**
+     Called when a day view is to be rendered.
+     
+     - parameter calendar The calendar manager concerning the day view.
+     - parameter view The day view that is being rendered.
+     */
+    func calendar(calendar: JTCalendarManager!, prepareDayView view: UIView!) {
+        guard let dayView = view as? JTCalendarDayView else {
+            // Wrong view. Error?
+            return
+        }
+        
+        // Things can be made less circular like so...
+        // dayView.circleView.layer.cornerRadius = 0
+        
+        // Day is from another month
+        if (dayView.isFromAnotherMonth) {
+            dayView.circleView.hidden = true
+            dayView.circleView.backgroundColor = UIColor.blueColor()
+            dayView.textLabel.textColor = UIColor.grayColor()
+        }
+        // Day is today
+        else if (calendarManager.dateHelper.date(NSDate(), isTheSameDayThan: dayView.date)) {
+            dayView.circleView.hidden = false
+            dayView.circleView.backgroundColor = UIColor.blueColor()
+            dayView.dotView.backgroundColor = UIColor.whiteColor()
+            dayView.textLabel.textColor = UIColor.whiteColor()
+        }
+        // Day is selected
+        else if (dateSelected != nil && calendarManager.dateHelper.date(dateSelected, isTheSameDayThan: dayView.date)) {
+            dayView.circleView.hidden = false
+            dayView.circleView.backgroundColor = UIColor.redColor()
+            dayView.dotView.backgroundColor = UIColor.whiteColor()
+            dayView.textLabel.textColor = UIColor.whiteColor()
+        }
+        // Day is another day of the current month
+        else {
+            dayView.circleView.hidden = true
+            dayView.circleView.backgroundColor = UIColor.blueColor()
+            dayView.textLabel.textColor = UIColor.blackColor()
+        }
     }
 }

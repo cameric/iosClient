@@ -19,7 +19,7 @@ enum QueryError: ErrorType {
 /**
 Make a query to the server, parse the result, and pass it to a closure.
 
-- parameter function: The query to call on the server.
+- parameter query: The query to call on the server.
 - parameter params: The parameters for the query.
 - parameter parser: A function that converts the server's response to the desired object
 - parameter onCompletion: A closure called upon either success of the query or an error during it.
