@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
         WeiboSDK.registerApp(GlobalAPIKeys.Weibo_AppKey)
         
         // Customize back button appearance
-        UINavigationBar.appearance().tintColor = ColorScheme.tintColor
+        UINavigationBar.appearance().tintColor = ColorScheme.mainColor
         
         return true
     }
