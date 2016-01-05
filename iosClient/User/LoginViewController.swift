@@ -56,12 +56,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
         }
         
         // User input check
-        guard let username = inputEmail!.text where username != "" else {
+        guard let username = inputEmail!.text where !username.isEmpty else {
             self.showLoginInfo = true
             self.invalidLoginInfo.text = "邮箱不能为空"
             return
         }
-        guard let pwd = inputPwd!.text where pwd != "" else {
+        guard let pwd = inputPwd!.text where !pwd.isEmpty else {
             self.showLoginInfo = true
             self.invalidLoginInfo.text = "密码不能为空"
             return

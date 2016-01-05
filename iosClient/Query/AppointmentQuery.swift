@@ -11,13 +11,13 @@ import Foundation
 class AppointmentQueryServices {
     
     /**
-     Convert the result of an AVQuery to an Appointment object.
+        Convert the result of an AVQuery to an Appointment object.
      
-     - parameter result: A query result.
+        - parameter result: A query result.
      
-     - returns: A User object based on information in the query
+        - returns: A User object based on information in the query
      
-     - throws: QueryError
+        - throws: QueryError
      */
     static func appointmentFromQueryResult(result: AnyObject!) throws -> Appointment {
         guard let resultDict = result as? [String: AnyObject] else {
@@ -53,21 +53,21 @@ class AppointmentQueryServices {
     }
     
     /**
-     Gets all appointments within a certain time range, filtering on either
-     client, provider, or both.
+        Gets all appointments within a certain time range, filtering on either
+        client, provider, or both.
      
-     - parameter client: The ID of the user receiving the service. If nil, it is
-     not used as a search criterion (in this case provider MUST be non-nil).
-     - parameter provider: The ID of the user providing the service. If nil, it is
-     not used as a search criterion (in this case client MUST be non-nil).
-     - parameter fromTime: The start of the time range. Appointments that
-     start before this time are ignored.
-     - parameter toTime: The end of the time range. Appointments that
-     start after this time are ignored.
-     - parameter onCompletion: A closure called upon either success of the query or an error during it.
+        - parameter client: The ID of the user receiving the service. If nil, it is
+        not used as a search criterion (in this case provider MUST be non-nil).
+        - parameter provider: The ID of the user providing the service. If nil, it is
+        not used as a search criterion (in this case client MUST be non-nil).
+        - parameter fromTime: The start of the time range. Appointments that
+        start before this time are ignored.
+        - parameter toTime: The end of the time range. Appointments that
+        start after this time are ignored.
+        - parameter onCompletion: A closure called upon either success of the query or an error during it.
      
-     - returns: A shortened version of user info, including only necessary information.
-     Returns nil if the given UID does not match any existing user.
+        - returns: A shortened version of user info, including only necessary information.
+        Returns nil if the given UID does not match any existing user.
      */
     static func getAppointmentsInRange(
         client: String!,

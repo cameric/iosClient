@@ -34,23 +34,12 @@ class UserQueryServices {
         guard let username: String = resultDict["username"] as? String else {
             throw QueryError.IncompleteResponse(missing: "username")
         }
-        guard let name: String = resultDict["name"] as? String else {
-            throw QueryError.IncompleteResponse(missing: "name")
-        }
-        guard let email: String = resultDict["email"] as? String else {
-            throw QueryError.IncompleteResponse(missing: "email")
-        }
         
-        // TODO: A user's avatar can probably be nil (not set), so maybe we shouldn't consider the user invalid if it's nil...
-    //    guard let avatar: AVFile = resultDict["avatar"] as? AVFile else {
-    //        throw QueryError.IncompleteResponse(missing: "avatar")
-    //    }
+        let user = User(uid: uid, username: username)
         
-        return User(
-            uid: uid,
-            username: username,
-            name: name,
-            email: email)
+        // TODO: set other things on the user
+        
+        return user
     }
 
     /**
@@ -67,9 +56,7 @@ class UserQueryServices {
         if let curUser = AVUser.currentUser() {
             return User(
                 uid: curUser["objectId"] as! String,
-                username: curUser["username"] as! String,
-                name: curUser["name"] as! String,
-                email: curUser["email"] as! String)
+                username: curUser["username"] as! String)
         }
         return nil
     }

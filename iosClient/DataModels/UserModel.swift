@@ -10,52 +10,48 @@ import UIKit
 
 class User {
     // MARK: Properties
-    // MARK: Identity
-    // Essential infomation
+    // MARK: Essentials
+    // These are inherent to every user, must always have a value, and cannot be changed after signup
     var uid: String
-    var category: [String] // TODO: maybe changed to custom type later
     var username: String
-    var name: String
-    var email: String
-    var emailVerified: Bool
     
-    // Supplementary information
-    var summary: String
-    var mobile: String
-    var score: Int
-    var isQualified: Bool
-    // var type: AnyObject!
-    
-    // TODO: Favorite section
-    var favorite: [User]
-    
-    // TODO: appointment section
-    // var availableTimes: [NSDate]
-    // var appointments: [Appointment] // ?
-    
-    // MARK: Graphics
-    // TODO: I presume an avatar can be "not set" in which case we'll use a default image.
-    // What's the best way to handle that?
-    var avatar: UIImage?
-    
-    // MARK: Initialization
-    init(uid: String, username: String, name: String, email: String) {
+    /**
+        Instantiates a User with UID and username. (In the future, any properties that are set at signup
+        and left unchanged afterward should be set here.)
+    */
+    init(uid: String, username: String) {
         self.uid = uid
         self.username = username
-        self.name = name
-        self.email = email
-        
-        // Currently, the initializer only initializes essential informations,
-        // leaving all other fields default. This definitely needs to be changed
-        // in the future, but so far we keep the initializer simple so that we 
-        // can speed up the development process of core features.
-        //  - Tony
-        self.category = []
-        self.emailVerified = false
-        self.summary = ""
-        self.mobile = ""
-        self.score = 0
-        self.isQualified = false
-        self.favorite = []
     }
+    
+    // MARK: Contact
+    class ContactAddress {
+        let address: String
+        var isVerified: Bool
+        
+        init(address: String, isVerified: Bool = false) {
+            self.address = address
+            self.isVerified = isVerified
+        }
+    }
+    /**
+        A dictionary of the form [contact_method_name : ContactAddress], e.g. ["email" : "user@email.com"]
+     */
+    var contactInfo: [String: ContactAddress] = [:]
+    
+    // MARK: Public display data
+    // This still needs a lot of work -- how should unset properties be represented (e.g. negative scores, or displaying username when no name is given)
+    var name: String = ""
+    var avatar: UIImage = UIImage()
+    var summary: String = ""
+    var score: Int = -1
+    var category: [String] = []
+    
+    // MARK: Scheduling
+    var appointmentsScheduled: [Appointment] = []
+    var appointmentsProvided: [Appointment] = []
+    
+    // MARK: Personal preferences
+    // Maybe move all these into a separate Preferences class if the list gets large
+    var favorites: [User] = []
 }
