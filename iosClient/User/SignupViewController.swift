@@ -48,7 +48,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == "signedupJumpToProfileSegue" {
             // Pass the logged in info to detailed profile view controller
             let targetViewController = segue.destinationViewController as! ProfileViewController
-            targetViewController.loggedInUser = UserQueryServices.getCurrentUserIfLoggedIn()
+//            targetViewController.loggedInUser = UserQueryServices.getCurrentUserIfLoggedIn()
+            targetViewController.loggedInUser = AVUser.currentUser()
         }
     }
     

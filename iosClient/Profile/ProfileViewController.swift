@@ -15,58 +15,82 @@ class ProfileViewController: UITableViewController {
     // MARK: Properties
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet var profileTableView: UITableView!
     
-    var loggedInUser: User?
-//    
-//    func toggleLogInButton() {
-//        if self.loggedInUser != nil {
-//            notLoggedInView.hidden = true
-//            loggedInNameLabel.text = self.loggedInUser!.objectForKey("name")
-//            loggedInView.hidden = false
-//            logoutButton.hidden = false
-//        } else {
-//            notLoggedInView.hidden = false
-//            loggedInView.hidden = true
-//            logoutButton.hidden = true
-//        }
-//    }
-//    
+    var loggedInUser: AVUser?
+    
+    func toggleLogInButton() {
+        if self.loggedInUser != nil {
+            nameLabel.text = self.loggedInUser!.objectForKey("name") as? String
+            
+        } else {
+            nameLabel.text = "点击登录"
+            categoryLabel.text = "或注册开始施展才华"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        if let curUser = UserQueryServices.getCurrentUserIfLoggedIn() {
-//            self.loggedInUser = curUser
-//        }
-//        
-//        
-//        toggleLogInButton()
+        //if let curUser = UserQueryServices.getCurrentUserIfLoggedIn() {
+        if let curUser = AVUser.currentUser() {
+            self.loggedInUser = curUser
+        }
+        self.profileTableView.reloadData()
+
+        toggleLogInButton()
     }
-//
-//    // MARK: Navigation
-//    // TODO: Pass useinfo to detailed profile page
-////    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-////        if let id = segue.identifier where id == "ShowDetailedProfileSegue" {
-////            
-////        }
-////    }
-//    
-//    // MARK: Actions
-//    @IBAction func didTapLoginButton(sender: UITapGestureRecognizer) {
-//        notLoggedInView.backgroundColor = UIColor.lightGrayColor()
-//    }
-//    @IBAction func didTapShowDetailedProfileButton(sender: UITapGestureRecognizer) {
-//        loggedInView.backgroundColor = UIColor.lightGrayColor()
-//    }
-//    
-//    @IBAction func finishedLoggedIn(sender: UIStoryboardSegue) {
-//        toggleLogInButton()
-//    }
-//    
-//    @IBAction func logout(sender: UIButton) {
-//        self.loggedInUser = nil
-//        toggleLogInButton()
-//        // Clear local storage
-//        AVUser.logOut()
-//    }
     
+    // Override delegate functions to hide and show logout section properly
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 4 && self.loggedInUser == nil {
+            return 0
+        } else {
+            return super.tableView(tableView, heightForHeaderInSection: section)
+        }
+    }
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 4 && self.loggedInUser == nil {
+            return 0
+        } else {
+            return super.tableView(tableView, heightForFooterInSection: section)
+        }
+    }
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 4 && self.loggedInUser == nil {
+            return 0
+        } else {
+            return super.tableView(tableView, numberOfRowsInSection: section)
+        }
+    }
+
+    // MARK: Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let id = segue.identifier where id == "ToDetailedProfileSegue" {
+            let targetViewController = segue.destinationViewController as! DetailedProfileViewController
+            targetViewController.loggedInUser = self.loggedInUser
+        }
+    }
+    
+    // MARK: Actions
+    @IBAction func didTapLoginButton(sender: UITapGestureRecognizer) {
+        if self.loggedInUser != nil {
+            self.performSegueWithIdentifier("ToDetailedProfileSegue", sender: self)
+        } else {
+            self.performSegueWithIdentifier("ToUserModuleSegue", sender: self)
+        }
+    }
+    
+    @IBAction func finishedLoggedIn(sender: UIStoryboardSegue) {
+        self.profileTableView.reloadData()
+        toggleLogInButton()
+    }
+    
+    @IBAction func logout(sender: UITapGestureRecognizer) {
+        self.loggedInUser = nil
+        self.profileTableView.reloadData()
+        toggleLogInButton()
+        // Clear local storage
+        AVUser.logOut()
+    }
 }

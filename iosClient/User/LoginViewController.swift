@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
     @IBOutlet weak var loginButton: UIButton!
     
     var showLoginInfo = false
-    var loggedInUser: User?
+    var loggedInUser: AVUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
         if segue.identifier == "loggedInJumpToProfileSegue" {
             // Pass the logged in info to detailed profile view controller
             let targetViewController = segue.destinationViewController as! ProfileViewController
-            targetViewController.loggedInUser = self.loggedInUser!
+            targetViewController.loggedInUser = self.loggedInUser
         }
     }
     
@@ -85,14 +85,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
             self.invalidLoginInfo.text = "登陆错误：\(error.localizedDescription) (\(error.code))"
         } else {
             // Perform segue after async call is resolved
-            do {
-                let tmpUser = try UserQueryServices.userFromQueryResult(user)
-                self.loggedInUser = tmpUser
-                self.performSegueWithIdentifier("loggedInJumpToProfileSegue",
-                    sender: self)
-            } catch {
-                self.invalidLoginInfo.text = "登录过程中出现错误，请重试"
-            }
+            // TODO: temporarily adopt AVUser as our use model.
+            //       will be modified in the future to incoporate
+            //       our self-defined user model.
+//            do {
+//                let tmpUser = try UserQueryServices.userFromQueryResult(user)
+//                self.loggedInUser = tmpUser
+//                self.performSegueWithIdentifier("loggedInJumpToProfileSegue",
+//                    sender: self)
+//            } catch {
+//                self.invalidLoginInfo.text = "登录过程中出现错误，请重试"
+//            }
+            
+            self.showLoginInfo = true
+            self.invalidLoginInfo.text = "登陆成功"
+            
+            // Perform segue after async call is resolved
+            self.loggedInUser = user
+            self.performSegueWithIdentifier("loggedInJumpToProfileSegue",
+                sender: self)
         }
     }
     

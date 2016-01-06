@@ -12,7 +12,7 @@ import AVOSCloud
 class DetailedProfileViewController: UIViewController {
     
     // MARK: Properties
-    var loggedInUser: User?
+    var loggedInUser: AVUser?
     @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
@@ -26,9 +26,9 @@ class DetailedProfileViewController: UIViewController {
 //        } catch {
 //            self.nameLabel.text = "您还没有登陆！"
 //        }
-        if self.loggedInUser != nil {
-            print(loggedInUser!.name)
-        }
+//        if self.loggedInUser != nil {
+//            print(loggedInUser!.name)
+//        }
     }
 
     override func didReceiveMemoryWarning() {

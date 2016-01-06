@@ -58,6 +58,10 @@
                                                 <constraint firstItem="9Tx-N1-yf8" firstAttribute="leading" secondItem="ECz-T4-1ls" secondAttribute="trailing" constant="20" id="yMT-kn-ADj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="vvd-d5-Gp6" appends="YES" id="3FR-Cq-csw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -93,11 +97,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BuQ-tL-hAe">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BuQ-tL-hAe">
                                         <rect key="frame" x="0.0" y="279" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BuQ-tL-hAe" id="xkT-TI-4au">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-Dg-sKP">
@@ -122,11 +126,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kdz-nH-PhD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kdz-nH-PhD">
                                         <rect key="frame" x="0.0" y="323" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kdz-nH-PhD" id="W0F-sh-tan">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJg-Vo-Kcx">
@@ -155,11 +159,11 @@
                             </tableViewSection>
                             <tableViewSection id="sgE-LG-HO8">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3s0-ee-ZxS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3s0-ee-ZxS">
                                         <rect key="frame" x="0.0" y="403" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3s0-ee-ZxS" id="bcd-6Q-GEQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R5p-A7-jad">
@@ -184,11 +188,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eBc-W2-bLv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eBc-W2-bLv">
                                         <rect key="frame" x="0.0" y="447" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eBc-W2-bLv" id="kDI-gS-gAL">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tgW-No-EBJ">
@@ -217,11 +221,11 @@
                             </tableViewSection>
                             <tableViewSection id="ian-5D-fZq">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hco-1A-jyl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hco-1A-jyl">
                                         <rect key="frame" x="0.0" y="527" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hco-1A-jyl" id="zhY-5P-cUp">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SnX-gR-gTm">
@@ -248,6 +252,37 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="rt9-pV-16h">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Kao-Gl-Ada">
+                                        <rect key="frame" x="0.0" y="607" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kao-Gl-Ada" id="BW9-7E-H53">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退出登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3c-N4-DiA">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.87450980389999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="q3c-N4-DiA" firstAttribute="bottom" secondItem="BW9-7E-H53" secondAttribute="bottomMargin" id="RyU-3L-hO7"/>
+                                                <constraint firstItem="q3c-N4-DiA" firstAttribute="trailing" secondItem="BW9-7E-H53" secondAttribute="trailingMargin" id="aec-sn-G51"/>
+                                                <constraint firstItem="q3c-N4-DiA" firstAttribute="top" secondItem="BW9-7E-H53" secondAttribute="topMargin" id="bFU-Nz-rWc"/>
+                                                <constraint firstItem="q3c-N4-DiA" firstAttribute="leading" secondItem="BW9-7E-H53" secondAttribute="leadingMargin" id="oCp-ik-ynf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="UdE-uZ-z1s" appends="YES" id="h55-CX-NJb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="Contacts" id="tpc-gU-Vg0">
@@ -258,10 +293,24 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
+                        <outlet property="categoryLabel" destination="9Wj-9C-xEe" id="NIC-Is-dvt"/>
                         <outlet property="nameLabel" destination="lh4-jl-OLM" id="bEf-i7-w2L"/>
+                        <outlet property="profileTableView" destination="n94-Dq-NBL" id="bXT-Yx-AJH"/>
+                        <segue destination="he9-DV-X4r" kind="presentation" identifier="ToUserModuleSegue" id="hbR-9Q-ouV"/>
+                        <segue destination="sO4-EV-1MU" kind="show" identifier="ToDetailedProfileSegue" id="zKO-4Q-Aft"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPC-94-Huv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vvd-d5-Gp6" userLabel="Login/Profile Tap Recognizer">
+                    <connections>
+                        <action selector="didTapLoginButton:" destination="ywd-OF-Fys" id="gsM-yg-4aw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UdE-uZ-z1s" userLabel="Logout Tap Gesture">
+                    <connections>
+                        <action selector="logout:" destination="ywd-OF-Fys" id="TUG-VY-l1r"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="468" y="-799"/>
         </scene>
@@ -271,7 +320,7 @@
                 <viewControllerPlaceholder storyboardName="User" id="he9-DV-X4r" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azc-2T-5z1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.5" y="-946"/>
+            <point key="canvasLocation" x="1063.5" y="-889"/>
         </scene>
         <!--DetailedProfile-->
         <scene sceneID="hdi-le-tyS">
@@ -279,7 +328,7 @@
                 <viewControllerPlaceholder storyboardName="DetailedProfile" id="sO4-EV-1MU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eiD-3I-tcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="-611"/>
+            <point key="canvasLocation" x="1063" y="-673"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HMZ-v6-PyP">
