@@ -20,9 +20,13 @@ class ProfileViewController: UITableViewController {
     var loggedInUser: AVUser?
     
     func toggleLogInButton() {
-        if self.loggedInUser != nil {
-            nameLabel.text = self.loggedInUser!.objectForKey("name") as? String
-            
+        if let curUser = self.loggedInUser {
+            nameLabel.text = curUser.objectForKey("name") as? String
+            guard let joinedCategory = curUser.objectForKey("category") as? [String] else {
+                categoryLabel.text = ""
+                return
+            }
+            categoryLabel.text = joinedCategory.joinWithSeparator(", ")
         } else {
             nameLabel.text = "点击登录"
             categoryLabel.text = "或注册开始施展才华"
@@ -36,6 +40,7 @@ class ProfileViewController: UITableViewController {
         if let curUser = AVUser.currentUser() {
             self.loggedInUser = curUser
         }
+        self.profileTableView.contentInset = UIEdgeInsetsMake(-36, 0, 0, 0);
         self.profileTableView.reloadData()
 
         toggleLogInButton()
