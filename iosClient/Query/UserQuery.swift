@@ -9,43 +9,6 @@
 import AVOSCloud
 
 class UserQueryServices {
-
-    /**
-    Convert the result of an AVQuery to a User object.
-
-    - parameter result: A query result.
-
-    - returns: A User object based on information in the query
-     
-    - throws: QueryError
-    */
-    static func userFromQueryResult(result: AnyObject!) throws -> User {
-        // The response from the server should be in the form of [String: AnyObject].
-        // If it isn't, the data retrieved is considered malformed.    
-        guard let user = result as? User else {
-            throw QueryError.MalformedResponse
-        }
-
-        return user
-    }
-
-    /**
-     Construct a user object if he/she has logged in
-
-     - returns: a formulated user object if the corresponding user session 
-         can be found from LeanCloud server. 
-            Return nil if the user hasn't logged in yet
-     
-     Note that guard is not used here because currentUser() is guaranteed to 
-     return a dictionary that includes the corrsponding keys
-    */
-    static func getCurrentUserIfLoggedIn() -> User? {
-        guard let curUser = User.currentUser() else {
-            return nil
-        }
-        return curUser
-    }
-
     /**
      Get truncated user info according to a UID
 
@@ -55,14 +18,26 @@ class UserQueryServices {
      - returns: A shortened version of user info, including only necessary information.
             Returns nil if the given UID does not match any existing user.
     */
-    static func getUserShortById(id: String, onCompletion: (User!, ErrorType!) -> Void) -> Void {
+    static func getUserShortById(id: String, onCompletion: (AVUser!, ErrorType!) -> Void) -> Void {
         // Set up parameters to be used in the query
         // Make sure the dictionary keys are EXACTLY those defined in the JS functions on the server
         let params = [
             "id" : id
         ]
         
-        QueryUtils.asyncQueryParseToObject("getUserShortById", params: params, parser: userFromQueryResult, onCompletion: onCompletion)
+        AVCloud.callFunctionInBackground("getUserShortById", withParameters: params) { (result: AnyObject!, error: NSError!) -> Void in
+            if error != nil {
+                // If the server gives us an error, pass it along
+                onCompletion(nil, error)
+            } else {
+                guard let user = result as? AVUser else {
+                    onCompletion(nil, QueryError.MalformedResponse)
+                    return;
+                }
+                onCompletion(user, nil)
+            }
+        }
+
     }
     
     /**
@@ -74,12 +49,23 @@ class UserQueryServices {
 
      - return: a user object using the information given by Weibo API
     */
-    static func signUpWithWeibo(uid: String, accessToken: String, onCompletion: (User!, ErrorType!) -> Void) -> Void {
+    static func signUpWithWeibo(uid: String, accessToken: String, onCompletion: (AVUser!, ErrorType!) -> Void) -> Void {
         let params = [
             "uid": uid,
             "accessToken": accessToken
         ]
         
-        QueryUtils.asyncQueryParseToObject("signUpWithWeibo", params: params, parser: userFromQueryResult, onCompletion: onCompletion)
+        AVCloud.callFunctionInBackground("signUpWithWeibo", withParameters: params) { (result: AnyObject!, error: NSError!) -> Void in
+            if error != nil {
+                // If the server gives us an error, pass it along
+                onCompletion(nil, error)
+            } else {
+                guard let user = result as? AVUser else {
+                    onCompletion(nil, QueryError.MalformedResponse)
+                    return;
+                }
+                onCompletion(user, nil)
+            }
+        }
     }
 }

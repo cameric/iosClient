@@ -36,7 +36,6 @@ class ProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //if let curUser = UserQueryServices.getCurrentUserIfLoggedIn() {
         if let curUser = AVUser.currentUser() {
             self.loggedInUser = curUser
         }

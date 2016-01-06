@@ -9,32 +9,18 @@
 import AVOSCloud
 import UIKit
 
-class User : AVUser {
+/*extension AVUser {
     // MARK: Properties
-    
-    // MARK: Public display data
-    // This still needs a lot of work -- how should unset properties be represented (e.g. negative scores, or displaying username when no name is given)
-    var name: String = ""
-    var avatar: UIImage = UIImage()
-    var summary: String = ""
-    var score: Int = -1
-    var category: [String] = []
-    
-    // MARK: Scheduling
-    var appointmentsScheduled: [Appointment] = []
-    var appointmentsProvided: [Appointment] = []
-    
-    // MARK: Personal preferences
-    // Maybe move all these into a separate Preferences class if the list gets large
-    
-    // Should this store UIDs instead?
-    var favorites: [String] = []
-    
-    /**
-     A dictionary of the form [contact_method_name : contact_address], e.g. ["Work Email" : "user@email.com"]
-     */
-    
-    // I don't understand this setting - Tony
-    var contactInfo: [String: String] = [:]
-    
-}
+    var avatarUiImage: UIImage {
+        get {
+            let avFile = objectForKey("avatar") as! AVFile
+            let data = avFile.getData()
+            return UIImage(data: data)!
+        }
+        set (img) {
+            let data: NSData = UIImagePNGRepresentation(img)!
+            let avFile = AVFile(data: data)
+            setObject(avFile, forKey: "avatar")
+        }
+    }
+}*/
