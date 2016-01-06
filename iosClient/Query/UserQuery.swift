@@ -22,23 +22,10 @@ class UserQueryServices {
     static func userFromQueryResult(result: AnyObject!) throws -> User {
         // The response from the server should be in the form of [String: AnyObject].
         // If it isn't, the data retrieved is considered malformed.    
-        guard let resultDict = result as? AVObject else {
+        guard let user = result as? User else {
             throw QueryError.MalformedResponse
         }
-        
-        // Try to get each of the necessary properties from the response. Return nil if any one does not
-        // exist or is not convertible to the expected type, which would render the user info invalid
-        guard let uid: String = resultDict["objectId"] as? String else {
-            throw QueryError.IncompleteResponse(missing: "objectId")
-        }
-        guard let username: String = resultDict["username"] as? String else {
-            throw QueryError.IncompleteResponse(missing: "username")
-        }
-        
-        let user = User(uid: uid, username: username)
-        
-        // TODO: set other things on the user
-        
+
         return user
     }
 
@@ -53,12 +40,10 @@ class UserQueryServices {
      return a dictionary that includes the corrsponding keys
     */
     static func getCurrentUserIfLoggedIn() -> User? {
-        if let curUser = AVUser.currentUser() {
-            return User(
-                uid: curUser["objectId"] as! String,
-                username: curUser["username"] as! String)
+        guard let curUser = User.currentUser() else {
+            return nil
         }
-        return nil
+        return curUser
     }
 
     /**
