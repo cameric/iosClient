@@ -33,6 +33,8 @@ class User : AVUser {
     /**
      A dictionary of the form [contact_method_name : contact_address], e.g. ["Work Email" : "user@email.com"]
      */
+    
+    // I don't understand this setting - Tony
     var contactInfo: [String: String] = [:]
     
 }

@@ -3,134 +3,265 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--我的-->
         <scene sceneID="CNa-dw-NPZ">
             <objects>
-                <viewController id="ywd-OF-Fys" customClass="ProfileViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VdY-vA-Iyf"/>
-                        <viewControllerLayoutGuide type="bottom" id="qYA-CD-rjI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Kma-ZE-JVT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jp-44-rxN">
-                                <rect key="frame" x="0.0" y="64" width="600" height="100"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KfX-sO-0CY">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="D7R-a5-WEK"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMO-JN-GqH">
-                                        <rect key="frame" x="129" y="39" width="68" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1ST-WT-Cfu"/>
-                                    <constraint firstItem="KfX-sO-0CY" firstAttribute="leading" secondItem="0jp-44-rxN" secondAttribute="leading" id="EuY-Fr-5Qv"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="FmR-ZJ-I0I"/>
-                                    <constraint firstItem="TMO-JN-GqH" firstAttribute="leading" secondItem="KfX-sO-0CY" secondAttribute="trailing" constant="29" id="O45-F5-Lpg"/>
-                                    <constraint firstItem="KfX-sO-0CY" firstAttribute="top" secondItem="0jp-44-rxN" secondAttribute="top" id="VZN-ps-vzb"/>
-                                    <constraint firstItem="TMO-JN-GqH" firstAttribute="top" secondItem="0jp-44-rxN" secondAttribute="top" constant="39" id="YnT-95-o6q"/>
-                                    <constraint firstAttribute="bottom" secondItem="KfX-sO-0CY" secondAttribute="bottom" id="aEb-gM-HjQ"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nds-sD-XeP" appends="YES" id="EOT-1d-UW1"/>
-                                </connections>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5o-BR-058">
-                                <rect key="frame" x="0.0" y="64" width="600" height="100"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jxf-EN-Nxz">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="uoc-CD-iHP"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfZ-QG-Epe">
-                                        <rect key="frame" x="129" y="39" width="68" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Drr-v3-HCB"/>
-                                    <constraint firstItem="dfZ-QG-Epe" firstAttribute="leading" secondItem="Jxf-EN-Nxz" secondAttribute="trailing" constant="29" id="VO9-w7-ePq"/>
-                                    <constraint firstItem="Jxf-EN-Nxz" firstAttribute="top" secondItem="w5o-BR-058" secondAttribute="top" id="WFz-Lw-g5V"/>
-                                    <constraint firstItem="dfZ-QG-Epe" firstAttribute="top" secondItem="w5o-BR-058" secondAttribute="top" constant="39" id="v8P-VB-C5M"/>
-                                    <constraint firstAttribute="bottom" secondItem="Jxf-EN-Nxz" secondAttribute="bottom" id="vSY-yH-s7M"/>
-                                    <constraint firstItem="Jxf-EN-Nxz" firstAttribute="leading" secondItem="w5o-BR-058" secondAttribute="leading" id="ya5-wQ-a1g"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="h87-dD-HHV" appends="YES" id="4dD-E5-rcG"/>
-                                </connections>
-                            </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J55-5q-S6y">
-                                <rect key="frame" x="20" y="530" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.87450980392156863" green="0.24313725490196078" blue="0.24313725490196078" alpha="0.68821262668918914" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="588-wH-xFe"/>
-                                </constraints>
-                                <state key="normal" title="退出登录">
-                                    <color key="titleColor" white="1" alpha="0.68821262668918914" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logout:" destination="ywd-OF-Fys" eventType="touchUpInside" id="ktr-hQ-83s"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="0jp-44-rxN" firstAttribute="trailing" secondItem="w5o-BR-058" secondAttribute="trailing" id="Iy3-KW-gto"/>
-                            <constraint firstItem="0jp-44-rxN" firstAttribute="top" secondItem="VdY-vA-Iyf" secondAttribute="bottom" id="M36-SJ-aNy"/>
-                            <constraint firstItem="w5o-BR-058" firstAttribute="top" secondItem="VdY-vA-Iyf" secondAttribute="bottom" id="OGf-gg-oV1"/>
-                            <constraint firstItem="w5o-BR-058" firstAttribute="leading" secondItem="Kma-ZE-JVT" secondAttribute="leadingMargin" constant="-20" id="RYC-eK-wg9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="J55-5q-S6y" secondAttribute="trailing" id="U37-Bl-LUP"/>
-                            <constraint firstItem="qYA-CD-rjI" firstAttribute="top" secondItem="J55-5q-S6y" secondAttribute="bottom" constant="20" id="Ytr-6X-gSs"/>
-                            <constraint firstItem="J55-5q-S6y" firstAttribute="leading" secondItem="Kma-ZE-JVT" secondAttribute="leadingMargin" id="bij-a4-Eoj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="w5o-BR-058" secondAttribute="trailing" constant="-20" id="wSr-lB-4i8"/>
-                            <constraint firstItem="0jp-44-rxN" firstAttribute="leading" secondItem="w5o-BR-058" secondAttribute="leading" id="x9e-JK-ac0"/>
-                        </constraints>
-                    </view>
+                <tableViewController id="ywd-OF-Fys" customClass="ProfileViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="n94-Dq-NBL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="QUk-ZU-w1w">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="x4Y-l7-zfy">
+                                        <rect key="frame" x="0.0" y="99" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x4Y-l7-zfy" id="qvA-Vx-5db">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-T4-1ls">
+                                                    <rect key="frame" x="8" y="10" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="KBe-b6-paK"/>
+                                                        <constraint firstAttribute="width" secondItem="ECz-T4-1ls" secondAttribute="height" multiplier="1:1" id="W9q-4i-EvF"/>
+                                                        <constraint firstAttribute="width" constant="80" id="y4r-pU-eHn"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Tx-N1-yf8">
+                                                    <rect key="frame" x="108" y="24" width="153" height="51"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh4-jl-OLM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="或注册开始施展才华" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wj-9C-xEe">
+                                                            <rect key="frame" x="0.0" y="30" width="153" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9Tx-N1-yf8" firstAttribute="centerY" secondItem="qvA-Vx-5db" secondAttribute="centerY" id="1rQ-Hd-x4q"/>
+                                                <constraint firstItem="ECz-T4-1ls" firstAttribute="top" secondItem="qvA-Vx-5db" secondAttribute="topMargin" constant="2" id="U0s-gz-UwB"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="ECz-T4-1ls" secondAttribute="leading" id="qp5-yH-frv"/>
+                                                <constraint firstItem="9Tx-N1-yf8" firstAttribute="leading" secondItem="ECz-T4-1ls" secondAttribute="trailing" constant="20" id="yMT-kn-ADj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="d1j-Tp-Kgd">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pZ3-Uo-3zq">
+                                        <rect key="frame" x="0.0" y="235" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pZ3-Uo-3zq" id="j3z-zH-lBM">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HFM-BK-CVv">
+                                                    <rect key="frame" x="16" y="2" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="BOM-KQ-KjD"/>
+                                                        <constraint firstAttribute="width" secondItem="HFM-BK-CVv" secondAttribute="height" multiplier="1:1" id="DWA-xF-40Y"/>
+                                                        <constraint firstAttribute="width" constant="40" id="eFM-f5-L2I"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的预约" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-aG-mqk">
+                                                    <rect key="frame" x="64" y="11" width="68" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HFM-BK-CVv" firstAttribute="leading" secondItem="j3z-zH-lBM" secondAttribute="leadingMargin" constant="8" id="0qQ-yJ-3Fn"/>
+                                                <constraint firstItem="8sd-aG-mqk" firstAttribute="centerY" secondItem="j3z-zH-lBM" secondAttribute="centerY" id="bYo-sT-4FK"/>
+                                                <constraint firstItem="HFM-BK-CVv" firstAttribute="top" secondItem="j3z-zH-lBM" secondAttribute="topMargin" constant="-6" id="ebo-99-3EQ"/>
+                                                <constraint firstItem="8sd-aG-mqk" firstAttribute="leading" secondItem="HFM-BK-CVv" secondAttribute="trailing" constant="8" id="wbp-eF-Srx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BuQ-tL-hAe">
+                                        <rect key="frame" x="0.0" y="279" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BuQ-tL-hAe" id="xkT-TI-4au">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-Dg-sKP">
+                                                    <rect key="frame" x="16" y="2" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gBg-Dg-sKP" secondAttribute="height" multiplier="1:1" id="9Cj-oH-7uI"/>
+                                                        <constraint firstAttribute="width" constant="40" id="UVo-oi-aKh"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Zuf-po-pLz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的服务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kt-ds-Ngp">
+                                                    <rect key="frame" x="64" y="11" width="68" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gBg-Dg-sKP" firstAttribute="leading" secondItem="xkT-TI-4au" secondAttribute="leadingMargin" constant="8" id="D24-gT-u6S"/>
+                                                <constraint firstItem="gBg-Dg-sKP" firstAttribute="top" secondItem="xkT-TI-4au" secondAttribute="topMargin" constant="-6" id="kiH-VN-RBk"/>
+                                                <constraint firstItem="gBg-Dg-sKP" firstAttribute="width" secondItem="gBg-Dg-sKP" secondAttribute="height" multiplier="1:1" id="ym5-h4-Woh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kdz-nH-PhD">
+                                        <rect key="frame" x="0.0" y="323" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kdz-nH-PhD" id="W0F-sh-tan">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJg-Vo-Kcx">
+                                                    <rect key="frame" x="16" y="2" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="aJg-Vo-Kcx" secondAttribute="height" multiplier="1:1" id="AZ7-GI-rWY"/>
+                                                        <constraint firstAttribute="width" constant="40" id="NIk-Fb-k3m"/>
+                                                        <constraint firstAttribute="height" constant="40" id="TZT-Pn-uVY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的积分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjb-qa-d8a">
+                                                    <rect key="frame" x="64" y="11" width="68" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aJg-Vo-Kcx" firstAttribute="leading" secondItem="W0F-sh-tan" secondAttribute="leadingMargin" constant="8" id="OEe-3R-dTZ"/>
+                                                <constraint firstItem="aJg-Vo-Kcx" firstAttribute="width" secondItem="aJg-Vo-Kcx" secondAttribute="height" multiplier="1:1" id="YML-eA-e9X"/>
+                                                <constraint firstItem="aJg-Vo-Kcx" firstAttribute="top" secondItem="W0F-sh-tan" secondAttribute="topMargin" constant="-6" id="wG6-bi-gNq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="sgE-LG-HO8">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3s0-ee-ZxS">
+                                        <rect key="frame" x="0.0" y="403" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3s0-ee-ZxS" id="bcd-6Q-GEQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R5p-A7-jad">
+                                                    <rect key="frame" x="16" y="2" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="R5p-A7-jad" secondAttribute="height" multiplier="1:1" id="Bs2-73-pQf"/>
+                                                        <constraint firstAttribute="height" constant="40" id="NME-WI-sWD"/>
+                                                        <constraint firstAttribute="width" constant="40" id="kyG-xc-CQ8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的钱包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lob-wV-cPg">
+                                                    <rect key="frame" x="64" y="11" width="128" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="R5p-A7-jad" firstAttribute="width" secondItem="R5p-A7-jad" secondAttribute="height" multiplier="1:1" id="Jho-Mk-cjU"/>
+                                                <constraint firstItem="R5p-A7-jad" firstAttribute="top" secondItem="bcd-6Q-GEQ" secondAttribute="topMargin" constant="-6" id="MRI-tD-ire"/>
+                                                <constraint firstItem="R5p-A7-jad" firstAttribute="leading" secondItem="bcd-6Q-GEQ" secondAttribute="leadingMargin" constant="8" id="VLe-wa-j3k"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eBc-W2-bLv">
+                                        <rect key="frame" x="0.0" y="447" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eBc-W2-bLv" id="kDI-gS-gAL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tgW-No-EBJ">
+                                                    <rect key="frame" x="16" y="2" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="tgW-No-EBJ" secondAttribute="height" multiplier="1:1" id="Fef-aQ-2Vs"/>
+                                                        <constraint firstAttribute="width" constant="40" id="bff-eO-cq6"/>
+                                                        <constraint firstAttribute="height" constant="40" id="vc5-Ji-gf8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的交易记录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74m-r2-7qm">
+                                                    <rect key="frame" x="64" y="11" width="380" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tgW-No-EBJ" firstAttribute="width" secondItem="tgW-No-EBJ" secondAttribute="height" multiplier="1:1" id="PlC-Hy-0e1"/>
+                                                <constraint firstItem="tgW-No-EBJ" firstAttribute="leading" secondItem="kDI-gS-gAL" secondAttribute="leadingMargin" constant="8" id="g8t-6z-ebf"/>
+                                                <constraint firstItem="tgW-No-EBJ" firstAttribute="top" secondItem="kDI-gS-gAL" secondAttribute="topMargin" constant="-6" id="hba-DO-rch"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="ian-5D-fZq">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hco-1A-jyl">
+                                        <rect key="frame" x="0.0" y="527" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hco-1A-jyl" id="zhY-5P-cUp">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SnX-gR-gTm">
+                                                    <rect key="frame" x="16" y="2" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="SnX-gR-gTm" secondAttribute="height" multiplier="1:1" id="4Zp-sF-6mA"/>
+                                                        <constraint firstAttribute="width" constant="40" id="EDq-aj-JX6"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Ymi-qD-PKM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9c-tt-Tov">
+                                                    <rect key="frame" x="64" y="11" width="128" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SnX-gR-gTm" firstAttribute="top" secondItem="zhY-5P-cUp" secondAttribute="topMargin" constant="-6" id="LGt-tg-hsE"/>
+                                                <constraint firstItem="SnX-gR-gTm" firstAttribute="width" secondItem="SnX-gR-gTm" secondAttribute="height" multiplier="1:1" id="Lyo-66-Gok"/>
+                                                <constraint firstItem="SnX-gR-gTm" firstAttribute="leading" secondItem="zhY-5P-cUp" secondAttribute="leadingMargin" constant="8" id="p6v-hP-ddp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
                     <tabBarItem key="tabBarItem" title="" image="Contacts" id="tpc-gU-Vg0">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="我的" id="iLN-Hs-CpF"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
                     <connections>
-                        <outlet property="loggedInNameLabel" destination="TMO-JN-GqH" id="fKu-lU-m9h"/>
-                        <outlet property="loggedInView" destination="0jp-44-rxN" id="OeY-81-gCE"/>
-                        <outlet property="logoutButton" destination="J55-5q-S6y" id="uo0-sU-PvG"/>
-                        <outlet property="notLoggedInView" destination="w5o-BR-058" id="pKN-9N-oGG"/>
+                        <outlet property="nameLabel" destination="lh4-jl-OLM" id="bEf-i7-w2L"/>
                     </connections>
-                </viewController>
+                </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPC-94-Huv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="h87-dD-HHV">
-                    <connections>
-                        <action selector="didTapLoginButton:" destination="ywd-OF-Fys" id="KPB-Mi-iOS"/>
-                        <segue destination="he9-DV-X4r" kind="presentation" id="Di5-OZ-chI"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="nds-sD-XeP">
-                    <connections>
-                        <action selector="didTapShowDetailedProfileButton:" destination="ywd-OF-Fys" id="Rp2-qY-DOx"/>
-                        <segue destination="sO4-EV-1MU" kind="show" id="cyi-dT-wDD"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="468" y="-799"/>
         </scene>
