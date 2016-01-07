@@ -10,6 +10,8 @@
 		092B23881C34C40800614EFD /* UserQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B23871C34C40800614EFD /* UserQuery.swift */; };
 		0930C0D61C35EAAB0065FD9F /* QueryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930C0D51C35EAAB0065FD9F /* QueryUtils.swift */; };
 		0979C20D1C34BFB1000BF8F8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979C20C1C34BFB1000BF8F8 /* UserModel.swift */; };
+		099A48491C3DC0A60072C5D2 /* KeywordSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099A48481C3DC0A60072C5D2 /* KeywordSearch.storyboard */; };
+		099A484D1C3DC11E0072C5D2 /* KeywordSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A484C1C3DC11E0072C5D2 /* KeywordSearchViewController.swift */; };
 		09D08E091C37533A00905187 /* AppointmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D08E081C37533A00905187 /* AppointmentModel.swift */; };
 		09D08E0B1C3755CA00905187 /* AppointmentQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D08E0A1C3755CA00905187 /* AppointmentQuery.swift */; };
 		09DD2FE51C36F24C0074037C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD2FE31C36F24C0074037C /* LoginViewController.swift */; };
@@ -64,6 +66,8 @@
 		092B23871C34C40800614EFD /* UserQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserQuery.swift; sourceTree = "<group>"; };
 		0930C0D51C35EAAB0065FD9F /* QueryUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryUtils.swift; sourceTree = "<group>"; };
 		0979C20C1C34BFB1000BF8F8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		099A48481C3DC0A60072C5D2 /* KeywordSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KeywordSearch.storyboard; sourceTree = "<group>"; };
+		099A484C1C3DC11E0072C5D2 /* KeywordSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordSearchViewController.swift; sourceTree = "<group>"; };
 		09D08E081C37533A00905187 /* AppointmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentModel.swift; sourceTree = "<group>"; };
 		09D08E0A1C3755CA00905187 /* AppointmentQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentQuery.swift; sourceTree = "<group>"; };
 		09DD2FE31C36F24C0074037C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,15 @@
 				092B23871C34C40800614EFD /* UserQuery.swift */,
 			);
 			path = Query;
+			sourceTree = "<group>";
+		};
+		099A48471C3DC0920072C5D2 /* KeywordSearch */ = {
+			isa = PBXGroup;
+			children = (
+				099A48481C3DC0A60072C5D2 /* KeywordSearch.storyboard */,
+				099A484C1C3DC11E0072C5D2 /* KeywordSearchViewController.swift */,
+			);
+			name = KeywordSearch;
 			sourceTree = "<group>";
 		};
 		09DD2FE21C36F2430074037C /* User */ = {
@@ -276,6 +289,7 @@
 		7436D0D31BFFF47E00E7D545 /* iosClient */ = {
 			isa = PBXGroup;
 			children = (
+				099A48471C3DC0920072C5D2 /* KeywordSearch */,
 				0979C20B1C34BF8D000BF8F8 /* DataModels */,
 				2548B6D71C381A5200CB4906 /* DetailedProfile */,
 				25AF48531C0C5CAF00C71DB6 /* Favorite */,
@@ -441,6 +455,7 @@
 				258D84C91C37BBFE00DCD9AA /* Favorite.storyboard in Resources */,
 				7436D0DC1BFFF47E00E7D545 /* Main.storyboard in Resources */,
 				258D84D91C37CFC500DCD9AA /* Schedule.storyboard in Resources */,
+				099A48491C3DC0A60072C5D2 /* KeywordSearch.storyboard in Resources */,
 				2548B6D91C381A7D00CB4906 /* DetailedProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +546,7 @@
 				0930C0D61C35EAAB0065FD9F /* QueryUtils.swift in Sources */,
 				25AF484B1C0C5C8500C71DB6 /* ScheduleViewController.swift in Sources */,
 				092B23881C34C40800614EFD /* UserQuery.swift in Sources */,
+				099A484D1C3DC11E0072C5D2 /* KeywordSearchViewController.swift in Sources */,
 				25AF484F1C0C5C9100C71DB6 /* FavoriteViewController.swift in Sources */,
 				09D08E0B1C3755CA00905187 /* AppointmentQuery.swift in Sources */,
 				252095791C3949A700877546 /* GlobalAPIKeys.swift in Sources */,
