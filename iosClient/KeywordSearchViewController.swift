@@ -9,20 +9,34 @@
 import AVOSCloud
 import UIKit
 
-class KeywordSearchViewController: UITableViewController {
-    
+class KeywordSearchViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     let kLoadingCellTag = 1337
     
+    var currentSearchText = ""
     var usersFound: [AVUser] = []
-    var currentPage = 1
+    var currentPage = 0
     var loadedAllPages = false
     let resultsPerPage = 10
+    
+    var searchController: UISearchController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        searchController.searchBar.sizeToFit()
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
         tableView.delegate = self
         tableView.dataSource = self
+        navigationItem.titleView = self.searchController.searchBar
+        
+        definesPresentationContext = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,8 +116,8 @@ class KeywordSearchViewController: UITableViewController {
     
     func fetchData() {
         UserQueryServices.getUsersShortByKeyword(
-            "smi",
-            skip: currentPage*resultsPerPage,
+            currentSearchText,
+            skip: (currentPage-1)*resultsPerPage,
             numResults: resultsPerPage,
             success: { (users: [AVUser]) -> Void in
                 // TODO: Does this work in the case that the total number of users found is equal to n*resultsPerPage? NO.
@@ -122,5 +136,16 @@ class KeywordSearchViewController: UITableViewController {
             failure: { (error: ErrorType) -> Void in
                 print(error)
             })
+    }
+    
+    // MARK: UISearchResultsUpdating
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        if let searchString = searchController.searchBar.text {
+            currentSearchText = searchString
+            currentPage = 0
+            loadedAllPages = false
+            usersFound = []
+            tableView.reloadData()
+        }
     }
 }

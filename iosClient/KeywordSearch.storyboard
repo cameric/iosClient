@@ -28,7 +28,6 @@
         <!--发现-->
         <scene sceneID="d8Y-cf-JAD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nIm-5I-4kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Z6T-Lg-EYS" customClass="KeywordSearchViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mej-aQ-yRA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -37,6 +36,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="发现" id="Md8-5e-02P"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIm-5I-4kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="493" y="239"/>
         </scene>
