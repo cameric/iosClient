@@ -44,16 +44,25 @@ class UserQueryServices {
      Gets a list of users (short format) matching the given keyword
      
      - parameter id: The keyword to search
-     - parameter onCompletion: A closure called upon either success of the query or an error during it.
+     - parameter success: A closure called upon success of the query.
+     - parameter failure: A closure called upon failure of the query.
      
      - returns: A list of users (short format) matching the given keyword
      */
-    static func getUsersShortByKeyword(keyword: String, success: [AVUser] -> Void, failure: ErrorType -> Void) {
+    static func getUsersShortByKeyword(
+        keyword: String,
+        skip: Int,
+        numResults: Int,
+        success: [AVUser] -> Void,
+        failure: ErrorType -> Void)
+    {
         // Set up parameters to be used in the query
         // Make sure the dictionary keys are EXACTLY those defined in the JS functions on the server
         let params = [
-            "keyword" : keyword
-        ]
+            "keyword": keyword,
+            "skip": skip,
+            "numResults": numResults
+        ] as [NSObject : AnyObject]
         
         AVCloud.callFunctionInBackground("getUsersShortByKeyword", withParameters: params) { (result: AnyObject!, error: NSError!) in
             if error != nil {
