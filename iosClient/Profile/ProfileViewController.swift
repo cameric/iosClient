@@ -16,20 +16,35 @@ class ProfileViewController: UITableViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet var profileTableView: UITableView!
+    @IBOutlet weak var defaultAccountImage: UIImageView!
     
     var loggedInUser: AVUser?
     
     func toggleLogInButton() {
         if let curUser = self.loggedInUser {
             nameLabel.text = curUser.objectForKey("name") as? String
-            guard let joinedCategory = curUser.objectForKey("category") as? [String] else {
+            if let joinedCategory = curUser.objectForKey("category") as? [String] {
+                categoryLabel.text = joinedCategory.joinWithSeparator(", ")
+            } else {
                 categoryLabel.text = ""
-                return
             }
-            categoryLabel.text = joinedCategory.joinWithSeparator(", ")
+            if let avatar = curUser.objectForKey("avatar") as? AVFile {
+                avatar.getThumbnail(true, width: 80, height: 80, withBlock: {
+                    (image: UIImage!, error: NSError!) -> Void in
+                    if error != nil {
+                        print("Loading avatar error: \(error)")
+                        return
+                    }
+                    self.defaultAccountImage.image = image
+                    UserInterfaceServices.cropRectangularUIImageToCircular(self.defaultAccountImage)
+                    self.defaultAccountImage.alpha = 1
+                })
+            }
         } else {
             nameLabel.text = "点击登录"
-            categoryLabel.text = "或注册开始施展才华"
+            categoryLabel.text = "或注册开始助力他人"
+            self.defaultAccountImage.image = UIImage(named: "md_ic_account_circle_48pt")
+            self.defaultAccountImage.alpha = 0.3
         }
     }
     
