@@ -130,15 +130,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate, WeiboSDKDelega
             // Call LeanEngine cloud function to signup using Weibo API
             UserQueryServices.signUpWithWeibo(authorizeResponse.userID,
                 accessToken: authorizeResponse.accessToken,
-                onCompletion: { (curUser: AVUser!, error: ErrorType!) -> Void in
-                    if error != nil {
-                        self.showLoginInfo = true
-                        self.invalidLoginInfo.text = "微博登录过程中出现错误"
-                    } else {
-                        self.loggedInUser = curUser
-                        self.performSegueWithIdentifier("loggedInJumpToDetailedProfileSegue",
-                            sender: self)
-                    }
+                success: { (curUser: AVUser) -> Void in
+                    self.loggedInUser = curUser
+                    self.performSegueWithIdentifier("loggedInJumpToDetailedProfileSegue",
+                        sender: self)
+                },
+                failure: { (error: ErrorType!) -> Void in
+                    self.showLoginInfo = true
+                    self.invalidLoginInfo.text = "微博登录过程中出现错误"
             })
         case .UserCancel:
             self.showLoginInfo = true

@@ -74,8 +74,8 @@ class AppointmentQueryServices {
         provider: String!,
         fromTime: NSDate,
         toTime: NSDate,
-        onCompletion: ([Appointment]!, ErrorType!) -> Void)
-        -> Void
+        success: [Appointment] -> Void,
+        failure: ErrorType -> Void)
     {
         let params = [
             "client": client,
@@ -89,6 +89,6 @@ class AppointmentQueryServices {
             params: params,
             parser: { (result: AnyObject!) in
                 return try QueryUtils.listFromQueryResult(result, elemParser: appointmentFromQueryResult) },
-            onCompletion: onCompletion)
+            success: success, failure: failure)
     }
 }

@@ -19,6 +19,24 @@ enum QueryError: ErrorType {
 class QueryUtils {
     
     /**
+     Given a server response, try to convert it into an AVObject (or a subclass).
+     
+     - parameter result The server response.
+     
+     - returns: An AVObject corresponding to the response.
+     
+     - throws: QueryError.MalformedResponse
+     */
+    static func avObjectFromQueryResult<T: AVObject>(result: AnyObject!) throws -> T {
+        let object = T()
+        guard let json = result as! [NSObject : AnyObject]! else {
+            throw QueryError.MalformedResponse
+        }
+        object.objectFromDictionary(json)
+        return object
+    }
+    
+    /**
     Make a query to the server, parse the result, and pass it to a closure.
 
     - parameter function: The query to call on the server.
@@ -33,21 +51,21 @@ class QueryUtils {
         query: String,
         params: [String : AnyObject]!,
         parser: (AnyObject! throws -> T),
-        onCompletion: (T!, ErrorType!) -> Void)
-        -> Void
+        success: T -> Void,
+        failure: ErrorType -> Void)
     {
-        AVCloud.callFunctionInBackground(query, withParameters: params) { (result: AnyObject!, error: NSError!) -> Void in
+        AVCloud.callFunctionInBackground(query, withParameters: params) { (result: AnyObject!, error: NSError!) in
             if error != nil {
                 // If the server gives us an error, pass it along
-                onCompletion(nil, error)
+                failure(error)
             } else {
                 // If we got a response, convert it to type T. If conversion doesn't work out (e.g. because the
                 // response had the wrong format), we pass the given error to onCompletion
                 do {
                     let object = try parser(result)
-                    onCompletion(object, nil)
+                    success(object)
                 } catch let err {
-                    onCompletion(nil, err)
+                    failure(err)
                 }
             }
         }

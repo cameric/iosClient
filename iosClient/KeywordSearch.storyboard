@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9hS-x1-Tx1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LOK-Bh-aAB">
+            <objects>
+                <navigationController id="9hS-x1-Tx1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Search" id="92W-ib-zkL">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WBj-qe-Qsp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Z6T-Lg-EYS" kind="relationship" relationship="rootViewController" id="ghz-EE-9ap"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLP-bt-2fD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="239"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="d8Y-cf-JAD">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIm-5I-4kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Z6T-Lg-EYS" customClass="KeywordSearchViewController" customModule="iosClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mej-aQ-yRA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="发现" id="Md8-5e-02P"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="493" y="239"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Search" width="38" height="38"/>
+    </resources>
+</document>
