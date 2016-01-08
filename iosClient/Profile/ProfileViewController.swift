@@ -36,7 +36,7 @@ class ProfileViewController: UITableViewController {
                         return
                     }
                     self.defaultAccountImage.image = image
-                    UserInterfaceServices.cropRectangularUIImageToCircular(self.defaultAccountImage)
+                    UserInterfaceServices.cropToCircle(self.defaultAccountImage)
                     self.defaultAccountImage.alpha = 1
                 })
             }

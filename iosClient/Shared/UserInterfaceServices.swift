@@ -51,7 +51,7 @@ class UserInterfaceServices {
                        alpha: 1.0)
     }
     
-    static func cropRectangularUIImageToCircular(imageView: UIImageView) {
+    static func cropToCircle(imageView: UIImageView) {
         imageView.layer.cornerRadius = imageView.frame.size.height / 2;
         imageView.layer.masksToBounds = true;
         imageView.layer.borderWidth = 0;

@@ -11,6 +11,7 @@ import UIKit
 
 class KeywordSearchViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     let kLoadingCellTag = 1337
+    let kUserCellIdentifier = "UserCell"
     
     var currentSearchText = ""
     var usersFound: [AVUser] = []
@@ -25,15 +26,19 @@ class KeywordSearchViewController: UITableViewController, UISearchResultsUpdatin
         
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
-        
-        navigationController?.setNavigationBarHidden(false, animated: true)
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 64
+        
+        // Fix the search bar at the top of the window. This replaces the title of the navbar.
         navigationItem.titleView = self.searchController.searchBar
         
         definesPresentationContext = true
@@ -62,10 +67,12 @@ class KeywordSearchViewController: UITableViewController, UISearchResultsUpdatin
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if !loadedAllPages {
-            return usersFound.count + 1
+        // If either we aren't currently searching (empty search text) or have loaded everything searched for,
+        // don't display the loading indicator.
+        if loadedAllPages || currentSearchText.isEmpty {
+            return usersFound.count
         }
-        return usersFound.count
+        return usersFound.count + 1
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -77,16 +84,12 @@ class KeywordSearchViewController: UITableViewController, UISearchResultsUpdatin
     }
     
     func userCellForIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "cell"
-        
-        // Retrieve a cell, or make one if the retrieved cell is nil (??)
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
-            ?? UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
-        
         let user = usersFound[indexPath.row]
         
-        cell.textLabel!.text = user.username
-        cell.detailTextLabel!.text = user.email
+        // Retrieve a cell, or make one if the retrieved cell is nil (??)
+        let cell = tableView.dequeueReusableCellWithIdentifier(kUserCellIdentifier) as! KeywordSearchTableViewUserCell
+        
+        cell.setDisplayUser(user)
         
         return cell
     }
@@ -94,9 +97,10 @@ class KeywordSearchViewController: UITableViewController, UISearchResultsUpdatin
     func loadingCell() -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
         let loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+        loadingIndicator.sizeToFit()
         
         // TODO: The center is a bit off
-        loadingIndicator.center = cell.center
+        loadingIndicator.center = cell.contentView.center
         cell.addSubview(loadingIndicator)
         loadingIndicator.startAnimating()
         
@@ -105,6 +109,10 @@ class KeywordSearchViewController: UITableViewController, UISearchResultsUpdatin
         return cell
     }
     
+    /**
+     Called when the loading indicator cell is seen. This generally means we've reached the end of the loaded content and need to
+     load the next batch of data.
+     */
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if (cell.tag == kLoadingCellTag) {
             currentPage++
@@ -115,6 +123,10 @@ class KeywordSearchViewController: UITableViewController, UISearchResultsUpdatin
     // MARK: Fetching
     
     func fetchData() {
+        if currentSearchText.isEmpty {
+            return
+        }
+        
         UserQueryServices.getUsersShortByKeyword(
             currentSearchText,
             skip: (currentPage-1)*resultsPerPage,
