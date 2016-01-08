@@ -75,7 +75,7 @@
 		09DD2FE31C36F24C0074037C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		09DD2FE41C36F24C0074037C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		09DEBC651C3770D50033B579 /* iosClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosClient-Bridging-Header.h"; sourceTree = "<group>"; };
-		252095781C3949A700877546 /* GlobalAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalAPIKeys.swift; path = ../DataModels/GlobalAPIKeys.swift; sourceTree = "<group>"; };
+		252095781C3949A700877546 /* GlobalAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalAPIKeys.swift; sourceTree = "<group>"; };
 		2548B6D51C37FD5800CB4906 /* DetailedProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedProfileViewController.swift; sourceTree = "<group>"; };
 		2548B6D81C381A7D00CB4906 /* DetailedProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailedProfile.storyboard; sourceTree = "<group>"; };
 		2548B6DC1C38C89700CB4906 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -161,19 +161,19 @@
 			isa = PBXGroup;
 			children = (
 				099A48481C3DC0A60072C5D2 /* KeywordSearch.storyboard */,
-				099A484C1C3DC11E0072C5D2 /* KeywordSearchViewController.swift */,
 				0921E17F1C3F0ADA009CC673 /* KeywordSearchTableViewCell.swift */,
+				099A484C1C3DC11E0072C5D2 /* KeywordSearchViewController.swift */,
 			);
-			name = KeywordSearch;
+			path = KeywordSearch;
 			sourceTree = "<group>";
 		};
 		09DD2FE21C36F2430074037C /* User */ = {
 			isa = PBXGroup;
 			children = (
+				25C7F22F1C3A9F6900E25E8C /* ForgetPasswordViewController.swift */,
 				09DD2FE31C36F24C0074037C /* LoginViewController.swift */,
 				09DD2FE41C36F24C0074037C /* SignupViewController.swift */,
 				258D84C61C37BBE500DCD9AA /* User.storyboard */,
-				25C7F22F1C3A9F6900E25E8C /* ForgetPasswordViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -213,9 +213,9 @@
 		25AF48501C0C5C9500C71DB6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				7458D7B41C2B6301008ABA85 /* CustomSearchController.swift */,
 				258D84CE1C37BC8F00DCD9AA /* Search.storyboard */,
 				7458D7B21C2B61FE008ABA85 /* SearchBar.swift */,
-				7458D7B41C2B6301008ABA85 /* CustomSearchController.swift */,
 				25AF48481C0C5C7F00C71DB6 /* SearchViewController.swift */,
 			);
 			path = Search;
@@ -251,9 +251,9 @@
 		740DFC721C0C4FEA00CE36EA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				252095781C3949A700877546 /* GlobalAPIKeys.swift */,
 				7458D7B61C2BB439008ABA85 /* ColorScheme.swift */,
 				7458D7B81C2BB8F3008ABA85 /* Font.swift */,
+				252095781C3949A700877546 /* GlobalAPIKeys.swift */,
 				7458D7F81C2BF2BE008ABA85 /* SearchUserListCell.swift */,
 				25C7F2311C3AA50400E25E8C /* UserInterfaceServices.swift */,
 			);
@@ -292,11 +292,11 @@
 		7436D0D31BFFF47E00E7D545 /* iosClient */ = {
 			isa = PBXGroup;
 			children = (
-				099A48471C3DC0920072C5D2 /* KeywordSearch */,
 				0979C20B1C34BF8D000BF8F8 /* DataModels */,
 				2548B6D71C381A5200CB4906 /* DetailedProfile */,
 				25AF48531C0C5CAF00C71DB6 /* Favorite */,
 				740DFC731C0C4FEA00CE36EA /* Icons */,
+				099A48471C3DC0920072C5D2 /* KeywordSearch */,
 				25AF48521C0C5CA700C71DB6 /* Profile */,
 				0979C20E1C34C2BC000BF8F8 /* Query */,
 				25AF48511C0C5CA000C71DB6 /* Schedule */,

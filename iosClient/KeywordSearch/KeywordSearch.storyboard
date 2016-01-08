@@ -83,7 +83,14 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="发现" id="Md8-5e-02P"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="发现" id="Md8-5e-02P">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="ct7-iT-3PA"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="filterButton" destination="ct7-iT-3PA" id="SaG-Jx-cdx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIm-5I-4kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

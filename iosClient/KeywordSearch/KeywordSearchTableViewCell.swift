@@ -9,6 +9,9 @@
 import AVOSCloud
 import UIKit
 
+/**
+ A UITableViewCell that displays information about a given user.
+ */
 class KeywordSearchTableViewUserCell: UITableViewCell {
     
     @IBOutlet var nameLabel: UILabel!
@@ -17,7 +20,9 @@ class KeywordSearchTableViewUserCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        // Crop avatars as as circles
+        UserInterfaceServices.cropToCircle(self.avatarImageView)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -26,21 +31,31 @@ class KeywordSearchTableViewUserCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    /**
+     Sets the cell to display information for the given user
+     
+     - parameter user The user from which to retrieve information
+     */
     func setDisplayUser(user: AVUser) {
+        // Show the user's name, or their username if no name is set
         if let name = user.objectForKey("name") as? String {
             nameLabel.text = name
         } else {
             nameLabel.text = user.username
         }
         
+        // Show the user's summary if available.
         if let summary = user.objectForKey("summary") as? String {
             detailLabel.text = summary
         } else {
             detailLabel.text = "无细节。"
         }
         
+        // Display an avatar if 
         if let avatarFile = user.objectForKey("avatar") as? AVFile {
             setAvatarForFile(avatarFile)
+        } else {
+            self.avatarImageView.image = UIImage(named: "defaultAvatar")
         }
     }
     
@@ -52,7 +67,6 @@ class KeywordSearchTableViewUserCell: UITableViewCell {
         
         file.getDataInBackgroundWithBlock { (data: NSData!, error: NSError!) -> Void in
             if error == nil && data != nil {
-                UserInterfaceServices.cropToCircle(self.avatarImageView)
                 self.avatarImageView.image = UIImage(data: data)
                 loadingIndicator.removeFromSuperview()
             } else {

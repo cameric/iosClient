@@ -21,6 +21,8 @@ class KeywordSearchViewController: UITableViewController, UISearchResultsUpdatin
     
     var searchController: UISearchController!
     
+    @IBOutlet var filterButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +42,7 @@ class KeywordSearchViewController: UITableViewController, UISearchResultsUpdatin
         
         // Fix the search bar at the top of the window. This replaces the title of the navbar.
         navigationItem.titleView = self.searchController.searchBar
+        navigationItem.leftBarButtonItem!.enabled = false
         
         definesPresentationContext = true
     }
@@ -159,5 +162,16 @@ class KeywordSearchViewController: UITableViewController, UISearchResultsUpdatin
             usersFound = []
             tableView.reloadData()
         }
+    }
+    
+    // MARK: UISearchBarDelegate
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        navigationItem.leftBarButtonItem!.enabled = true
+        return true
+    }
+    
+    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
+        navigationItem.leftBarButtonItem!.enabled = false
+        return true
     }
 }
